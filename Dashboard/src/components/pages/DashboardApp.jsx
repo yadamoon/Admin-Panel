@@ -14,9 +14,9 @@ const DashboardApp = () => {
 
         {/* //todo list Earing */}
         <div className="grid grid-cols-3 gap-4 mb-4">
-          <div className="flex rounded bg-gray-50 dark:bg-gray-800">
+          <div className="flex rounded bg-gray-50 ">
             {/* earing */}
-            <div class="flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:border-t-blue-500 dark:shadow-slate-700/[.7]">
+            <div class="flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl  dark:border-t-blue-500 dark:shadow-slate-500/[.7]">
               <div class="p-4 md:p-5">
                 <h3 class="text-lg font-bold text-gray-800 dark:text-white">
                   Card title
@@ -49,8 +49,8 @@ const DashboardApp = () => {
             </div>
           </div>
           {/* another */}
-          <div className="flex  rounded bg-gray-50 dark:bg-gray-800">
-            <div class="flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:border-t-blue-500 dark:shadow-slate-700/[.7]">
+          <div className="flex  rounded bg-gray-50 ">
+            <div class="flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl   dark:border-t-blue-500 dark:shadow-slate-500/[.7]">
               <div class="p-4 md:p-5">
                 <h3 class="text-lg font-bold text-gray-800 dark:text-white">
                   Card title
@@ -83,8 +83,8 @@ const DashboardApp = () => {
             </div>
           </div>
           {/* another */}
-          <div className="flex  rounded bg-gray-50 dark:bg-gray-800">
-            <div class="flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:border-t-blue-500 dark:shadow-slate-700/[.7]">
+          <div className="flex  rounded bg-gray-50 ">
+            <div class="flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:border-t-blue-500 dark:shadow-slate-500/[.7]">
               <div class="p-4 md:p-5">
                 <h3 class="text-lg font-bold text-gray-800 dark:text-white">
                   Card title
