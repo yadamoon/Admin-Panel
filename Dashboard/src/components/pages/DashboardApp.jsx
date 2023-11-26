@@ -1,13 +1,12 @@
-import React from 'react'
-import Chart from '../Layout/Chart'
-import PieComponent from '../Layout/PieComponent'
-import HeaderApp from '../SideBar/common/HeaderApp'
+import React from "react";
+import Chart from "../Layout/Chart";
+import PieComponent from "../Layout/PieComponent";
+import HeaderApp from "../SideBar/common/HeaderApp";
 
 const DashboardApp = () => {
   return (
     <div className="p-4 h-screen ">
       <div className=" rounded-lg dark:border-gray-700 ">
-        {/* //todo HeaderPart */}
         {/* //todo dashboard */}
         <div className="flex  p-2 mb-4 rounded bg-gray-100">
           <p className="text-2xl text-gray-400 dark:text-gray-500">Dashboard</p>
@@ -136,7 +135,7 @@ const DashboardApp = () => {
           {/*//todo  pie chart */}
           <div className="flex items-center justify-center rounded bg-white col-span-1">
             <p className="text-2xl text-gray-400 dark:text-gray-500">
-              {' '}
+              {" "}
               <PieComponent />
             </p>
           </div>
@@ -231,7 +230,7 @@ const DashboardApp = () => {
           </div> */}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardApp
+export default DashboardApp;

@@ -200,13 +200,13 @@ const SideBar = () => {
               </Link>
             </li>
             {/* signIN */}
-            <li>
+            <li
+              onClick={() => {
+                dispatch(logout());
+              }}
+            >
               <Link
                 to="/SignIn"
-                onClick={() => {
-                  dispatch(logout());
-                }}
-                href="#"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
               >
                 <svg

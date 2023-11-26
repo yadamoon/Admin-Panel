@@ -1,7 +1,7 @@
-import React from 'react'
-import Chart from './Chart'
-import PieComponent from './PieComponent'
-import Table from './Table'
+import React from "react";
+import Chart from "./Chart";
+import PieComponent from "./PieComponent";
+import Table from "./Table";
 
 const Dashboard = () => {
   return (
@@ -57,11 +57,8 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="">
-        <Table />
-      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
