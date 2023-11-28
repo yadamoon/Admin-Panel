@@ -11,6 +11,7 @@ import SignIn from "./components/pages/SignIn";
 import SignUp from "./components/pages/SignUp";
 import Settings from "./components/pages/Settings";
 import Inbox from "./components/pages/Inbox";
+import Error from "./components/pages/Error";
 
 function App() {
   return (
@@ -66,9 +67,9 @@ function App() {
             <Route path="/Setting" element={<Settings />} />
 
             <Route path="/Product" element={<Products />} />
-            {/* <Route path="*" element={<NoPage />} /> */}
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/SignIN" element={<SignIn />} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </div>
       </div>
