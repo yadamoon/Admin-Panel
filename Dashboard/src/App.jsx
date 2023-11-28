@@ -64,10 +64,11 @@ function App() {
             <Route path="/User" element={<Profiles />} />
             <Route path="/Inbox" element={<Inbox />} />
             <Route path="/Setting" element={<Settings />} />
-            <Route path="/SignUp" element={<SignUp />} />
-            <Route path="/SignIN" element={<SignIn />} />
+
             <Route path="/Product" element={<Products />} />
             {/* <Route path="*" element={<NoPage />} /> */}
+            <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/SignIN" element={<SignIn />} />
           </Routes>
         </div>
       </div>
