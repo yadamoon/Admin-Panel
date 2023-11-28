@@ -3,15 +3,17 @@ import React from "react";
 const Profiles = () => {
   return (
     <div>
-      <div className="bg-gray-100">
+      <div className="bg-gray-100 h-screen">
         <div className="container mx-auto py-8">
           <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
             <div className="col-span-4 sm:col-span-3">
               <div className="bg-white shadow rounded-lg p-6">
                 <div className="flex flex-col items-center">
-                  {/* <img src="https://randomuser.me/api/portraits/men/94.jpg" className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"> */}
+                  <img
+                    src="public/feveb.jpg"
+                    className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
+                  />
 
-                  {/* </img> */}
                   <h1 className="text-xl font-bold">John Doe</h1>
                   <p className="text-gray-600">Software Developer</p>
                   <div className="mt-6 flex flex-wrap gap-4 justify-center">
