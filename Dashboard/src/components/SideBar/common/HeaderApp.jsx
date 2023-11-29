@@ -9,36 +9,41 @@ export default function HeaderApp() {
   return (
     <div className=" 2xl:mx-auto">
       <div className="bg-white  shadow-lg py-5 px-7">
-        <nav className="flex justify-between">
-          <div className=" flex justify-center items-center relative   w-1/3">
-            <input
-              className="text-sm leading-none text-left text-gray-600 px-4 py-3 w-full border rounded border-gray-300  outline-none"
-              type="text"
-              placeholder="Search"
-            />
-            <svg
-              className="absolute right-3 z-10 cursor-pointer"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z"
-                stroke="#4B5563"
-                strokeWidth="1.66667"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+        <nav className="flex justify-between ">
+          <div className="mt-8"></div>
+          <div className="lg:w-3/5 flex mt-10 ml-2 lg:ml-0 lg:mt-0 lg:justify-end justify-center items-center">
+            {/* <div className="pt-2 relative  text-gray-600">
+              <input
+                className="focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bg-gray-200 h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                type="search"
+                name="search"
+                placeholder="Search"
               />
-              <path
-                d="M21 21L15 15"
-                stroke="#4B5563"
-                strokeWidth="1.66667"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+              <button
+                type="submit"
+                className="focus:ring-2 focus:ring-offset-2 text-gray-600 focus:text-indigo-700 focus:rounded-full   focus:ring-indigo-700 bg-gray-200 e absolute right-0 top-0 mt-5 mr-4"
+              >
+                <svg
+                  className=" h-4 w-4 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="Capa_1"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 56.966 56.966"
+                  style={{ enableBackground: "new 0 0 56.966 56.966" }}
+                  xmlSpace="preserve"
+                  width="512px"
+                  height="512px"
+                >
+                  <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                </svg>
+              </button>
+            </div> */}
+            {/* <h1 className="font-bold text-teal-600 text-3xl uppercase">
+              food recipe
+            </h1> */}
           </div>
 
           <div className="flex items-center">
