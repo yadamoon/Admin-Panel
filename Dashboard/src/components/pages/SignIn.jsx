@@ -23,6 +23,10 @@ function SignIn() {
     setPasswordType("password");
   };
 
+  const handleLogin = ({ username, password }) => {
+    console.log(username + "" + password);
+  };
+
   return (
     <div className="h-screen my-16 ">
       <div className="flex justify-center ">
@@ -75,7 +79,7 @@ function SignIn() {
                 Forgot password?
               </a>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3" onClick={handleSubmit(handleLogin)}>
               <div className="border bg-gray-500 uppercase text-center text-white w-full  pl-20 pr-20 pt-3 pb-2 hover:bg-gray-600 hover:text-white rounded md:w-auto ">
                 log in
               </div>
