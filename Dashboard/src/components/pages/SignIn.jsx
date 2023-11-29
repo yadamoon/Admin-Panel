@@ -1,95 +1,98 @@
-import React from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+function SignIn() {
+  const [passwordType, setPasswordType] = useState("password");
+  const {
+    register,
+    handleSubmit,
 
-const SignIn = () => {
+    formState: { errors },
+    reset,
+  } = useForm({
+    defaultValues: {
+      username: "",
+      password: "",
+    },
+  });
+
+  const handleCkeckBox = () => {
+    if (passwordType === "password") {
+      setPasswordType("text");
+      return;
+    }
+    setPasswordType("password");
+  };
+
   return (
-    <section className="bg-gray-50 ">
-      <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-        <div className="w-full bg-gray-200 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 ">
-          <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-              Sign in to your account
-            </h1>
-            <form className="space-y-4 md:space-y-6" action="#">
-              <div>
-                <label
-                  for="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Your email
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
-                  placeholder="name@company.com"
-                  required=""
-                />
-              </div>
-              <div>
-                <label
-                  for="password"
-                  className="block mb-2 text-sm font-medium text-gray-900 "
-                >
-                  Password
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="••••••••"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
-                  required=""
-                />
-              </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-start">
-                  <div className="flex items-center h-5">
-                    <input
-                      id="remember"
-                      aria-describedby="remember"
-                      type="checkbox"
-                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 "
-                      required=""
-                    />
-                  </div>
-                  <div className="ml-3 text-sm">
-                    <label
-                      for="remember"
-                      className="text-gray-500 dark:text-gray-300"
-                    >
-                      Remember me
-                    </label>
-                  </div>
-                </div>
-                <a
-                  href="#"
-                  className="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"
-                >
-                  Forgot password?
-                </a>
-              </div>
-              <button
-                type="submit"
-                className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center "
-              >
-                Sign in
-              </button>
-              <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                Don’t have an account yet?{" "}
-                <a
-                  href="#"
-                  className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                >
-                  Sign up
-                </a>
-              </p>
-            </form>
+    <div className="h-screen my-16 ">
+      <div className="flex justify-center ">
+        <div className=" bg-white mx-4 md:mx-0 w-full md:w-2/3 lg:w-1/3 rounded-xl h-auto p-6">
+          <div className="text-2xl">
+            <h1>LOGIN</h1>
           </div>
+          <form className="w-full space-y-3">
+            <div className="grid grid-cols-1 gap-6">
+              <input
+                {...register("username", {
+                  required: "Enter Your username please!",
+                })}
+                placeholder="username"
+                className="border p-3 font-bold col-span-3 md:col-span-2"
+              />
+              {errors.username && (
+                <span className="text-red-700 col-span-1 md:col-span-2 ">
+                  {errors.username.message}
+                </span>
+              )}
+              <input
+                type={passwordType}
+                {...register("password", {
+                  required: "Enter your psssword please!",
+                })}
+                placeholder="password"
+                className="border p-3 font-bold col-span-3 md:col-span-2"
+              />
+
+              {errors.password && (
+                <span className="text-red-700 col-span-1 md:col-span-2 ">
+                  {errors.password.message}
+                </span>
+              )}
+              <label htmlFor="showPassword" className="font-bold space-x-3">
+                <input
+                  type="checkBox"
+                  {...register("showPassword", {})}
+                  onClick={handleCkeckBox}
+                />
+                <span> Show Password </span>
+              </label>
+            </div>
+            <div>
+              <a
+                href="#"
+                class="mt-6 text-indigo-900 flex justify-end text-sm font-normal underline"
+              >
+                Forgot password?
+              </a>
+            </div>
+            <div className="space-y-3">
+              <div className="border bg-gray-500 uppercase text-center text-white w-full  pl-20 pr-20 pt-3 pb-2 hover:bg-gray-600 hover:text-white rounded md:w-auto ">
+                log in
+              </div>
+            </div>
+            <div className="relative flex items-center mt-8">
+              <div className="border h-0 w-2/4 border-stone-300"></div>
+              <div className=" text-stone-300 px-4 text-sm font-normal">OR</div>
+              <div className=" border h-0 w-2/4 border-stone-300"></div>
+            </div>
+            <div className="border border-green-600 uppercase text-center text-black w-full  pl-20 pr-20 pt-3 pb-2 hover:bg-gray-600 hover:text-white rounded md:w-auto ">
+              <a href="#">Create New Acc </a>
+            </div>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
   );
-};
+}
 
 export default SignIn;
