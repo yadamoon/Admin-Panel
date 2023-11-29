@@ -19,13 +19,13 @@ const Profiles = () => {
                   <div className="mt-6 flex flex-wrap gap-4 justify-center">
                     <a
                       href="#"
-                      className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"
+                      className="bg-gray-800 hover:bg-gray-600 text-white py-2 px-4 rounded"
                     >
                       Contact
                     </a>
                     <a
                       href="#"
-                      className="bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded"
+                      className="bg-gray-500 hover:bg-gray-600 text-gray-50 py-2 px-4 rounded"
                     >
                       Resume
                     </a>
@@ -48,16 +48,18 @@ const Profiles = () => {
             </div>
             <div className="col-span-4 sm:col-span-9">
               <div className="bg-white shadow rounded-lg p-6">
-                <h2 className="text-xl font-bold mb-4">About Me</h2>
-                <p className="text-gray-700">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  finibus est vitae tortor ullamcorper, ut vestibulum velit
-                  convallis. Aenean posuere risus non velit egestas suscipit.
-                  Nunc finibus vel ante id euismod. Vestibulum ante ipsum primis
-                  in faucibus orci luctus et ultrices posuere cubilia Curae;
-                  Aliquam erat volutpat. Nulla vulputate pharetra tellus, in
-                  luctus risus rhoncus id.
-                </p>
+                <div className="border bg-gray-200 p-2">
+                  <h2 className="text-xl font-bold mb-4">About Me</h2>
+                  <p className="text-gray-500">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    finibus est vitae tortor ullamcorper, ut vestibulum velit
+                    convallis. Aenean posuere risus non velit egestas suscipit.
+                    Nunc finibus vel ante id euismod. Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia
+                    Curae; Aliquam erat volutpat. Nulla vulputate pharetra
+                    tellus, in luctus risus rhoncus id.
+                  </p>
+                </div>
 
                 <h3 className="font-semibold text-center mt-3 -mb-2">
                   Find me on
