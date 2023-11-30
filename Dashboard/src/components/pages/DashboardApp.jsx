@@ -2,6 +2,7 @@ import React from "react";
 import Chart from "../Layout/Chart";
 import PieComponent from "../Layout/PieComponent";
 import HeaderApp from "../SideBar/common/HeaderApp";
+import { Progress, Space } from "antd";
 
 const DashboardApp = () => {
   return (
@@ -140,9 +141,53 @@ const DashboardApp = () => {
             </p>
           </div>
         </div>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="col-span-2 justify-center items-center border ">
+            {" "}
+            <ProgressBarApp />{" "}
+          </div>
+          <div className="col-span-1 justify-center items-center border ">
+            {" "}
+            <SpaceWrap />
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default DashboardApp;
+
+export const SpaceWrap = () => {
+  return (
+    <div className="justify-center items-center">
+      <Space wrap>
+        <Progress type="dashboard" percent={75} />
+        <Progress type="dashboard" percent={70} status="exception" />
+        <Progress type="circle" percent={100} />
+        <Progress type="circle" percent={50} />
+      </Space>
+    </div>
+  );
+};
+
+export const ProgressBarApp = () => {
+  return (
+    <div className="justify-center items-center">
+      <Progress
+        percent={30}
+        className="col-span-1 p-2 flex"
+        status="exception"
+      />
+      <Progress percent={60} className="col-span-1 p-2 flex" />
+      <Progress percent={70} className="col-span-1 p-2 flex" />
+      <Progress percent={40} className="col-span-1 p-2 flex" />
+      <Progress percent={100} className="col-span-1 p-2 flex" />
+      <Progress
+        percent={100}
+        className="col-span-1 p-2 flex"
+        status="success"
+      />
+    </div>
+  );
+};
