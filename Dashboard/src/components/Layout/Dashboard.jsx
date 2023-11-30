@@ -2,6 +2,7 @@ import React from "react";
 import Chart from "./Chart";
 import PieComponent from "./PieComponent";
 import Table from "./Table";
+import { Progress } from "antd";
 
 const Dashboard = () => {
   return (
@@ -54,6 +55,12 @@ const Dashboard = () => {
           </div>
           <div className=" flex justify-center items-center mt-16 h-auto">
             <PieComponent />
+          </div>
+        </div>
+
+        <div className="flex w-full justify-center items-center">
+          <div className="bg-red-400">
+            <Progress percent={30} />
           </div>
         </div>
       </div>
