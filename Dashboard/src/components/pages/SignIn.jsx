@@ -90,7 +90,7 @@ function SignIn() {
               <div className=" border h-0 w-2/4 border-stone-300"></div>
             </div>
             <div className="border border-green-600 uppercase text-center text-black w-full  pl-20 pr-20 pt-3 pb-2 hover:bg-gray-600 hover:text-white rounded md:w-auto ">
-              <a href="#">Create New Acc </a>
+              <a href="#">Create New Account </a>
             </div>
           </form>
         </div>
