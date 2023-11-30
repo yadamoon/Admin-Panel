@@ -129,16 +129,6 @@ const SignUp = () => {
               </span>
             )}
           </div>
-          {/* <div className="relative z-0 w-full mb-5 group">
-            <input
-              type="text"
-              name="floating_company"
-              id="floating_company"
-              className=" py-2.5 px-0 w-full text-sm text-gray-900  border rounded appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-              placeholder=" "
-              required
-            />
-          </div> */}
         </div>
         <button
           type="submit"
