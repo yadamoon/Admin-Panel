@@ -34,14 +34,11 @@ const Profiles = () => {
                 <hr className="my-6 border-t border-gray-300" />
                 <div className="flex flex-col">
                   <span className="text-gray-600 uppercase font-bold tracking-wider mb-2">
-                    Skills
+                    information
                   </span>
                   <ul>
-                    <li className="mb-2">JavaScript</li>
-                    <li className="mb-2">React</li>
-                    <li className="mb-2">Node.js</li>
-                    <li className="mb-2">HTML/CSS</li>
-                    <li className="mb-2">Tailwind Css</li>
+                    <li className="mb-2">yared241993@gmail.com</li>
+                    <li className="mb-2">+251932380202</li>
                   </ul>
                 </div>
               </div>
@@ -151,56 +148,6 @@ const Profiles = () => {
                       ></path>
                     </svg>
                   </a>
-                </div>
-
-                <h2 className="text-xl font-bold mt-6 mb-4">Experience</h2>
-                <div className="mb-6">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 font-bold">
-                      Web Developer
-                    </span>
-                    <p>
-                      <span className="text-gray-600 mr-2">at ABC Company</span>
-                      <span className="text-gray-600">2017 - 2019</span>
-                    </p>
-                  </div>
-                  <p className="mt-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    finibus est vitae tortor ullamcorper, ut vestibulum velit
-                    convallis. Aenean posuere risus non velit egestas suscipit.
-                  </p>
-                </div>
-                <div className="mb-6">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 font-bold">
-                      Web Developer
-                    </span>
-                    <p>
-                      <span className="text-gray-600 mr-2">at ABC Company</span>
-                      <span className="text-gray-600">2017 - 2019</span>
-                    </p>
-                  </div>
-                  <p className="mt-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    finibus est vitae tortor ullamcorper, ut vestibulum velit
-                    convallis. Aenean posuere risus non velit egestas suscipit.
-                  </p>
-                </div>
-                <div className="mb-6">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600 font-bold">
-                      Web Developer
-                    </span>
-                    <p>
-                      <span className="text-gray-600 mr-2">at ABC Company</span>
-                      <span className="text-gray-600">2017 - 2019</span>
-                    </p>
-                  </div>
-                  <p className="mt-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    finibus est vitae tortor ullamcorper, ut vestibulum velit
-                    convallis. Aenean posuere risus non velit egestas suscipit.
-                  </p>
                 </div>
               </div>
             </div>
