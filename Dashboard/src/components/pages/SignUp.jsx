@@ -40,7 +40,7 @@ const SignUp = () => {
             {...register("firstName", {
               required: "Enter Your firstName please!",
             })}
-            className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border bg-white  rounded dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border bg-white  rounded  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
           />
           {errors.firstName && (
@@ -55,7 +55,7 @@ const SignUp = () => {
             {...register("lastName", {
               required: "Enter Your lastName please!",
             })}
-            className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border bg-white  rounded appearance-none dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border bg-white  rounded appearance-none   dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder=" "
           />
           {errors.lastName && (
@@ -71,7 +71,7 @@ const SignUp = () => {
             {...register("email", {
               required: "Enter Your Email please!",
             })}
-            className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border  appearance-none dark:text-white bg-white  rounded dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border  appearance-none  bg-white  rounded dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
             placeholder="email"
           />
           {errors.email && (
@@ -87,7 +87,7 @@ const SignUp = () => {
               {...register("password", {
                 required: "Enter Your new password please!",
               })}
-              className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border  dark:text-white bg-white  rounded dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border   bg-white  rounded dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder="password"
             />
             {errors.password && (
@@ -102,7 +102,7 @@ const SignUp = () => {
               {...register("ConfirmePassword", {
                 required: "Enter Your Correct Password please!",
               })}
-              className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border rounded bg-white dark:text-white  dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border rounded bg-white   dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder="ConfirmePassword"
             />
             {errors.ConfirmePassword && (
@@ -120,7 +120,7 @@ const SignUp = () => {
               {...register("tel", {
                 required: "Enter Your telephone number please!",
               })}
-              className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent  dark:text-white  border rounded bg-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+              className=" py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent    border rounded bg-white dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
               placeholder="Phone Number"
             />
             {errors.tel && (
