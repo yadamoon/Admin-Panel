@@ -16,9 +16,13 @@ const SideBar = () => {
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-800">
           <div className=" mb-4 justify-center items-center text-center">
-            <h1 className="text-white font-bold text-2xl items-center justify-center ">
+            <motion.h1
+              className="text-white font-bold text-2xl items-center justify-center "
+              initial={{ y: -100 }}
+              animate={{ y: -10 }}
+            >
               Admin Panel
-            </h1>
+            </motion.h1>
           </div>
           <div className="flex border h-1 bg-white"></div>
           <ul className="space-y-2 my-5 font-medium">
