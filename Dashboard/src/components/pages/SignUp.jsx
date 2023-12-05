@@ -312,12 +312,9 @@ const SignUp = () => {
                       className="inline-block pl-[0.15rem] hover:cursor-pointer"
                       for="exampleCheck2"
                     >
-                      Remember me
+                      Show Password
                     </label>
                   </div>
-
-                  {/* <!--Forgot password link--> */}
-                  <a href="#!">Forgot password?</a>
                 </div>
 
                 {/* <!-- Login button --> */}
