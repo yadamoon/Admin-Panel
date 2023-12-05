@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout } from "../../Features/Slice/controllerSlice/controllerSlice";
+import { frame, motion } from "framer-motion";
 
 const SideBar = () => {
   const controller = useSelector((state) => state.controller);
@@ -53,7 +54,10 @@ const SideBar = () => {
             </div>
 
             {/* Dashboard */}
-            <li>
+            <motion.li
+              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Link
                 to="/"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
@@ -70,10 +74,13 @@ const SideBar = () => {
                 </svg>
                 <span className="ms-3">Dashboard</span>
               </Link>
-            </li>
+            </motion.li>
 
             {/* table */}
-            <li>
+            <motion.li
+              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Link
                 to="/Table"
                 className="flex items-center w-full p-2 text-base text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
@@ -106,9 +113,12 @@ const SideBar = () => {
                   Table
                 </span>
               </Link>
-            </li>
+            </motion.li>
 
-            <li>
+            <motion.li
+              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Link
                 to=""
                 href="#"
@@ -128,10 +138,13 @@ const SideBar = () => {
                   new
                 </span>
               </Link>
-            </li>
+            </motion.li>
 
             {/* inbox */}
-            <li>
+            <motion.li
+              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Link
                 to="/Inbox"
                 href="#"
@@ -151,10 +164,13 @@ const SideBar = () => {
                   3
                 </span>
               </Link>
-            </li>
+            </motion.li>
 
             {/* user */}
-            <li>
+            <motion.li
+              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Link
                 to="/User"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
@@ -170,9 +186,12 @@ const SideBar = () => {
                 </svg>
                 <span className="flex-1 ms-3 whitespace-nowrap">Users</span>
               </Link>
-            </li>
+            </motion.li>
 
-            <li>
+            <motion.li
+              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Link
                 to="/Product"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
@@ -188,9 +207,12 @@ const SideBar = () => {
                 </svg>
                 <span className="flex-1 ms-3 whitespace-nowrap">Products</span>
               </Link>
-            </li>
+            </motion.li>
             {/* settings */}
-            <li>
+            <motion.li
+              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Link
                 to="/Setting"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
@@ -229,9 +251,11 @@ const SideBar = () => {
                 </svg>
                 <span className="flex-1 ms-3 whitespace-nowrap">Settings</span>
               </Link>
-            </li>
+            </motion.li>
             {/* signIN */}
-            <li
+            <motion.li
+              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
               onClick={() => {
                 dispatch(logout());
               }}
@@ -257,9 +281,12 @@ const SideBar = () => {
                 </svg>
                 <span className="flex-1 ms-3 whitespace-nowrap">Sign In</span>
               </Link>
-            </li>
+            </motion.li>
             {/* signUP */}
-            <li>
+            <motion.li
+              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               <Link
                 to="/SignUp"
                 className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
@@ -277,7 +304,7 @@ const SideBar = () => {
                 </svg>
                 <span className="flex-1 ms-3 whitespace-nowrap">Sign Up</span>
               </Link>
-            </li>
+            </motion.li>
           </ul>
         </div>
       </aside>
