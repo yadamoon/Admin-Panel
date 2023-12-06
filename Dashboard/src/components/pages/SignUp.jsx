@@ -158,7 +158,7 @@ const SignUp = () => {
               <form>
                 {/* <!--Sign in section--> */}
                 <div className="flex flex-row items-center justify-center lg:justify-start">
-                  <p className="mb-0 mr-4 text-lg">Sign in with</p>
+                  <p className="mb-0 mr-4 text-lg">Sign Up with</p>
 
                   {/* <!-- Facebook --> */}
                   <button
@@ -237,6 +237,7 @@ const SignUp = () => {
                     Email address
                   </label> */}
                 </div>
+
                 {/* <--last name   */}
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
@@ -245,13 +246,8 @@ const SignUp = () => {
                     id="exampleFormControlInput2"
                     placeholder="LastName"
                   />
-                  {/* <label
-                    for="exampleFormControlInput2"
-                    className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15]  transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8] "
-                  >
-                    Email address
-                  </label> */}
                 </div>
+
                 {/* <!-- Email input --> */}
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
@@ -283,8 +279,8 @@ const SignUp = () => {
                     Password
                   </label> */}
                 </div>
+
                 {/* <-- confirem password */}
-                {/* <!-- Password input --> */}
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
                     type="password"
@@ -292,12 +288,6 @@ const SignUp = () => {
                     id="exampleFormControlInput22"
                     placeholder="Confirem Password"
                   />
-                  {/* <label
-                    for="exampleFormControlInput22"
-                    className="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[2.15]  transition-all duration-200 ease-out peer-focus:-translate-y-[1.15rem] peer-focus:scale-[0.8]  peer-data-[te-input-state-active]:-translate-y-[1.15rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none "
-                  >
-                    Password
-                  </label> */}
                 </div>
                 <div className="mb-6 flex items-center justify-between">
                   {/* <!-- Remember me checkbox --> */}
