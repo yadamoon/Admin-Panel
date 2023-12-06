@@ -20,10 +20,12 @@ const SignUp = () => {
     lastName,
     email,
     password,
-    ConfirmePassword,
-    tel,
+    confirmePassword,
   }) => {
-    console.log(username + "" + password);
+    console.log(
+      email + "<br/>" + firstName + "" + lastName + "<br/>" + password
+    ),
+      confirmePassword;
   };
 
   return (
@@ -48,8 +50,8 @@ const SignUp = () => {
 
                 {/* <!-- Separator between social media sign in and email/password sign in --> */}
                 <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
-                  <p className="mx-4 mb-0 text-center font-semibold dark:">
-                    Or
+                  <p className="mx-4 mb-0 text-center font-bold text-xl">
+                    Create New Account
                   </p>
                 </div>
 
@@ -57,8 +59,10 @@ const SignUp = () => {
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
                     type="text"
+                    {...register("firstName", {
+                      required: "Enter Your username please!",
+                    })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
-                    id="exampleFormControlInput2"
                     placeholder="First Name"
                   />
                   {/* <label
@@ -73,8 +77,10 @@ const SignUp = () => {
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
                     type="text"
+                    {...register("lastName", {
+                      required: "Enter Your username please!",
+                    })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
-                    id="exampleFormControlInput2"
                     placeholder="LastName"
                   />
                 </div>
@@ -83,8 +89,10 @@ const SignUp = () => {
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
                     type="text"
+                    {...register("email", {
+                      required: "Enter Your username please!",
+                    })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
-                    id="exampleFormControlInput2"
                     placeholder="Email address"
                   />
                   {/* <label
@@ -99,8 +107,10 @@ const SignUp = () => {
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
                     type="password"
+                    {...register("password", {
+                      required: "Enter Your username please!",
+                    })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
-                    id="exampleFormControlInput22"
                     placeholder="Password"
                   />
                   {/* <label
@@ -115,8 +125,10 @@ const SignUp = () => {
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
                     type="password"
+                    {...register("confiremPassword", {
+                      required: "Enter Your username please!",
+                    })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
-                    id="exampleFormControlInput22"
                     placeholder="Confirem Password"
                   />
                 </div>
@@ -145,6 +157,7 @@ const SignUp = () => {
                     className="inline-block rounded bg-gray-400 text-gray-50 px-20  pb-2.5 pt-3 text-sm font-medium uppercase leading-normal"
                     data-te-ripple-init
                     data-te-ripple-color="light"
+                    onClick={handleSubmit(handleRegister)}
                   >
                     Sign UP
                   </button>
