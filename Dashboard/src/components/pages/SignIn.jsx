@@ -30,7 +30,7 @@ function SignIn() {
   return (
     <div className="h-screen">
       {/* <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->  */}
-      <section className="h-screen">
+      <section className="h-screen mx-5">
         <div className="h-full">
           {/* <!-- Left column container with background--> */}
           <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
