@@ -58,14 +58,12 @@ function App() {
             <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
             <HeaderApp />
           </div>
-
           <Routes>
             <Route path="/" element={<DashboardApp />} />
             <Route path="/Table" element={<ListUser />} />
             <Route path="/User" element={<Profiles />} />
             <Route path="/Inbox" element={<Inbox />} />
             <Route path="/Setting" element={<Settings />} />
-
             <Route path="/Product" element={<Products />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/SignIN" element={<SignIn />} />
