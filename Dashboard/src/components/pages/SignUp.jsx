@@ -61,6 +61,14 @@ const SignUp = () => {
                     type="text"
                     {...register("firstName", {
                       required: "Enter Your username please!",
+                      minLength: {
+                        value: 2,
+                        message: "Please Enter atleast more than 2 character",
+                      },
+                      maxLength: {
+                        value: 15,
+                        message: "Please Enter atleast less than 15 character",
+                      },
                     })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
                     placeholder="First Name"
