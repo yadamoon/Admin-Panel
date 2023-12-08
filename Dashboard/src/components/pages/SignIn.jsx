@@ -88,16 +88,16 @@ function SignIn() {
                     data-te-ripple-color="light"
                     // onClick={handleSubmit(handleRegister)}
                   >
-                    Sign UP
+                    Sign In
                   </button>
 
                   <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
-                    I have an account?
+                    I don't have an account?
                     <a
                       href="#!"
                       className="transition duration-150 ease-in-out  "
                     >
-                      Login
+                      Sign Up
                     </a>
                   </p>
                 </div>
