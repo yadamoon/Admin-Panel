@@ -28,17 +28,20 @@ function SignIn() {
   };
 
   return (
-    <div className="h-screen">
-      <h1 className="text-center font-bold text-2xl mt-32">Login Page </h1>
+    <div className="h-screen ">
       {/* <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->  */}
-      <section className="h-screen mx-15">
+      <section className="h-screen mx-15 mb-1">
         <div className="h-full">
           {/* <!-- Left column container with background--> */}
-          <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between">
+          <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between ">
             <div className="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-3/12 mx-20">
-              <form className="border  h-auto   p-2">
+              <form className="space-y-4 md:space-y-6">
                 {/* <!--Sign in section--> */}
-
+                <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
+                  <p className="mx-4 mb-0 text-center font-bold text-xl">
+                    Login Here
+                  </p>
+                </div>
                 {/* <!-- Email input --> */}
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <label htmlFor="password" className="font-bold">
@@ -83,9 +86,8 @@ function SignIn() {
                 <div className="text-center  lg:text-left">
                   <button
                     type="button"
-                    className="inline-block rounded bg-gray-400 text-gray-50 px-20  pb-2.5 pt-3 text-sm font-medium uppercase leading-normal"
-                    data-te-ripple-init
-                    data-te-ripple-color="light"
+                    className="inline-block rounded bg-gray-600 hover:bg-green-700 text-gray-50 px-20  pb-2.5 pt-3 text-sm font-medium uppercase leading-normal mx-20"
+
                     // onClick={handleSubmit(handleRegister)}
                   >
                     Login
