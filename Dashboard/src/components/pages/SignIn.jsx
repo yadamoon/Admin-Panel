@@ -15,16 +15,17 @@ function SignIn() {
     },
   });
 
-  const handleCkeckBox = () => {
-    if (passwordType === "password") {
-      setPasswordType("text");
-      return;
-    }
-    setPasswordType("password");
-  };
+  // const handleCkeckBox = () => {
+  //   if (passwordType === "password") {
+  //     setPasswordType("text");
+  //     return;
+  //   }
+  //   setPasswordType("password");
+  // };
 
   const handleSignIn = ({ email, password }) => {
     console.log(email + "" + password);
+    console.log("hello");
   };
 
   return (
@@ -44,7 +45,7 @@ function SignIn() {
                 </div>
                 {/* <!-- Email input --> */}
                 <div className="relative mb-6" data-te-input-wrapper-init>
-                  <label htmlFor="password" className="font-bold">
+                  <label htmlFor="Password" className="font-bold">
                     Email
                   </label>
                   <input
@@ -64,13 +65,13 @@ function SignIn() {
 
                 {/* <!-- new Password input --> */}
                 <div className="relative mb-6" data-te-input-wrapper-init>
-                  <label htmlFor="password" className="font-bold ">
+                  <label htmlFor="Password" className="font-bold ">
                     Password
                   </label>
                   <input
                     type="password"
                     {...register("password", {
-                      required: "Please Enter New Password!",
+                      required: "Please Enter Correct Password!",
                     })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
                     placeholder="Password"
