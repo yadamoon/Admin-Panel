@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 function SignIn() {
   const [passwordType, setPasswordType] = useState("password");
   const {
@@ -95,12 +96,12 @@ function SignIn() {
 
                   <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
                     I don't have an account?
-                    <a
-                      href="#!"
-                      className="transition duration-150 ease-in-out  "
+                    <Link
+                      to="/SignUp"
+                      className="transition duration-150 ease-in-out  hover:text-blue-600 "
                     >
                       Sign Up
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </form>
