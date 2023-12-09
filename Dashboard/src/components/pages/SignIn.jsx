@@ -23,8 +23,8 @@ function SignIn() {
     setPasswordType("password");
   };
 
-  const handleLogin = ({ username, password }) => {
-    console.log(username + "" + password);
+  const handleSignIn = ({ email, password }) => {
+    console.log(email + "" + password);
   };
 
   return (
@@ -87,8 +87,7 @@ function SignIn() {
                   <button
                     type="button"
                     className="inline-block rounded bg-gray-600 hover:bg-green-700 text-gray-50 px-20  pb-2.5 pt-3 text-sm font-medium uppercase leading-normal mx-20"
-
-                    // onClick={handleSubmit(handleRegister)}
+                    onClick={handleSubmit(handleSignIn)}
                   >
                     Login
                   </button>
