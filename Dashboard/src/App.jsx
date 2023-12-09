@@ -66,7 +66,7 @@ function App() {
             <Route path="/Setting" element={<Settings />} />
             <Route path="/Product" element={<Products />} />
             <Route path="/SignUp" element={<SignUp />} />
-            <Route path="/SignIN" element={<SignIn />} />
+            <Route path="/SignIn" element={<SignIn />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
