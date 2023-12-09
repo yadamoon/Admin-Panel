@@ -16,13 +16,13 @@ function SignIn() {
     },
   });
 
-  // const handleCkeckBox = () => {
-  //   if (passwordType === "password") {
-  //     setPasswordType("text");
-  //     return;
-  //   }
-  //   setPasswordType("password");
-  // };
+  const handleCkeckBox = () => {
+    if (passwordType === "password") {
+      setPasswordType("text");
+      return;
+    }
+    setPasswordType("password");
+  };
 
   const handleSignIn = ({ email, password }) => {
     console.log(email + "" + password);
@@ -82,6 +82,24 @@ function SignIn() {
                       {errors.password.message}
                     </span>
                   )}
+                </div>
+                <div className="mb-6 flex items-center justify-between">
+                  {/* <!-- Remember me checkbox --> */}
+                  <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
+                    <input
+                      className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] text-black "
+                      type="checkbox"
+                      value=""
+                      id="exampleCheck2"
+                      onClick={handleCkeckBox}
+                    />
+                    <label
+                      className="inline-block pl-[0.15rem] hover:cursor-pointer"
+                      for="exampleCheck2"
+                    >
+                      Show Password
+                    </label>
+                  </div>
                 </div>
 
                 {/* <!-- Login button --> */}
