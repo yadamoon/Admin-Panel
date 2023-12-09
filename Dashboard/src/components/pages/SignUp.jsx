@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const {
@@ -155,31 +156,12 @@ const SignUp = () => {
                     </span>
                   )}
                 </div>
-                <div className="mb-6 flex items-center justify-between">
-                  {/* <!-- Remember me checkbox --> */}
-                  <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
-                    <input
-                      className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] text-black "
-                      type="checkbox"
-                      value=""
-                      id="exampleCheck2"
-                    />
-                    <label
-                      className="inline-block pl-[0.15rem] hover:cursor-pointer"
-                      for="exampleCheck2"
-                    >
-                      Show Password
-                    </label>
-                  </div>
-                </div>
 
                 {/* <!-- Login button --> */}
                 <div className="text-center  lg:text-left">
                   <button
                     type="button"
                     className="inline-block rounded bg-gray-400 text-gray-50 px-20  pb-2.5 pt-3 text-sm font-medium uppercase leading-normal"
-                    data-te-ripple-init
-                    data-te-ripple-color="light"
                     onClick={handleSubmit(handleRegister)}
                   >
                     Sign UP
@@ -187,12 +169,12 @@ const SignUp = () => {
 
                   <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
                     I have an account?
-                    <a
-                      href="#!"
+                    <Link
+                      to="/SignIn"
                       className="transition duration-150 ease-in-out  "
                     >
                       Login
-                    </a>
+                    </Link>
                   </p>
                 </div>
               </form>
