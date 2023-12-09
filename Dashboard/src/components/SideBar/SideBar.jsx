@@ -7,7 +7,7 @@ import { frame, motion } from "framer-motion";
 const SideBar = () => {
   const controller = useSelector((state) => state.controller);
   const dispatch = useDispatch();
-  const handleSignIn = ({ email, password }) => {};
+
   return (
     <div className="">
       <aside
