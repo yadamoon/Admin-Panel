@@ -15,17 +15,17 @@ const SideBar = () => {
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
         aria-label="Sidebar"
       >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-800">
+        <div className="h-full px-3 py-4 overflow-y-auto bg-white">
           <div className=" mb-4 justify-center items-center text-center">
             <motion.h1
-              className="text-white font-bold text-2xl items-center justify-center "
+              className="text-gray-500 font-bold text-2xl items-center justify-center uppercase "
               initial={{ y: -100 }}
               animate={{ y: -10 }}
             >
               Admin Panel
             </motion.h1>
           </div>
-          <div className="flex border h-1 bg-white"></div>
+          <div className="flex border h-1 bg-black"></div>
           <ul className="space-y-2 my-5 font-medium">
             <div className=" flex justify-start items-center py-7 relative">
               <input
@@ -65,10 +65,10 @@ const SideBar = () => {
             >
               <Link
                 to="/"
-                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
               >
                 <svg
-                  className="w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                  className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -88,13 +88,13 @@ const SideBar = () => {
             >
               <Link
                 to="/Table"
-                className="flex items-center w-full p-2 text-base text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center w-full p-2 text-base text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
               >
                 <svg
                   fill="#ffffff"
                   width={20}
                   height={20}
-                  className="flex-shrink-0 w-5 h-5 text-white transition duration-75 group-hover:text-white dark:text-gray-400 dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-500"
                   viewBox="0 0 1920 1920"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -127,10 +127,10 @@ const SideBar = () => {
               <Link
                 to=""
                 href="#"
-                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
               >
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -153,10 +153,10 @@ const SideBar = () => {
               <Link
                 to="/Inbox"
                 href="#"
-                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
               >
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -178,10 +178,10 @@ const SideBar = () => {
             >
               <Link
                 to="/User"
-                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
               >
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -199,10 +199,10 @@ const SideBar = () => {
             >
               <Link
                 to="/Product"
-                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
               >
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -220,12 +220,12 @@ const SideBar = () => {
             >
               <Link
                 to="/Setting"
-                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
               >
                 <svg
                   width={20}
                   height={20}
-                  className="flex-shrink-0 w-5 h-5 text-white transition duration-75 group-hover:text-white dark:text-gray-400 dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -267,10 +267,10 @@ const SideBar = () => {
             >
               <Link
                 to="/SignIn"
-                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
               >
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -294,10 +294,10 @@ const SideBar = () => {
             >
               <Link
                 to="/SignUp"
-                className="flex items-center p-2 text-white transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
               >
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-white transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-white"
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
