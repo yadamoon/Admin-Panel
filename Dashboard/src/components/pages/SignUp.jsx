@@ -171,7 +171,7 @@ const SignUp = () => {
                     I have an account?
                     <Link
                       to="/SignIn"
-                      className="transition duration-150 ease-in-out  "
+                      className="transition duration-150 ease-in-out hover:text-blue-600 "
                     >
                       Login
                     </Link>
