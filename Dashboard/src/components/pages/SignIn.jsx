@@ -36,8 +36,8 @@ function SignIn() {
         <div className="h-full">
           {/* <!-- Left column container with background--> */}
           <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between ">
-            <div className="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-3/12 mx-20">
-              <form className="space-y-4 md:space-y-6">
+            <div className="mb-12 md:mb-0 md:w-8/12 lg:w-2/3 xl:w-2/5 mx-20  shadow-gray-300 shadow-lg rounded ">
+              <form className="space-y-4 md:space-y-6 mx-10">
                 {/* <!--Sign in section--> */}
                 <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
                   <p className="mx-4 mb-0 text-center font-bold text-xl">
@@ -87,9 +87,8 @@ function SignIn() {
                   {/* <!-- Remember me checkbox --> */}
                   <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
                     <input
-                      className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] text-black "
-                      type="checkbox"
-                      value=""
+                      className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] text-black border "
+                      type={passwordType}
                       id="exampleCheck2"
                       onClick={handleCkeckBox}
                     />
