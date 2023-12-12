@@ -1,11 +1,28 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 function Table() {
   const [show, setShow] = useState(null);
 
-  let data = [{ name: "haniel" }, { name: "alex" }, { name: "robel" }];
+  const [users, setUsers] = useState([]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    // const data = Axios.get("https://jsonplaceholder.typicode.com/users")
+    //   .then((response) => response.json())
+    //   .then((json) => {
+    //     console.log(json);
+    //     setDatas(response);
+    //   });
+    getUsers();
+  }, []);
+
+  function getUsers() {
+    axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
+      // const persons = res.data;
+      setUsers(res.data);
+      console.log(res.data);
+    });
+  }
   return (
     <>
       <div className="w-full">
@@ -31,47 +48,48 @@ function Table() {
                 </th>
               </tr>
             </thead>
-
-            <tbody>
-              <tr className="bg-gray-100 ">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
-                >
-                  haniel Alex
-                </th>
-                <td className="px-6 py-4">4 STAR</td>
-                <td className="px-6 py-4">Special Shiro</td>
-                <td className="px-6 py-4">12/06/2023</td>
-                <td className="px-6 py-4">
-                  <a
-                    href=""
-                    className="bg-gray-500 text-white p-3 rounded hover:text-gray-800 hover:bg-gray-300"
+            {users.map((person) => (
+              <tbody key={person.id}>
+                <tr className="bg-gray-100 ">
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
                   >
-                    Details
-                  </a>
-                </td>
-              </tr>
-              <tr className="bg-gray-100">
-                <th
-                  scope="row"
-                  className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
-                >
-                  Alex Weldu
-                </th>
-                <td className="px-6 py-4">5 START</td>
-                <td className="px-6 py-4">Special Pizza</td>
-                <td className="px-6 py-4">01/06/2023</td>
-                <td className="px-6 py-4 ">
-                  <a
-                    href=""
-                    className="bg-gray-500 text-white p-3 rounded hover:text-gray-800 hover:bg-gray-300"
+                    {person.name}
+                  </th>
+                  <td className="px-6 py-4">4 STAR</td>
+                  <td className="px-6 py-4">Special Shiro</td>
+                  <td className="px-6 py-4">12/06/2023</td>
+                  <td className="px-6 py-4">
+                    <a
+                      href=""
+                      className="bg-gray-500 text-white p-3 rounded hover:text-gray-800 hover:bg-gray-300"
+                    >
+                      Details
+                    </a>
+                  </td>
+                </tr>
+                {/* <tr className="bg-gray-100">
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
                   >
-                    Details
-                  </a>
-                </td>
-              </tr>
-            </tbody>
+                    Alex Weldu
+                  </th>
+                  <td className="px-6 py-4">5 START</td>
+                  <td className="px-6 py-4">Special Pizza</td>
+                  <td className="px-6 py-4">01/06/2023</td>
+                  <td className="px-6 py-4 ">
+                    <a
+                      href=""
+                      className="bg-gray-500 text-white p-3 rounded hover:text-gray-800 hover:bg-gray-300"
+                    >
+                      Details
+                    </a>
+                  </td>
+                </tr> */}
+              </tbody>
+            ))}
           </table>
         </div>
       </div>
