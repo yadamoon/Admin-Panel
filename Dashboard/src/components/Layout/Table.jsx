@@ -2,40 +2,40 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-function RCPaginate({ itemsPerPage }) {
-  const [itemOffset, setItemOffset] = useState(0);
-  const endOffset = itemOffset + itemsPerPage;
-  const currentItems = items.slice(itemOffset, endOffset);
+// function RCPaginate({ itemsPerPage }) {
+//   const [itemOffset, setItemOffset] = useState(0);
+//   const endOffset = itemOffset + itemsPerPage;
+//   const currentItems = items.slice(itemOffset, endOffset);
 
-  useEffect(() => {
-    setter(currentItems);
-  }, [itemOffset, endOffset, items]);
+//   useEffect(() => {
+//     setter(currentItems);
+//   }, [itemOffset, endOffset, items]);
 
-  const pageCount = Math.ceil(items.length / itemsPerPage);
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % items.length;
-    setItemOffset(newOffset);
-  };
+//   const pageCount = Math.ceil(items.length / itemsPerPage);
+//   const handlePageClick = (event) => {
+//     const newOffset = (event.selected * itemsPerPage) % items.length;
+//     setItemOffset(newOffset);
+//   };
 
-  return (
-    <div className="flex justify-center ">
-      <ReactPaginate
-        containerClassName="flex space-x-2 items-center bg-white p-1 px-2 justify-center rounded sm:1/2"
-        nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
-        previousClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
-        activeLinkClassName=" text-white bg-teal-700 border-0"
-        pageLinkClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-teal-500 hover:text-white"
-        breakLabel="..."
-        nextLabel="next"
-        onPageChange={handlePageClick}
-        initialPage={0}
-        pageCount={pageCount}
-        previousLabel="previous"
-        renderOnZeroPageCount={null}
-      />
-    </div>
-  );
-}
+//   return (
+//     <div className="flex justify-center ">
+//       <ReactPaginate
+//         containerClassName="flex space-x-2 items-center bg-white p-1 px-2 justify-center rounded sm:1/2"
+//         nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
+//         previousClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
+//         activeLinkClassName=" text-white bg-teal-700 border-0"
+//         pageLinkClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-teal-500 hover:text-white"
+//         breakLabel="..."
+//         nextLabel="next"
+//         onPageChange={handlePageClick}
+//         initialPage={0}
+//         pageCount={pageCount}
+//         previousLabel="previous"
+//         renderOnZeroPageCount={null}
+//       />
+//     </div>
+//   );
+// }
 
 function Table() {
   const [recipesDisplayed, setRecipesDisplayed] = useState([]);
@@ -58,29 +58,21 @@ function Table() {
       console.log(res.data);
     });
   }
+
+  const headTable = ["FullName", "Email", "Address", "Information"];
   return (
     <>
       <div className="w-full">
-        <div className=" mx-5 my-4 ">
+        <div className="  ">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             {/* //todo Header of Table */}
             <thead className="text-xs text-black uppercase  bg-gray-200">
               <tr>
-                <th scope="col" className="px-6 py-3">
-                  FullName
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Rate
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Type Of Food
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Time
-                </th>
-                <th scope="col" className="px-6 py-3">
-                  Info
-                </th>
+                {headTable.map((title) => (
+                  <th scope="col" className="px-6 py-3">
+                    {title}
+                  </th>
+                ))}
               </tr>
             </thead>
             {users.map((person) => (
@@ -92,13 +84,13 @@ function Table() {
                   >
                     {person.name}
                   </th>
-                  <td className="px-6 py-4">4 STAR</td>
-                  <td className="px-6 py-4">Special Shiro</td>
-                  <td className="px-6 py-4">12/06/2023</td>
+                  <td className="px-6 py-4"> {person.email}</td>
+                  <td className="px-6 py-4">{person.address.city}</td>
+
                   <td className="px-6 py-4">
                     <a
                       href=""
-                      className="bg-gray-500 text-white p-3 rounded hover:text-gray-800 hover:bg-gray-300"
+                      className="bg-blue-500 text-white p-3 rounded hover:text-gray-800 hover:opacity-75"
                     >
                       Details
                     </a>
@@ -128,7 +120,7 @@ function Table() {
           </table>
         </div>
       </div>
-      <div className="space-y-2">
+      {/* <div className="space-y-2">
         {users.length > 4 && (
           <RCPaginate
             // items={recipesFiltered}
@@ -136,7 +128,7 @@ function Table() {
             // setter={setRecipesDisplayed}
           />
         )}
-      </div>
+      </div> */}
     </>
   );
 }
