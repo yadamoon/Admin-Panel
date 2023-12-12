@@ -45,8 +45,8 @@ const SignUp = () => {
             </div>
 
             {/* <!-- Right column container --> */}
-            <div className="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12 bg-white p-5 rounded-md relative h-auto w-full ">
-              <form className=" mx-10 my-10">
+            <div className="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12 bg-white p-5 rounded-md relative h-auto w-full mx-5">
+              <form className=" mx-10 my-5">
                 {/* <!--Sign in section--> */}
 
                 {/* <!-- Separator between social media sign in and email/password sign in --> */}
@@ -158,25 +158,24 @@ const SignUp = () => {
                 </div>
 
                 {/* <!-- Login button --> */}
-                <div className="text-center  lg:text-left">
+                <div className="text-center  ">
                   <button
                     type="button"
-                    className="inline-block rounded bg-gray-400 text-gray-50 px-20  pb-2.5 pt-3 text-sm font-medium uppercase leading-normal"
+                    className="inline-block rounded bg-gray-200 text-gray-500  p-2 pl-10 pr-10  text-sm font-medium uppercase hover:opacity-75 hover:text-teal-600"
                     onClick={handleSubmit(handleRegister)}
                   >
                     Sign UP
                   </button>
-
-                  <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
-                    I have an account?
-                    <Link
-                      to="/SignIn"
-                      className="transition duration-150 ease-in-out hover:text-blue-600 "
-                    >
-                      Login
-                    </Link>
-                  </p>
                 </div>
+                <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
+                  I have an account?
+                  <Link
+                    to="/SignIn"
+                    className="transition duration-150 ease-in-out hover:text-blue-600 "
+                  >
+                    Login
+                  </Link>
+                </p>
               </form>
             </div>
           </div>
