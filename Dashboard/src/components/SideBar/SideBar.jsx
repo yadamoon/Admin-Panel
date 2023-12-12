@@ -65,7 +65,7 @@ const SideBar = () => {
             >
               <Link
                 to="/"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
                 <svg
                   className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
@@ -88,7 +88,7 @@ const SideBar = () => {
             >
               <Link
                 to="/Table"
-                className="flex items-center w-full p-2 text-base text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
+                className="flex items-center w-full p-2 text-base text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
                 <svg
                   fill="#ffffff"
@@ -127,7 +127,7 @@ const SideBar = () => {
               <Link
                 to=""
                 href="#"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
@@ -153,7 +153,7 @@ const SideBar = () => {
               <Link
                 to="/Inbox"
                 href="#"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
@@ -178,7 +178,7 @@ const SideBar = () => {
             >
               <Link
                 to="/User"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
@@ -199,7 +199,7 @@ const SideBar = () => {
             >
               <Link
                 to="/Product"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
@@ -220,7 +220,7 @@ const SideBar = () => {
             >
               <Link
                 to="/Setting"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
                 <svg
                   width={20}
@@ -267,7 +267,7 @@ const SideBar = () => {
             >
               <Link
                 to="/SignIn"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
@@ -294,7 +294,7 @@ const SideBar = () => {
             >
               <Link
                 to="/SignUp"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-600 dark:text-gray-500 dark:hover:bg-gray-700"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
                 <svg
                   className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
