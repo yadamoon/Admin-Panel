@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Table() {
   const [show, setShow] = useState(null);
 
   let data = [{ name: "haniel" }, { name: "alex" }, { name: "robel" }];
 
+  useEffect(() => {}, []);
   return (
     <>
       <div className="w-full">
