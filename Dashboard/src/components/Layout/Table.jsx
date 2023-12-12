@@ -38,11 +38,9 @@ import ReactPaginate from "react-paginate";
 // }
 
 function Table() {
-  const [recipesDisplayed, setRecipesDisplayed] = useState([]);
+  const [usersDisplayed, setUsersDisplayed] = useState([]);
 
-  // const navigate = useNavigate()
-
-  const [recipesFiltered, setRecipesFiltered] = useState([]);
+  const [usersFiltered, setUsersFiltered] = useState([]);
   const [show, setShow] = useState(null);
 
   const [users, setUsers] = useState([]);
@@ -96,39 +94,11 @@ function Table() {
                     </a>
                   </td>
                 </tr>
-                {/* <tr className="bg-gray-100">
-                  <th
-                    scope="row"
-                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
-                  >
-                    Alex Weldu
-                  </th>
-                  <td className="px-6 py-4">5 START</td>
-                  <td className="px-6 py-4">Special Pizza</td>
-                  <td className="px-6 py-4">01/06/2023</td>
-                  <td className="px-6 py-4 ">
-                    <a
-                      href=""
-                      className="bg-gray-500 text-white p-3 rounded hover:text-gray-800 hover:bg-gray-300"
-                    >
-                      Details
-                    </a>
-                  </td>
-                </tr> */}
               </tbody>
             ))}
           </table>
         </div>
       </div>
-      {/* <div className="space-y-2">
-        {users.length > 4 && (
-          <RCPaginate
-            // items={recipesFiltered}
-            itemsPerPage={12}
-            // setter={setRecipesDisplayed}
-          />
-        )}
-      </div> */}
     </>
   );
 }
