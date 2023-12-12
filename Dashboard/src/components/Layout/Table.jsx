@@ -11,7 +11,8 @@ function Table() {
       <div className="w-full">
         <div className=" mx-5 my-4 ">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-            <thead className="text-xs text-white uppercase  bg-gray-700">
+            {/* //todo Header of Table */}
+            <thead className="text-xs text-black uppercase  bg-gray-200">
               <tr>
                 <th scope="col" className="px-6 py-3">
                   FullName
