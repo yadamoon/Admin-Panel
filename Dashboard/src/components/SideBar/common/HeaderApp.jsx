@@ -8,7 +8,7 @@ export default function HeaderApp() {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <div className=" 2xl:mx-auto bg-white  shadow-gray-300  shadow-sm rounded">
-      <div className=" p-4 px-7">
+      <div className=" p-6 px-7">
         <nav className="flex justify-between ">
           <div className="mt-8"></div>
           <div className="lg:w-3/5 flex mt-10 ml-2 lg:ml-0 lg:mt-0 lg:justify-end justify-center items-center"></div>
