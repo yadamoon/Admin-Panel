@@ -30,7 +30,16 @@ function SignIn() {
   };
 
   return (
-    <div className="h-screen ">
+    <div
+      className="h-screen  "
+      style={{
+        backgroundImage: `url("https://app.dubbpie.com/assets/images/login-img.png")`,
+        backgroundRepeat: "no-repeat",
+        width: "auto",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+      }}
+    >
       {/* <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->  */}
       <section className="h-screen mx-15 mb-1">
         <div className="h-full">
@@ -123,13 +132,13 @@ function SignIn() {
                 </div>
               </form>
             </div>
-            <div className="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
+            {/* <div className="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
               <img
                 src="https://app.dubbpie.com/assets/images/login-img.png"
                 className="w-full"
                 alt="Sample image"
               />
-            </div>
+            </div> */}
 
             {/* <!-- Right column container --> */}
           </div>
