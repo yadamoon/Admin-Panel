@@ -16,9 +16,9 @@ const SideBar = () => {
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-white">
-          <div className=" mb-4 justify-center items-center text-center">
+          <div className=" mb-4 justify-center items-center text-center ">
             <motion.h1
-              className="text-gray-500 font-bold text-2xl items-center justify-center uppercase "
+              className="text-gray-500  text-2xl items-center justify-center uppercase font-mono "
               initial={{ y: -100 }}
               animate={{ y: -10 }}
             >
