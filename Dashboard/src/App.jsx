@@ -1,5 +1,4 @@
 import "./App.css";
-
 import SideBar from "./components/SideBar/SideBar";
 import HeaderApp from "./components/SideBar/common/HeaderApp";
 import { Routes, Route } from "react-router-dom";
