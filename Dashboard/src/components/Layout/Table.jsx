@@ -2,52 +2,47 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-// function RCPaginate({ itemsPerPage }) {
-//   const [itemOffset, setItemOffset] = useState(0);
-//   const endOffset = itemOffset + itemsPerPage;
-//   const currentItems = items.slice(itemOffset, endOffset);
+function RCPaginate({ items, itemsPerPage, setter }) {
+  const [itemOffset, setItemOffset] = useState(0);
+  const endOffset = itemOffset + itemsPerPage;
+  const currentItems = items.slice(itemOffset, endOffset);
 
-//   useEffect(() => {
-//     setter(currentItems);
-//   }, [itemOffset, endOffset, items]);
+  useEffect(() => {
+    setter(currentItems);
+  }, [itemOffset, endOffset, items]);
 
-//   const pageCount = Math.ceil(items.length / itemsPerPage);
-//   const handlePageClick = (event) => {
-//     const newOffset = (event.selected * itemsPerPage) % items.length;
-//     setItemOffset(newOffset);
-//   };
+  const pageCount = Math.ceil(items.length / itemsPerPage);
 
-//   return (
-//     <div className="flex justify-center ">
-//       <ReactPaginate
-//         containerClassName="flex space-x-2 items-center bg-white p-1 px-2 justify-center rounded sm:1/2"
-//         nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
-//         previousClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
-//         activeLinkClassName=" text-white bg-teal-700 border-0"
-//         pageLinkClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-teal-500 hover:text-white"
-//         breakLabel="..."
-//         nextLabel="next"
-//         onPageChange={handlePageClick}
-//         initialPage={0}
-//         pageCount={pageCount}
-//         previousLabel="previous"
-//         renderOnZeroPageCount={null}
-//       />
-//     </div>
-//   );
-// }
+  const handlePageClick = (event) => {
+    const newOffset = event.selected * itemsPerPage;
+    setItemOffset(newOffset);
+  };
+  return (
+    <div className="flex justify-center  ">
+      <ReactPaginate
+        containerClassName="flex space-x-2 items-center bg- p-1 px-2 justify-center rounded sm:1/2"
+        nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
+        previousClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
+        activeLinkClassName=" text-white bg-teal-700 border-0"
+        pageLinkClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-teal-500 hover:text-white"
+        breakLabel="..."
+        nextLabel="next"
+        onPageChange={handlePageClick}
+        initialPage={0}
+        pageCount={pageCount}
+        previousLabel="previous"
+        renderOnZeroPageCount={null}
+      />
+    </div>
+  );
+}
 
 function Table() {
+  const [users, setUsers] = useState([]);
   const [usersDisplayed, setUsersDisplayed] = useState([]);
 
   const [usersFiltered, setUsersFiltered] = useState([]);
-  const [show, setShow] = useState(null);
-
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    getUsers();
-  }, []);
+  // const [show, setShow] = useState(null);
 
   function getUsers() {
     axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
@@ -56,6 +51,10 @@ function Table() {
       console.log(res.data);
     });
   }
+
+  useEffect(() => {
+    getUsers();
+  }, []);
 
   const headTable = ["FullName", "Email", "Address", "Information"];
   return (
@@ -97,6 +96,15 @@ function Table() {
               </tbody>
             ))}
           </table>
+        </div>
+        <div className="space-y-2 my-16">
+          {users.length > 4 && (
+            <RCPaginate
+              items={users}
+              itemsPerPage={10}
+              setter={setUsersDisplayed}
+            />
+          )}
         </div>
       </div>
     </>
