@@ -108,7 +108,7 @@ function Table() {
             <thead className="text-xs text-black uppercase  bg-gray-200">
               <tr>
                 {headTable.map((title) => (
-                  <th scope="col" className="px-6 py-3">
+                  <th scope="col" className="px-6 py-3" key={title.id}>
                     {title}
                   </th>
                 ))}
