@@ -129,7 +129,7 @@ function Table() {
                   <td className="px-6 py-4">
                     <a
                       href=""
-                      className="bg-blue-500 text-white p-3 rounded hover:text-gray-800 hover:opacity-75"
+                      className="bg-blue-500 text-white p-3 rounded hover:opacity-75"
                     >
                       Details
                     </a>
