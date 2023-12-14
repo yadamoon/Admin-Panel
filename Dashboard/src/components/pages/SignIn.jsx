@@ -111,25 +111,26 @@ function SignIn() {
                 </div>
 
                 {/* <!-- Login button --> */}
-                <div className="text-center  lg:text-left">
+
+                <div className="text-center  ">
                   <button
                     type="button"
-                    className="inline-block rounded bg-gray-600 hover:bg-green-700 text-gray-50 px-20  pb-2.5 pt-3 text-sm font-medium uppercase leading-normal mx-20"
+                    className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-10 pr-10  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
                     onClick={handleSubmit(handleSignIn)}
                   >
                     Login
                   </button>
-
-                  <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
-                    I don't have an account?
-                    <Link
-                      to="/SignUp"
-                      className="transition duration-150 ease-in-out  hover:text-blue-600 "
-                    >
-                      Sign Up
-                    </Link>
-                  </p>
                 </div>
+
+                <p className="mb-0 mt-2 pt-1 text-sm font-semibold">
+                  I don't have an account?
+                  <Link
+                    to="/SignUp"
+                    className="transition duration-150 ease-in-out  hover:text-blue-600 "
+                  >
+                    Sign Up
+                  </Link>
+                </p>
               </form>
             </div>
           </div>
