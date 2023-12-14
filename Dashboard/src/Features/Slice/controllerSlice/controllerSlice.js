@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const controllerSlice = createSlice({
-  name: "controller",
+  name: "auth",
   initialState: [],
   reducers: {
     logout: (state, actions) => {

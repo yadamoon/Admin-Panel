@@ -132,15 +132,6 @@ function SignIn() {
                 </div>
               </form>
             </div>
-            {/* <div className="shrink-1 mb-12 grow-0 basis-auto md:mb-0 md:w-9/12 md:shrink-0 lg:w-6/12 xl:w-6/12">
-              <img
-                src="https://app.dubbpie.com/assets/images/login-img.png"
-                className="w-full"
-                alt="Sample image"
-              />
-            </div> */}
-
-            {/* <!-- Right column container --> */}
           </div>
         </div>
       </section>
