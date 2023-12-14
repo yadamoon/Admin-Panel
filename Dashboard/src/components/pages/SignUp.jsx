@@ -170,7 +170,7 @@ const SignUp = () => {
                 <div className="text-center  ">
                   <button
                     type="button"
-                    className="inline-block rounded bg-gray-200 text-gray-500  p-2 pl-10 pr-10  text-sm font-medium uppercase hover:opacity-75 hover:text-teal-600"
+                    className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-10 pr-10  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
                     onClick={handleSubmit(handleRegister)}
                   >
                     Sign UP
