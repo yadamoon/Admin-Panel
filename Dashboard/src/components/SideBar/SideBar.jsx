@@ -225,7 +225,7 @@ const SideBar = () => {
               <Link
                 to="/SignUp"
                 onClick={() => {
-                  dispatch(logout());
+                  // dispatch(logout());
                 }}
                 className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
