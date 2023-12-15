@@ -49,7 +49,7 @@ function SignIn() {
               <form className="space-y-4 md:space-y-6 mx-10 my-10 ">
                 {/* <!--Sign in section--> */}
                 <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
-                  <p className="mx-4 mb-0 text-center font-bold text-xl">
+                  <p className="mx-4 mb-0 text-center font-bold text-xl text-blue-600">
                     Login Here
                   </p>
                 </div>
