@@ -28,7 +28,7 @@ const SideBar = () => {
           </div>
           <div className="flex border h-1 bg-black"></div>
           <ul className="space-y-2 my-5 font-medium">
-            <div className=" flex justify-start items-center py-7 relative">
+            {/* <div className=" flex justify-start items-center py-7 relative">
               <input
                 className="text-sm leading-none text-left text-gray-600 px-4 py-3 w-full border rounded border-gray-300  outline-none"
                 type="text"
@@ -57,7 +57,7 @@ const SideBar = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </div>
+            </div> */}
 
             {/* Dashboard */}
             <motion.li
