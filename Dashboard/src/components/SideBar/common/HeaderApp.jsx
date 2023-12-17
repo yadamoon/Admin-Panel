@@ -2,16 +2,15 @@ import React, { useState } from "react";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
-  const [product, setProduct] = useState(false);
-  const [deliverables, setDeliverables] = useState(false);
+
   return (
     <>
-      <div className="bg-gray-200 h-full w-full">
+      <div className="bg-gray-100 h-full w-full">
         {/* Code block starts */}
-        <nav className="bg-white shadow xl:block hidden">
+        <nav className="bg-white shadow xl:block hidden p-4 ">
           <div className="mx-auto container px-6 py-2 xl:py-0">
-            <div className="flex items-center justify-between">
-              <div className="inset-y-0 left-0 flex items-center xl:hidden">
+            <div className="flex items-end justify-end">
+              <div className="inset-y-0 left-0 flex items-end xl:hidden">
                 <div className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-100 focus:outline-none transition duration-150 ease-in-out">
                   <div className="visible xl:hidden">
                     <ul className="p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-8 md:mt-8 hidden">
@@ -106,14 +105,14 @@ export default function IndexPage() {
               </div>
 
               <div className="flex">
-                <div className="hidden xl:flex items-center">
-                  <div className="ml-6 relative">
+                <div className="hidden xl:flex  justify-end items-end ">
+                  <div className="">
                     <div
-                      className="flex items-center relative"
+                      className="flex  items-center relative  "
                       onClick={() => setProfile(!profile)}
                     >
                       {profile && (
-                        <ul className="p-2 w-40 border-r bg-white absolute rounded right-0 shadow top-0 mt-16 ">
+                        <ul className="p-2 w-40 border-r bg-white absolute rounded  shadow top-0 mt-16 ">
                           <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                             <div className="flex items-center">
                               <svg
@@ -176,9 +175,9 @@ export default function IndexPage() {
                           </li>
                         </ul>
                       )}
-                      <div className="cursor-pointer flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
+                      <div className=" flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
                         <img
-                          className="rounded-full h-10 w-10 object-cover"
+                          className="rounded-full h-10 w-10 object-cover float-right"
                           src="https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_2.png"
                           alt="logo"
                         />
@@ -264,17 +263,17 @@ export default function IndexPage() {
             }
           >
             <div
-              className="bg-gray-800 opacity-50 w-full h-full"
+              className=" opacity-50 w-full h-full"
               onClick={() => setShow(!show)}
             />
-            <div className="w-64 z-40 fixed overflow-y-auto  top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+            <div className="w-60 z-40 fixed overflow-y-auto  top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
               <div className="px-6 h-full">
                 <div className="flex flex-col justify-between h-full w-full">
                   <div>
                     <div className="mt-6 flex w-full items-center justify-between">
-                      <div className="flex items-center justify-between w-full">
+                      <div className="flex items-center justify-between w-full space-x-32">
                         <div className="flex items-center">
-                          <svg
+                          {/* <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width={43}
                             height={44}
@@ -287,14 +286,14 @@ export default function IndexPage() {
                               d="M37.8735 0C36.1688 0 34.7818 1.37956 34.7818 3.0751C34.7818 4.77063 36.1688 6.15019 37.8735 6.15019C39.5782 6.15019 40.9653 4.77063 40.9653 3.0751C40.9653 1.37956 39.5782 0 37.8735 0ZM37.8735 4.61264C37.021 4.61264 36.3277 3.92305 36.3277 3.0751C36.3277 2.22714 37.021 1.53755 37.8735 1.53755C38.7261 1.53755 39.4194 2.22714 39.4194 3.0751C39.4194 3.92305 38.7261 4.61264 37.8735 4.61264ZM26.6663 1.0513C26.1828 1.0513 25.7909 1.44107 25.7909 1.92193C25.7909 2.4028 26.1828 2.79238 26.6663 2.79238C27.1497 2.79238 27.5416 2.40261 27.5416 1.92193C27.5416 1.44107 27.1497 1.0513 26.6663 1.0513ZM43 13.4535C43 13.9342 42.6081 14.324 42.1247 14.324C41.6412 14.324 41.2493 13.9342 41.2493 13.4535C41.2493 12.9727 41.6412 12.5829 42.1247 12.5829C42.6081 12.5829 43 12.9729 43 13.4535ZM18.1654 2.59019L35.1698 12.4044C35.4079 12.5418 35.5548 12.7951 35.5548 13.0692V33.0573C35.5548 33.3273 35.4123 33.5772 35.1803 33.7161L18.1758 43.8901C18.0533 43.9633 17.915 44 17.7774 44C17.6398 44 17.5016 43.9633 17.3789 43.8901L0.374484 33.7161C0.142219 33.5772 0 33.3271 0 33.0573V13.0692C0 12.7951 0.146857 12.5418 0.384919 12.4044L17.3894 2.59019C17.6296 2.45124 17.9254 2.45124 18.1654 2.59019ZM17.7774 4.14388L33.2524 13.0751L23.0207 19.0887L18.5503 16.4735V12.3004C18.5503 11.8758 18.2042 11.5316 17.7774 11.5316C17.3505 11.5316 17.0044 11.8758 17.0044 12.3004V16.4735L11.9752 19.4158C11.7389 19.554 11.5939 19.8057 11.5939 20.0783V25.8047L1.54586 31.7102V13.5118L17.7774 4.14388ZM2.28227 33.0632L17.7774 42.3341L34.0091 32.6225V14.4162L23.961 20.322V26.4081C23.961 26.6807 23.8161 26.9325 23.5798 27.0706L18.5505 30.0125V33.826C18.5505 34.2506 18.2044 34.5948 17.7776 34.5948C17.3507 34.5948 17.0046 34.2506 17.0046 33.826V30.0125L12.2274 27.2182L2.28227 33.0632Z"
                               fill="#667EEA"
                             />
-                          </svg>
+                          </svg> */}
                           <p className="text-base md:text-2xl text-gray-800 ml-3">
-                            The North
+                            Admin Panel
                           </p>
                         </div>
                         <div
                           id="cross"
-                          className="text-gray-800"
+                          className="text-gray-800 w-full"
                           onClick={() => setShow(!show)}
                         >
                           <svg
@@ -318,6 +317,39 @@ export default function IndexPage() {
                     </div>
                     <ul className="f-m-m">
                       <a className="cursor-pointer">
+                        <li className="text-gray-800 pt-10">
+                          <div className="flex items-center">
+                            <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
+                              <svg
+                                className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 22 21"
+                              >
+                                <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z" />
+                                <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z" />
+                              </svg>
+                            </div>
+                            <p className="text-indigo-700 xl:text-base text-base ml-3">
+                              Dashboard
+                            </p>
+                          </div>
+                        </li>
+                      </a>
+                      <a className="cursor-pointer">
+                        <li className="text-gray-800 pt-10">
+                          <div className="flex items-center">
+                            <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
+                              <i class="fa fa-table"></i>
+                            </div>
+                            <p className="text-indigo-700 xl:text-base text-base ml-3">
+                              Table
+                            </p>
+                          </div>
+                        </li>
+                      </a>
+                      {/* <a className="cursor-pointer">
                         <li className="text-gray-800 pt-10">
                           <div className="flex items-center">
                             <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
@@ -357,7 +389,31 @@ export default function IndexPage() {
                               </svg>
                             </div>
                             <p className="text-indigo-700 xl:text-base text-base ml-3">
-                              Dashboard
+                              OverView
+                            </p>
+                          </div>
+                        </li>
+                      </a> */}
+                      <a className="cursor-pointer">
+                        <li className="text-gray-800 pt-10">
+                          <div className="flex items-center">
+                            <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
+                              <i class="fa fa-inbox"></i>
+                            </div>
+                            <p className="text-indigo-700 xl:text-base text-base ml-3">
+                              Inbox
+                            </p>
+                          </div>
+                        </li>
+                      </a>
+                      <a className="cursor-pointer">
+                        <li className="text-gray-800 pt-10">
+                          <div className="flex items-center">
+                            <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
+                              <i class="fa fa-user"></i>
+                            </div>
+                            <p className="text-indigo-700 xl:text-base text-base ml-3">
+                              User
                             </p>
                           </div>
                         </li>
@@ -368,21 +424,83 @@ export default function IndexPage() {
                             <div className="flex items-center">
                               <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
                                 <svg
+                                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
+                                  aria-hidden="true"
                                   xmlns="http://www.w3.org/2000/svg"
-                                  className="icon icon-tabler icon-tabler-puzzle"
-                                  viewBox="0 0 24 24"
-                                  strokeWidth="1.5"
-                                  stroke="currentColor"
-                                  fill="none"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
+                                  fill="currentColor"
+                                  viewBox="0 0 18 20"
                                 >
-                                  <path stroke="none" d="M0 0h24v24H0z" />
-                                  <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
+                                  <path d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
                                 </svg>
                               </div>
                               <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">
-                                Products
+                                Product
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                      </a>
+                      <a className="cursor-pointer">
+                        <li className="text-gray-800 pt-8">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center">
+                              <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
+                                <i class="fa fa-gears"></i>
+                              </div>
+                              <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">
+                                Settings
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                      </a>
+                      <a className="cursor-pointer">
+                        <li className="text-gray-800 pt-8">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center">
+                              <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
+                                <svg
+                                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="none"
+                                  viewBox="0 0 18 16"
+                                >
+                                  <path
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"
+                                  />
+                                </svg>
+                              </div>
+                              <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">
+                                SignIn
+                              </p>
+                            </div>
+                          </div>
+                        </li>
+                      </a>
+                      <a className="cursor-pointer">
+                        <li className="text-gray-800 pt-8">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center">
+                              <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
+                                <svg
+                                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
+                                  aria-hidden="true"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  fill="currentColor"
+                                  viewBox="0 0 20 20"
+                                >
+                                  <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z" />
+                                  <path d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z" />
+                                  <path d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z" />
+                                </svg>
+                              </div>
+                              <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">
+                                SignUp
                               </p>
                             </div>
                           </div>
