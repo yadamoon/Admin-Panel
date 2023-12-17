@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="bg-gray-100 ">
       {/* //todo for small size */}
-      <button
+      {/* <button
         data-drawer-target="sidebar-multi-level-sidebar"
         data-drawer-toggle="sidebar-multi-level-sidebar"
         aria-controls="sidebar-multi-level-sidebar"
@@ -37,7 +37,7 @@ function App() {
             d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
           ></path>
         </svg>
-      </button>
+      </button> */}
 
       {/* //todo sidebar */}
       <aside
@@ -53,8 +53,7 @@ function App() {
       <div className="p-4 sm:ml-64">
         <div className="rounded-lg dark:border-gray-700 ">
           {/* //todo HeaderPart */}
-          <div className=" mb-4 rounded bg-gray-50 dark:bg-gray-800">
-            <p className="text-2xl text-gray-400 dark:text-gray-500"></p>
+          <div className=" rounded bg-gray-50 dark:bg-gray-800">
             <HeaderApp />
           </div>
           <Routes>
