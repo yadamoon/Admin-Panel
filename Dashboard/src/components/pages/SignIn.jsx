@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 function SignIn() {
-  const [passwordType, setPasswordType] = useState("password");
+  const [showPassword, setShowPassword] = useState(false);
   const {
     register,
     handleSubmit,
@@ -17,11 +17,13 @@ function SignIn() {
   });
 
   const handleCkeckBox = () => {
-    if (passwordType === "password") {
-      setPasswordType("text");
-      return;
+    if (type === "password") {
+      setIcon(eye);
+      setType("text");
+    } else {
+      setIcon(eyeOff);
+      setType("password");
     }
-    setPasswordType("password");
   };
 
   const handleSignIn = ({ email, password }) => {
@@ -79,13 +81,14 @@ function SignIn() {
                     Password
                   </label>
                   <input
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     {...register("password", {
                       required: "Please Enter Correct Password!",
                     })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
                     placeholder="Password"
                   />
+
                   {errors.password && (
                     <span className="text-red-700 col-span-1 md:col-span-2 ">
                       {errors.password.message}
@@ -97,9 +100,8 @@ function SignIn() {
                   <div className="mb-[0.125rem] block min-h-[1.5rem] pl-[1.5rem]">
                     <input
                       className="relative float-left -ml-[1.5rem] mr-[6px] mt-[0.15rem] h-[1.125rem] w-[1.125rem] text-black border "
-                      type={passwordType}
-                      id="exampleCheck2"
-                      onClick={handleCkeckBox}
+                      type="checkbox"
+                      onChange={() => setShowPassword(!showPassword)}
                     />
                     <label
                       className="inline-block pl-[0.15rem] hover:cursor-pointer"
