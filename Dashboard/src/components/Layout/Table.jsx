@@ -58,8 +58,8 @@ function Table() {
 
   const headTable = ["FullName", "Email", "Address", "Information"];
   return (
-    <>
-      <div className="w-full">
+    <div className="flex justify-center">
+      <div className=" w-full">
         <div className="px-4 xl:px-0 py-10">
           <div className="flex flex-col lg:flex-row flex-wrap">
             <div className="mt-4 lg:mt-0 lg:w-3/5">
@@ -102,7 +102,7 @@ function Table() {
             </div>
           </div>
         </div>
-        <div className="  ">
+        <div className=" flex  ">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             {/* //todo Header of Table */}
             <thead className="text-xs text-black uppercase  bg-gray-200">
@@ -149,7 +149,7 @@ function Table() {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
