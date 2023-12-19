@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
@@ -316,7 +317,7 @@ export default function IndexPage() {
                       </div>
                     </div>
                     <ul className="f-m-m">
-                      <a className="cursor-pointer">
+                      <Link to="/" className="cursor-pointer">
                         <li className="text-gray-800 pt-10">
                           <div className="flex items-center">
                             <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
@@ -336,8 +337,8 @@ export default function IndexPage() {
                             </p>
                           </div>
                         </li>
-                      </a>
-                      <a className="cursor-pointer">
+                      </Link>
+                      <Link to="/Table" className="cursor-pointer">
                         <li className="text-gray-800 pt-10">
                           <div className="flex items-center">
                             <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
@@ -348,9 +349,9 @@ export default function IndexPage() {
                             </p>
                           </div>
                         </li>
-                      </a>
+                      </Link>
 
-                      <a className="cursor-pointer">
+                      <Link to="/Inbox" className="cursor-pointer">
                         <li className="text-gray-800 pt-10">
                           <div className="flex items-center">
                             <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
@@ -361,8 +362,8 @@ export default function IndexPage() {
                             </p>
                           </div>
                         </li>
-                      </a>
-                      <a className="cursor-pointer">
+                      </Link>
+                      <Link to="/User" className="cursor-pointer">
                         <li className="text-gray-800 pt-10">
                           <div className="flex items-center">
                             <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
@@ -373,8 +374,8 @@ export default function IndexPage() {
                             </p>
                           </div>
                         </li>
-                      </a>
-                      <a className="cursor-pointer">
+                      </Link>
+                      <Link to="/Product" className="cursor-pointer">
                         <li className="text-gray-800 pt-8">
                           <div className="flex items-center justify-between">
                             <div className="flex items-center">
@@ -395,7 +396,7 @@ export default function IndexPage() {
                             </div>
                           </div>
                         </li>
-                      </a>
+                      </Link>
                       <a className="cursor-pointer">
                         <li className="text-gray-800 pt-8">
                           <div className="flex items-center justify-between">
@@ -410,7 +411,7 @@ export default function IndexPage() {
                           </div>
                         </li>
                       </a>
-                      <a className="cursor-pointer">
+                      <Link to="/SignIn" className="cursor-pointer">
                         <li className="text-gray-800 pt-8">
                           <div className="flex items-center justify-between">
                             <div className="flex items-center">
@@ -437,8 +438,8 @@ export default function IndexPage() {
                             </div>
                           </div>
                         </li>
-                      </a>
-                      <a className="cursor-pointer">
+                      </Link>
+                      <Link to="SignUp" className="cursor-pointer">
                         <li className="text-gray-800 pt-8">
                           <div className="flex items-center justify-between">
                             <div className="flex items-center">
@@ -461,7 +462,7 @@ export default function IndexPage() {
                             </div>
                           </div>
                         </li>
-                      </a>
+                      </Link>
                     </ul>
                   </div>
                   <div className="w-full pt-4">
