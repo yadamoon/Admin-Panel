@@ -5,7 +5,7 @@ const ListUser = () => {
   return (
     <div
       className="w-full h-screen
-     justify-center items-center"
+     justify-center items-center "
     >
       <Table />
     </div>
