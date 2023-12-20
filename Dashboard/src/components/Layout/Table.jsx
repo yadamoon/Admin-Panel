@@ -41,10 +41,7 @@ function RCPaginate({ items, itemsPerPage, setter }) {
 function Table() {
   const [users, setUsers] = useState([]);
   const [displayedUsers, setDisplayedUsers] = useState([]);
-  // const [recipesDisplayed, setRecipesDisplayed] = useState([]);
-
   const [usersFiltered, setUsersFiltered] = useState([]);
-  // const [show, setShow] = useState(null);
 
   function getUsers() {
     try {
@@ -113,7 +110,7 @@ function Table() {
         <div className="space-y-2 my-16">
           {users.length > 4 && (
             <RCPaginate
-              items={users}
+              items={usersFiltered}
               itemsPerPage={5}
               setter={setDisplayedUsers}
               onPageChange={handlePageChange}
