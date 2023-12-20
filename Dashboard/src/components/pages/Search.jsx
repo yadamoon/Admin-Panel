@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Search = () => {
+const Search = ({ users, setter }) => {
+  const [search, setSearch] = useState();
+
+  const searchHandel = () => {
+    const usersFiltered = users.filter((item) =>
+      item.name.toLowerCase().includes(search.toLowerCase())
+    );
+    setter(usersFiltered);
+  };
   return (
     <div className="px-4 xl:px-0 py-10">
       <div className="flex flex-col lg:flex-row flex-wrap">
@@ -25,7 +33,7 @@ const Search = () => {
             <button
               type="submit"
               className="focus:ring-2 focus:ring-offset-2 text-gray-600 focus:text-indigo-700 focus:rounded-full  focus:bg-gray-100 focus:ring-indigo-700 bg-white focus:outline-none absolute right-0 top-0 mt-5 mr-4"
-              onClick={SearchHandel}
+              onClick={searchHandel}
             >
               <svg
                 className=" h-4 w-4 fill-current"
