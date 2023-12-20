@@ -140,7 +140,7 @@ function Table() {
           </table>
         </div>
         <div className="space-y-2 my-16">
-          {users.length > 4 && (
+          {users.length > 9 && (
             <RCPaginate
               items={users}
               itemsPerPage={10}
