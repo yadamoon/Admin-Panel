@@ -2,29 +2,29 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-function RCPaginate({ items, itemsPerPage, setter }) {
+function RCPaginate({ items, itemsPerPage }) {
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = items.slice(itemOffset, endOffset);
 
   useEffect(() => {
-    setter(currentItems);
+    // setter(currentItems);
   }, [itemOffset, endOffset, items]);
 
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   const handlePageClick = (event) => {
-    const newOffset = event.selected * itemsPerPage;
+    const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
   };
   return (
     <div className="flex justify-center  ">
       <ReactPaginate
-        containerClassName="flex space-x-2 items-center bg- p-1 px-2 justify-center rounded sm:1/2"
+        containerClassName="flex space-x-2 items-center bg-white p-1 px-2 justify-center rounded sm:1/2"
         nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
         previousClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
-        activeLinkClassName=" text-white bg-blue-700 border-0"
-        pageLinkClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-blue-800 hover:text-white"
+        activeLinkClassName=" text-white bg-teal-700 border-0"
+        pageLinkClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-teal-500 hover:text-white"
         breakLabel="..."
         nextLabel="next"
         onPageChange={handlePageClick}
@@ -39,9 +39,10 @@ function RCPaginate({ items, itemsPerPage, setter }) {
 
 function Table() {
   const [users, setUsers] = useState([]);
-  const [usersDisplayed, setUsersDisplayed] = useState([]);
+  const [displayedUsers, setDisplayedUsers] = useState([]);
+  // const [recipesDisplayed, setRecipesDisplayed] = useState([]);
 
-  const [usersFiltered, setUsersFiltered] = useState([]);
+  // const [usersFiltered, setUsersFiltered] = useState([]);
   // const [show, setShow] = useState(null);
 
   function getUsers() {
@@ -57,7 +58,12 @@ function Table() {
 
   useEffect(() => {
     getUsers();
+    setDisplayedUsers(users.slice(0, 5));
   }, []);
+
+  const handlePageChange = (newPageItems) => {
+    setDisplayedUsers(newPageItems);
+  };
 
   const headTable = ["FullName", "Email", "Address", "Information"];
   return (
@@ -117,7 +123,7 @@ function Table() {
                 ))}
               </tr>
             </thead>
-            {users.map((person) => (
+            {displayedUsers.map((person) => (
               <tbody key={person.id}>
                 <tr className="bg-gray-100 ">
                   <th
@@ -143,11 +149,12 @@ function Table() {
           </table>
         </div>
         <div className="space-y-2 my-16">
-          {users.length > 9 && (
+          {users.length > 4 && (
             <RCPaginate
               items={users}
-              itemsPerPage={10}
-              setter={setUsersDisplayed}
+              itemsPerPage={5}
+              // setter={setRecipesDisplayed}
+              onPageChange={handlePageChange}
             />
           )}
         </div>
