@@ -2,13 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-function RCPaginate({ items, itemsPerPage }) {
+function RCPaginate({ items, itemsPerPage, setter }) {
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = items.slice(itemOffset, endOffset);
 
   useEffect(() => {
-    // setter(currentItems);
+    setter(currentItems);
   }, [itemOffset, endOffset, items]);
 
   const pageCount = Math.ceil(items.length / itemsPerPage);
@@ -49,6 +49,7 @@ function Table() {
     try {
       axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
         setUsers(res.data);
+
         console.log(res.data);
       });
     } catch (error) {
@@ -153,7 +154,7 @@ function Table() {
             <RCPaginate
               items={users}
               itemsPerPage={5}
-              // setter={setRecipesDisplayed}
+              setter={setDisplayedUsers}
               onPageChange={handlePageChange}
             />
           )}
