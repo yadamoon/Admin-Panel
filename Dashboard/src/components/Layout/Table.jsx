@@ -45,11 +45,14 @@ function Table() {
   // const [show, setShow] = useState(null);
 
   function getUsers() {
-    axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
-      // const persons = res.data;
-      setUsers(res.data);
-      console.log(res.data);
-    });
+    try {
+      axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
+        setUsers(res.data);
+        console.log(res.data);
+      });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
