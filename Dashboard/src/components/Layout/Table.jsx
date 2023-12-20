@@ -24,8 +24,8 @@ function RCPaginate({ items, itemsPerPage, setter }) {
         containerClassName="flex space-x-2 items-center bg-white p-1 px-2 justify-center rounded sm:1/2"
         nextClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
         previousClassName="bg-gray-300 text-xs uppercase py-1 px-2 rounded-lg hover:opacity-75"
-        activeLinkClassName=" text-white bg-teal-700 border-0"
-        pageLinkClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-teal-500 hover:text-white"
+        activeLinkClassName=" text-white bg-blue-600 border-0"
+        pageLinkClassName="w-8 h-8 flex items-center justify-center text-sm rounded-full border  hover:bg-blue-500 hover:text-white"
         breakLabel="..."
         nextLabel="next"
         onPageChange={handlePageClick}
