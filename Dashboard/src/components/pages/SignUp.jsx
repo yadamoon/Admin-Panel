@@ -121,6 +121,10 @@ const SignUp = () => {
                     type="text"
                     {...register("email", {
                       required: "Please Enter Correct Email!",
+                      pattern: {
+                        value: /[@]/,
+                        message: "Enter at least one special character",
+                      },
                     })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
                     placeholder="Email address"
