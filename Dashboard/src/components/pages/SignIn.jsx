@@ -69,12 +69,12 @@ function SignIn() {
                         message: "Enter at least one special character",
                       },
                       minLength: {
-                        value: 2,
-                        message: "Please Enter atleast more than 2 character",
+                        value: 15,
+                        message: "Please Enter atleast more than 15 character",
                       },
                       maxLength: {
-                        value: 15,
-                        message: "Please Enter atleast less than 15 character",
+                        value: 32,
+                        message: "Please Enter atleast less than 32 character",
                       },
                     })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
@@ -96,6 +96,14 @@ function SignIn() {
                     type={showPassword ? "text" : "password"}
                     {...register("password", {
                       required: "Please Enter Correct Password!",
+                      minLength: {
+                        value: 6,
+                        message: "Please Enter atleast more than 6 character",
+                      },
+                      maxLength: {
+                        value: 10,
+                        message: "Please Enter atleast less than 10 character",
+                      },
                     })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
                     placeholder="Password"
