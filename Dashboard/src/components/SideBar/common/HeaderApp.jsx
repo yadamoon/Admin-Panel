@@ -13,35 +13,13 @@ export default function IndexPage() {
             <div className="flex items-end justify-end">
               {/* //!? button of signIn and SignUp */}
               <div className="">
-                <ul className=" grid grid-cols-2 gap-2 text-center ">
-                  <Link
-                    to="/SignIn"
-                    className=" col-span-1 border p-1 rounded-lg  bg-blue-600"
-                  >
-                    <li className="text-gray-800 ">
-                      <div className="flex items-center justify-center">
-                        <div className="flex items-center">
-                          <p className="text-white xl:text-base md:text-2xl text-base ">
-                            SignIn
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  </Link>
-                  <Link
-                    to="SignUp"
-                    className="col-span-1 border p-1 pl-1 pr-2 rounded-lg mx-3 bg-blue-600"
-                  >
-                    <li className=" ">
-                      <div className="flex items-center justify-center">
-                        <div className="flex items-center">
-                          <p className="text-white xl:text-base md:text-2xl text-base ">
-                            SignUp
-                          </p>
-                        </div>
-                      </div>
-                    </li>
-                  </Link>
+                <ul className=" grid grid-cols-2 gap-2 text-center mx-3 ">
+                  <div className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white">
+                    SignIn
+                  </div>
+                  <div className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white">
+                    SignUp
+                  </div>
                 </ul>
               </div>
 
