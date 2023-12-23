@@ -12,16 +12,16 @@ export default function IndexPage() {
           <div className="mx-auto container px-6 py-2 xl:py-0">
             <div className="flex items-end justify-end">
               {/* //!? button of signIn and SignUp */}
-              <div className="grid grid-cols-2 gap-3 text-center ">
-                <ul className=" flex items-center justify-center gap-3">
+              <div className="">
+                <ul className=" grid grid-cols-2 gap-2 text-center ">
                   <Link
                     to="/SignIn"
-                    className="cursor-pointer col-span-1 border p-1 rounded bg-blue-600"
+                    className=" col-span-1 border p-1 rounded-lg  bg-blue-600"
                   >
                     <li className="text-gray-800 ">
                       <div className="flex items-center justify-center">
                         <div className="flex items-center">
-                          <p className="text-white xl:text-base md:text-2xl text-base ml-3">
+                          <p className="text-white xl:text-base md:text-2xl text-base ">
                             SignIn
                           </p>
                         </div>
@@ -30,12 +30,12 @@ export default function IndexPage() {
                   </Link>
                   <Link
                     to="SignUp"
-                    className="cursor-pointer col-span-1 border p-1 bg-blue-600"
+                    className="col-span-1 border p-1 pl-1 pr-2 rounded-lg mx-3 bg-blue-600"
                   >
-                    <li className="t ">
+                    <li className=" ">
                       <div className="flex items-center justify-center">
                         <div className="flex items-center">
-                          <p className="text-white xl:text-base md:text-2xl text-base ml-3">
+                          <p className="text-white xl:text-base md:text-2xl text-base ">
                             SignUp
                           </p>
                         </div>
@@ -44,6 +44,7 @@ export default function IndexPage() {
                   </Link>
                 </ul>
               </div>
+
               <div className="inset-y-0 left-0 flex items-end xl:hidden">
                 <div className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-100 focus:outline-none transition duration-150 ease-in-out">
                   <div className="visible xl:hidden">
