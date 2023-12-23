@@ -2,16 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import Search from "../pages/Search";
-
 function RCPaginate({ items, itemsPerPage, setter }) {
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = items.slice(itemOffset, endOffset);
-
   useEffect(() => {
     setter(currentItems);
   }, [itemOffset, endOffset, items]);
-
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   const handlePageClick = (event) => {
@@ -37,7 +34,6 @@ function RCPaginate({ items, itemsPerPage, setter }) {
     </div>
   );
 }
-
 function Table() {
   const [users, setUsers] = useState([]);
   const [displayedUsers, setDisplayedUsers] = useState([]);
@@ -55,16 +51,13 @@ function Table() {
       console.log(error);
     }
   }
-
   useEffect(() => {
     getUsers();
     setDisplayedUsers(users.slice(0, 5));
   }, []);
-
   const handlePageChange = (newPageItems) => {
     setDisplayedUsers(newPageItems);
   };
-
   const headTable = ["FullName", "Email", "Address", "Information"];
   return (
     <div className="flex justify-center">
@@ -91,9 +84,8 @@ function Table() {
                   >
                     {person.name}
                   </th>
-                  <td className="px-6 py-4"> {person.email}</td>
-                  <td className="px-6 py-4">{person.address.city}</td>
-
+                  <td className="px-6 py-4"> {person.email} </td>
+                  <td className="px-6 py-4"> {person.address.city} </td>
                   <td className="px-6 py-4">
                     <a
                       href=""
@@ -111,7 +103,7 @@ function Table() {
           {users.length > 4 && (
             <RCPaginate
               items={usersFiltered}
-              itemsPerPage={5}
+              itemsPerPage={6}
               setter={setDisplayedUsers}
               onPageChange={handlePageChange}
             />
