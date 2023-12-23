@@ -117,11 +117,11 @@ export default function IndexPage() {
                 </div>
               </div>
 
-              <div className="flex">
+              <div className="flex ">
                 <div className="hidden xl:flex  justify-end items-end ">
                   <div className="">
                     <div
-                      className="flex  items-center relative  "
+                      className="flex   items-center relative  "
                       onClick={() => setProfile(!profile)}
                     >
                       {profile && (
@@ -219,7 +219,7 @@ export default function IndexPage() {
             </div>
           </div>
         </nav>
-        <nav>
+        <nav className="w-screen bg-white">
           <div className="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-40">
             <div className="w-24">
               <svg
