@@ -57,9 +57,9 @@ function SignIn() {
                 </div>
                 {/* <!-- Email input --> */}
                 <div className="relative mb-6" data-te-input-wrapper-init>
-                  <label htmlFor="Password" className="font-bold">
+                  {/* <label htmlFor="Password" className="font-bold">
                     Email
-                  </label>
+                  </label> */}
                   <input
                     type="text"
                     {...register("email", {
@@ -89,9 +89,9 @@ function SignIn() {
 
                 {/* <!-- new Password input --> */}
                 <div className="relative mb-6" data-te-input-wrapper-init>
-                  <label htmlFor="Password" className="font-bold ">
+                  {/* <label htmlFor="Password" className="font-bold ">
                     Password
-                  </label>
+                  </label> */}
                   <input
                     type={showPassword ? "text" : "password"}
                     {...register("password", {
