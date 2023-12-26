@@ -14,7 +14,7 @@ import Error from "./components/pages/Error";
 
 function App() {
   return (
-    <div className="bg-gray-100 ">
+    <div className="bg-gray-100 w-full ">
       {/* //!? sidebar */}
       <aside
         id="sidebar-multi-level-sidebar"
