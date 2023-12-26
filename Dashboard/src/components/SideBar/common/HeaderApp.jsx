@@ -13,14 +13,20 @@ export default function IndexPage() {
             <div className="flex items-end justify-end">
               {/* //!? button of signIn and SignUp */}
               <div className="">
-                <ul className=" grid grid-cols-2 gap-2 text-center mx-3 ">
-                  <div className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white">
+                <div className=" grid grid-cols-2 gap-2 text-center mx-3 ">
+                  <Link
+                    to="/SignIn"
+                    className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
+                  >
                     SignIn
-                  </div>
-                  <div className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white">
+                  </Link>
+                  <Link
+                    to="/SignUp"
+                    className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
+                  >
                     SignUp
-                  </div>
-                </ul>
+                  </Link>
+                </div>
               </div>
 
               <div className="inset-y-0 left-0 flex items-end xl:hidden">
