@@ -65,8 +65,8 @@ const PieComponent = () => {
       <br />
       <div className="col-span-2">
         <div className="grid grid-cols-4 ">
-          {data.map((list, index) => (
-            <div className="">
+          {data.map((list) => (
+            <div key={list.id} className="">
               <p className=" text-teal-600 col-span-1   ">
                 <span> {list.name}</span>
               </p>
