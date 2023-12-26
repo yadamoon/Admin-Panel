@@ -6,7 +6,7 @@ export default function IndexPage() {
 
   return (
     <>
-      <div className="bg-gray-100 h-full w-full">
+      <div className=" h-full w-full">
         {/* Code block starts */}
         <nav className="bg-white shadow xl:block hidden p-4 ">
           <div className="mx-auto container px-6 py-2 xl:py-0">
