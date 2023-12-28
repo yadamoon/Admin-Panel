@@ -1,3 +1,4 @@
+import Item from "antd/es/list/Item";
 import React, { useState } from "react";
 
 const Settings = () => {
@@ -99,14 +100,14 @@ const Settings = () => {
                         <img
                           className="bg-gray-200 p-2 mb-5 rounded-full"
                           src={item.src}
-                          alt="home-1"
+                          alt={Item.msg}
                         />
                       </span>
                       <h1 className="pb-4 text-2xl font-semibold">
                         {item.name}
                       </h1>
                       <div className="my-5">
-                        <div className="flex items-center pb-4 dark:border-gray-700 cursor-pointer w-full space-x-3">
+                        <div className="flex items-center pb-4 dark:border-gray-700 cursor-pointer w-full space-x-3 hover:opacity-60">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="12.5"

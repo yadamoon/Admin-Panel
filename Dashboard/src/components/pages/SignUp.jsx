@@ -7,7 +7,7 @@ const SignUp = () => {
     register,
     handleSubmit,
 
-    formState: { errors },
+    formState: { errors, watch },
     reset,
   } = useForm({
     defaultValues: {
@@ -148,8 +148,17 @@ const SignUp = () => {
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
                     type="password"
+                    name="password"
                     {...register("password", {
                       required: "Please Enter New Password!",
+                      minLength: {
+                        value: 8,
+                        message: "min Length 8",
+                        maxLength: {
+                          value: 12,
+                          message: "max Length are 12",
+                        },
+                      },
                     })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
                     placeholder="Password"
@@ -165,8 +174,19 @@ const SignUp = () => {
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
                     type="password"
+                    name="confiremPassword"
                     {...register("confiremPassword", {
                       required: "Please Enter Correct Confirem Password !",
+                      minLength: {
+                        value: 8,
+                        message: "min Length 8",
+                      },
+                      maxLength: {
+                        value: 12,
+                        message: "max Length are 12",
+                      },
+                      validate: (value) =>
+                        value === password || "Passwords do not match",
                     })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
                     placeholder="Confirem Password"
