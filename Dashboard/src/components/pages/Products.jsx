@@ -1,44 +1,45 @@
 import React from "react";
-const items = [
-  {
-    name: " Account Overview",
-    src: "https://i.ibb.co/27R6nk5/home-1.png",
-    alt: "home-1",
-    msg: "",
-  },
-  {
-    name: " Subscription Plans",
-    src: "https://i.ibb.co/bdGyLYk/pricetags-1.png",
-    alt: "pricetags-1",
-    msg: "",
-  },
-  {
-    name: "Payment Options",
-    src: "https://i.ibb.co/GT4KHvJ/card-1.png",
-    alt: "home-1",
-    msg: "",
-  },
-  {
-    name: " Notification Settings",
-    src: "https://i.ibb.co/rG4r6NJ/notifications-1.png",
-    alt: "home-1",
-    msg: "",
-  },
-  {
-    name: "Profile Preferences",
-    src: "https://i.ibb.co/HFC1hqn/people-1.png",
-    alt: "home-1",
-    msg: "",
-  },
-  {
-    name: " Privacy and Cookies",
-    src: "https://i.ibb.co/QX80fYm/lock-closed-1.png",
-    alt: "home-1",
-    msg: "",
-  },
-];
 
 const Products = () => {
+  const items = [
+    {
+      // name: " Account Overview",
+      src: "https://i.ibb.co/27R6nk5/home-1.png",
+      alt: "home-1",
+      msg: "",
+    },
+    {
+      // name: " Subscription Plans",
+      src: "https://i.ibb.co/bdGyLYk/pricetags-1.png",
+      alt: "pricetags-1",
+      msg: "",
+    },
+    {
+      // name: "Payment Options",
+      src: "https://i.ibb.co/GT4KHvJ/card-1.png",
+      alt: "home-1",
+      msg: "",
+    },
+    {
+      // name: " Notification Settings",
+      src: "https://i.ibb.co/rG4r6NJ/notifications-1.png",
+      alt: "home-1",
+      msg: "",
+    },
+    {
+      // name: "Profile Preferences",
+      src: "https://i.ibb.co/HFC1hqn/people-1.png",
+      alt: "home-1",
+      msg: "",
+    },
+    {
+      // name: " Privacy and Cookies",
+      src: "https://i.ibb.co/QX80fYm/lock-closed-1.png",
+      alt: "home-1",
+      msg: "",
+    },
+  ];
+
   return (
     <>
       <div className="bg-gray-100 w-full h-screen">
@@ -49,7 +50,7 @@ const Products = () => {
                 <div className="mt-4 lg:mt-0 lg:w-3/5">
                   <div>
                     <h1 className="text-3xl ml-2 lg:ml-0 lg:text-4xl font-bold text-gray-900 tracking-normal lg:w-11/12">
-                      Settings
+                      Products
                     </h1>
                   </div>
                 </div>
@@ -94,9 +95,9 @@ const Products = () => {
                       {/* class="absolute inset-0 object-center object-cover h-full w-full"  */}
                       <span>
                         <img
-                          className="bg-gray-200 p-2 mb-5 rounded-full"
+                          className="bg-gray-200 p-2 mb-5 rounded-full w-full"
                           src={item.src}
-                          alt={Item.msg}
+                          alt={item.msg}
                         />
                       </span>
                       <h1 className="pb-4 text-2xl font-semibold">
