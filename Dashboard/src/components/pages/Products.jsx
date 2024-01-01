@@ -54,6 +54,7 @@ const Products = () => {
                     </h1>
                   </div>
                 </div>
+
                 <div className="lg:w-2/5 flex mt-10 ml-2 lg:ml-0 lg:mt-0 lg:justify-end">
                   <div className="pt-2 relative  text-gray-600">
                     <input
@@ -90,17 +91,17 @@ const Products = () => {
             <div className="px-6 xl:px-0">
               <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8">
                 {items.map((item) => (
-                  <div key={item.id} role="cell" className="bg-gray-100">
+                  <div key={item.id} role="cell">
                     <div className="bg-white  rounded-md relative h-full w-full">
                       {/* class="absolute inset-0 object-center object-cover h-full w-full"  */}
-                      <span className="hover:opacity-75">
+                      <span className="hover:opacity-75 w-full">
                         <img
-                          className="bg-gray-200 p-2 mb-5  w-full"
+                          className="p-2 mb-5  w-full"
                           src={item.src}
                           alt={item.msg}
                         />
                       </span>
-                      <h1 className="pb-4 text-2xl font-semibold text-center items-center">
+                      <h1 className="pb-4 text-xlfont-semibold text-center items-center text-blue-500 hover:opacity-60">
                         {item.name}
                       </h1>
                     </div>
