@@ -28,21 +28,6 @@ const Profiles = () => {
                     />
 
                     <h1 className="text-xl font-bold">{userList.name}</h1>
-                    {/* <p className="text-gray-600">Software Developer</p> */}
-                    {/* <div className="mt-6 flex flex-wrap gap-4 justify-center">
-<a
-  href="#"
-  className="bg-gray-800 hover:bg-gray-600 text-white py-2 px-4 rounded"
->
-  Contact
-</a>
-<a
-  href="#"
-  className="bg-gray-500 hover:bg-gray-600 text-gray-50 py-2 px-4 rounded"
->
-  Resume
-</a>
-                  </div> */}
                   </div>
                   <hr className="my-6 border-t border-gray-300" />
                   <div className="flex flex-col">
