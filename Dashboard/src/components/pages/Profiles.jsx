@@ -1,6 +1,7 @@
 import React from "react";
 
 const Profiles = () => {
+  // !? information of user
   const userInfo = [
     {
       name: " Yared Chereka",
@@ -17,7 +18,9 @@ const Profiles = () => {
     <div>
       <div className="bg-gray-100 h-screen">
         <div className="container mx-auto py-8">
+          {/* //!? total user information  */}
           <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
+            {/* //!? rendering the user information img , fullName , etc.. */}
             {userInfo.map((userList) => (
               <div key={userInfo.id} className="col-span-4 sm:col-span-3">
                 <div className="bg-white shadow rounded-lg p-6  ">
@@ -42,6 +45,8 @@ const Profiles = () => {
                 </div>
               </div>
             ))}
+
+            {/* //!? rendering the more information like detail information ...  */}
             {userInfo.map((moreInfo) => (
               <div key={moreInfo.id} className="col-span-4 sm:col-span-9">
                 <div className="bg-white shadow rounded-lg p-6">
