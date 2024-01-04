@@ -1,6 +1,16 @@
 import React from "react";
 
 const Profiles = () => {
+  const userInfo = [
+    {
+      name: " Yared Chereka",
+      email: "yared241993@gmail.com",
+      detail: "",
+      titel: "Detail",
+      SocialMedia: "",
+    },
+  ];
+
   return (
     <div>
       <div className="bg-gray-100 h-screen">
@@ -54,7 +64,26 @@ const Profiles = () => {
                     Nunc finibus vel ante id euismod. Vestibulum ante ipsum
                     primis in faucibus orci luctus et ultrices posuere cubilia
                     Curae; Aliquam erat volutpat. Nulla vulputate pharetra
-                    tellus, in luctus risus rhoncus id.
+                    tellus, in luctus risus rhoncus id. Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit. Sed finibus est vitae
+                    tortor ullamcorper, ut vestibulum velit convallis. Aenean
+                    posuere risus non velit egestas suscipit. Nunc finibus vel
+                    ante id euismod. Vestibulum ante ipsum primis in faucibus
+                    orci luctus et ultrices posuere cubilia Curae; Aliquam erat
+                    volutpat. Nulla vulputate pharetra tellus, in luctus risus
+                    rhoncus id. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Sed finibus est vitae tortor ullamcorper,
+                    ut vestibulum velit convallis. Aenean posuere risus non
+                    velit egestas suscipit. Nunc finibus vel ante id euismod.
+                    Vestibulum ante ipsum primis in faucibus orci luctus et
+                    ultrices posuere cubilia Curae; Aliquam erat volutpat. Nulla
+                    vulputate pharetra tellus, in luctus risus rhoncus id. Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                    finibus est vitae tortor ullamcorper, ut vestibulum velit
+                    convallis. Aenean posuere risus non velit egestas suscipit.
+                    Nunc finibus vel ante id euismod. Vestibulum ante ipsum
+                    primis in faucibus orci luctus et ultrices posuere cubilia
+                    Curae
                   </p>
                 </div>
 
@@ -62,7 +91,7 @@ const Profiles = () => {
                   Find me on
                 </h3>
 
-                <div className="flex justify-center items-center gap-6 my-6">
+                {/* <div className="flex justify-center items-center gap-6 my-6">
                   <a
                     className="text-gray-700 hover:text-orange-600"
                     aria-label="Visit TrendyMinds LinkedIn"
@@ -148,7 +177,7 @@ const Profiles = () => {
                       ></path>
                     </svg>
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
