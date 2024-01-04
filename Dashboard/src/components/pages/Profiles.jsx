@@ -1,5 +1,4 @@
 import React from "react";
-
 const Profiles = () => {
   // !? information of user
   const userInfo = [
@@ -13,7 +12,6 @@ const Profiles = () => {
       telephone: "+251932380202",
     },
   ];
-
   return (
     <div>
       <div className="bg-gray-100 h-screen">
@@ -38,8 +36,17 @@ const Profiles = () => {
                       information
                     </span>
                     <ul>
-                      <li className="mb-2">{userList.email}</li>
-                      <li className="mb-2">{userList.telephone}</li>
+                      <li className="mb-2">
+                        {" "}
+                        <span>
+                          <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                        {userList.email}
+                      </li>
+                      <li className="mb-2">
+                        <i class="fa fa-phone" aria-hidden="true"></i>{" "}
+                        {userList.telephone}
+                      </li>
                     </ul>
                   </div>
                 </div>
