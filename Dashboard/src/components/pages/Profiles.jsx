@@ -35,16 +35,18 @@ const Profiles = () => {
                     <span className="text-gray-600 uppercase font-bold tracking-wider mb-2">
                       information
                     </span>
-                    <ul>
+                    <ul className="">
                       <li className="mb-2">
                         {" "}
-                        <span>
+                        <span className="mx-4">
                           <i class="fa fa-envelope" aria-hidden="true"></i>
                         </span>
                         {userList.email}
                       </li>
                       <li className="mb-2">
-                        <i class="fa fa-phone" aria-hidden="true"></i>{" "}
+                        <span className="mx-4">
+                          <i class="fa fa-phone" aria-hidden="true"></i>{" "}
+                        </span>
                         {userList.telephone}
                       </li>
                     </ul>
