@@ -11,6 +11,7 @@ import SignUp from "./components/pages/SignUp";
 import Settings from "./components/pages/Settings";
 import Inbox from "./components/pages/Inbox";
 import Error from "./components/pages/Error";
+import ForgetPassword from "./components/pages/ForgetPassword";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/Product" element={<Products />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/ForgetPassword" element={<ForgetPassword />} />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
