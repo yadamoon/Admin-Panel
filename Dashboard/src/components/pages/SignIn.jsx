@@ -130,6 +130,12 @@ function SignIn() {
                       Show Password
                     </label>
                   </div>
+                  <Link
+                    to="/ForgetPassword"
+                    className="text-blue-500 hover:opacity-60"
+                  >
+                    Forget Password ?
+                  </Link>
                 </div>
 
                 {/* <!-- Login button --> */}
@@ -148,7 +154,7 @@ function SignIn() {
                   I don't have an account?
                   <Link
                     to="/SignUp"
-                    className="transition duration-150 ease-in-out  hover:text-blue-600 "
+                    className="transition duration-150 ease-in-out text-blue-600 hover:opacity-60 "
                   >
                     Sign Up
                   </Link>
