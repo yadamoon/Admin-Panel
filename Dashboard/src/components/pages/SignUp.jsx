@@ -55,7 +55,7 @@ const SignUp = () => {
 
             {/* <!-- Right column container --> */}
             <div className="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12 bg-white p-5 rounded-md relative h-auto w-full mx-5 shadow-lg shadow-slate-200">
-              <form className=" mx-10 my-10 ">
+              <form className=" mt-4 space-y-4 lg:mt-5 md:space-y-5 ">
                 {/* <!--Sign in section--> */}
 
                 {/* <!-- Separator between social media sign in and email/password sign in --> */}
