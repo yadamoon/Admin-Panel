@@ -60,9 +60,11 @@ function SignIn() {
             <div className="mb-12 md:mb-0 md:w-8/12 lg:w-5/12 xl:w-5/12 bg-white p-5 rounded-md relative h-auto w-full mx-5 shadow-lg shadow-slate-200">
               <form className=" mt-4 space-y-4 lg:mt-5 md:space-y-5 ">
                 {/* <!--Sign in section--> */}
-                <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
+                <div
+                // className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300"
+                >
                   <p className="mx-4 mb-0 text-center font-bold text-xl text-blue-600">
-                    Login Here
+                    Welcome Back ! Please Login Here
                   </p>
                 </div>
                 {/* <!-- Email input --> */}
@@ -142,7 +144,7 @@ function SignIn() {
                   </div>
                   <Link
                     to="/ForgetPassword"
-                    className="text-blue-500 hover:opacity-60"
+                    className="text-blue-500 hover:opacity-60 mx-6"
                   >
                     Forget Password ?
                   </Link>
