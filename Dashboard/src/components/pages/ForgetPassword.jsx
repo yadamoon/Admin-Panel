@@ -140,7 +140,9 @@ export const CreateNewPassword = () => {
                 <input
                   type="confirm-password"
                   {...register("confirm_password", {
-                    required: "Please Enter New Password!",
+                    required: true,
+                    validate: (value) =>
+                      value === password || "The passwords do not match",
                     minLength: {
                       value: 8,
                       message: "min Length 8",
@@ -149,9 +151,6 @@ export const CreateNewPassword = () => {
                       value: 12,
                       message: "max Length are 12",
                     },
-                    required: true,
-                    validate: (value) =>
-                      value === password || "The passwords do not match",
                   })}
                   placeholder="••••••••"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-4 "
