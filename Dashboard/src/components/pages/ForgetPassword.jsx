@@ -10,10 +10,6 @@ const ForgetPassword = () => {
     formState: { errors, watch },
     reset,
   } = useForm();
-
-  // const ClickEmail = () => {
-  //   setShow(true);
-  // };
   const handleClick = ({ email }) => {
     console.log(email);
     setShow(true);
@@ -86,11 +82,15 @@ export const CreateNewPassword = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, watch },
+    watch,
+    formState: { errors },
     reset,
   } = useForm();
-  const handleRegister = ({ password, confirm_password }) => {
-    console.log(password, confirm_password);
+  const password = watch("password", ""); // Watch the "newPassword" field
+  const confirm_password = watch("confirm_password", ""); // Watch the "confirmPassword" field
+
+  const handleRegister = (data) => {
+    console.log(data);
   };
   return (
     <div className="">
@@ -144,18 +144,21 @@ export const CreateNewPassword = () => {
                     minLength: {
                       value: 8,
                       message: "min Length 8",
-                      maxLength: {
-                        value: 12,
-                        message: "max Length are 12",
-                      },
                     },
+                    maxLength: {
+                      value: 12,
+                      message: "max Length are 12",
+                    },
+                    required: true,
+                    validate: (value) =>
+                      value === password || "The passwords do not match",
                   })}
                   placeholder="••••••••"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-4 "
                 />
-                {errors.confiremPassword && (
+                {errors.confirm_password && (
                   <span className="text-red-700 col-span-1 md:col-span-2 ">
-                    {errors.confiremPassword.message}
+                    {errors.confirm_password.message}
                   </span>
                 )}
               </div>
