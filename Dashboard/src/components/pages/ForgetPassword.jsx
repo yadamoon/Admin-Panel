@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { Form, useForm } from "react-hook-form";
-
 const ForgetPassword = () => {
   const [show, setShow] = useState(false);
-
   const {
     register,
     handleSubmit,
     formState: { errors, watch },
-    reset,
   } = useForm();
   const handleClick = ({ email }) => {
     console.log(email);
@@ -86,8 +83,8 @@ export const CreateNewPassword = () => {
     formState: { errors },
     reset,
   } = useForm();
-  const password = watch("password", ""); // Watch the "newPassword" field
-  const confirm_password = watch("confirm_password", ""); // Watch the "confirmPassword" field
+  const password = watch("password", ""); // Watch the "password" field
+  const confirm_password = watch("confirm_password", ""); // Watch the "confirm_password" field
 
   const handleRegister = (data) => {
     console.log(data);
