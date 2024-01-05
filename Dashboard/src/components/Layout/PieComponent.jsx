@@ -31,16 +31,17 @@ const renderCustomizedLabel = ({
       fill="white"
       textAnchor={x > cx ? "start" : "end"}
       dominantBaseline="central"
-      className="hover:opacity-75 "
+      className="hover:opacity-75"
     >
       {`${(percent * 100).toFixed(0)}%`}
     </text>
   );
 };
+
 const PieComponent = () => {
   return (
-    <div className="  justify-center items-center  grid grid-cols-2">
-      <div className=" col-span-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-center items-center">
+      <div>
         <PieChart width={300} height={300}>
           <Pie
             data={data}
@@ -56,32 +57,29 @@ const PieComponent = () => {
               <Cell
                 key={`cell-${index}`}
                 fill={COLORS[index % COLORS.length]}
-                className="p-10 "
+                className="p-10"
               />
             ))}
           </Pie>
         </PieChart>
       </div>
       <br />
-      <div className="col-span-2">
-        <div className="grid grid-cols-4 ">
-          {data.map((list) => (
-            <div key={list.id} className="">
-              <p className=" text-teal-600 col-span-1   ">
-                <span> {list.name}</span>
-              </p>
-            </div>
-          ))}
-          {COLORS.map((list, index) => (
+      <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center items-center sm:mx-10">
+        {data.map((list, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center rounded bg-white col-span-1 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 "
+          >
+            <span>{list.name}</span>
             <div
-              key={index}
-              className="border w-5 h-4 justify-center items-center text-center "
-              style={{ backgroundColor: list }}
+              className="border w-5 h-4"
+              style={{ backgroundColor: COLORS[index % COLORS.length] }}
             ></div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
+
 export default PieComponent;
