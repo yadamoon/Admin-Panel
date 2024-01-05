@@ -57,7 +57,7 @@ export const CreateNewPassword = () => {
   return (
     <div className="">
       <section className="">
-        <div className="flex flex-col items-center   mx-auto md:h-screen lg:py-20">
+        <div className="flex flex-col items-center   mx-auto md:h-screen lg:py-20 sm:0">
           <div className="w-full p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md  sm:p-8">
             <h2 className="mb-1 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl ">
               Recover Account
@@ -106,17 +106,8 @@ export const CreateNewPassword = () => {
                   />
                 </div>
                 <div className="ml-3 text-sm">
-                  <label
-                    for="newsletter"
-                    className="font-light text-gray-500 dark:text-gray-300"
-                  >
-                    I accept the{" "}
-                    <a
-                      className="font-medium text-primary-600 hover:underline dark:text-primary-500"
-                      href="#"
-                    >
-                      Terms and Conditions
-                    </a>
+                  <label for="newsletter" className="font-light text-gray-900 ">
+                    Show Password
                   </label>
                 </div>
               </div>
