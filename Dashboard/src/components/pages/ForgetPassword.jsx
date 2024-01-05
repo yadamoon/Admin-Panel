@@ -1,10 +1,20 @@
 import React, { useState } from "react";
+import { Form, useForm } from "react-hook-form";
 
 const ForgetPassword = () => {
   const [show, setShow] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, watch },
+    reset,
+  } = useForm();
 
   const ClickEmail = () => {
     setShow(true);
+  };
+  const handleClick = ({ email }) => {
+    console.log(email);
   };
   return (
     <div>
@@ -26,8 +36,21 @@ const ForgetPassword = () => {
                   </label>
                   <input
                     type="email"
-                    name="email"
-                    id="email"
+                    {...register("email", {
+                      required: "Please Enter Correct Email!",
+                      pattern: {
+                        value: /[@]/,
+                        message: "Enter at least one special character",
+                      },
+                      minLength: {
+                        value: 2,
+                        message: "Please Enter atleast more than 2 character",
+                      },
+                      maxLength: {
+                        value: 15,
+                        message: "Please Enter atleast less than 15 character",
+                      },
+                    })}
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-4 "
                     placeholder="name@company.com"
                     required=""
@@ -35,7 +58,7 @@ const ForgetPassword = () => {
                 </div>
 
                 <button
-                  onClick={ClickEmail}
+                  onClick={handleSubmit(handleClick)}
                   type="submit"
                   className="w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  "
                 >
