@@ -40,50 +40,38 @@ const data = [
     pv: 4800,
     amt: 2181,
   },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500,
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100,
-  },
 ];
 
 const Chart = () => {
   return (
-    <div className=" flex justify-center items-center">
-      <LineChart
-        width={1000}
-        height={400}
-        data={data}
-        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-        className="flex"
-      >
-        <XAxis dataKey="name" />
-        <YAxis />
-        <CartesianGrid strokeDasharray="3 3" />
-        <Tooltip />
-        <Legend verticalAlign="top" height={36} />
-        <Line
-          name="pv of pages"
-          type="monotone"
-          dataKey="pv"
-          stroke="#8884d8"
-        />
-        <Line
-          name="uv of pages"
-          type="monotone"
-          dataKey="uv"
-          stroke="#82ca9d"
-        />
-      </LineChart>
-      <br />
-      <br />
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-center items-center">
+      <div className="flex justify-center items-center">
+        <LineChart
+          width={window.innerWidth > 640 ? 640 : window.innerWidth - 20}
+          height={400}
+          data={data}
+          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+          className="flex"
+        >
+          <XAxis dataKey="name" />
+          <YAxis />
+          <CartesianGrid strokeDasharray="3 3" />
+          <Tooltip />
+          <Legend verticalAlign="top" height={36} />
+          <Line
+            name="pv of pages"
+            type="monotone"
+            dataKey="pv"
+            stroke="#8884d8"
+          />
+          <Line
+            name="uv of pages"
+            type="monotone"
+            dataKey="uv"
+            stroke="#82ca9d"
+          />
+        </LineChart>
+      </div>
     </div>
   );
 };
