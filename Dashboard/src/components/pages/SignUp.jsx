@@ -212,7 +212,7 @@ const SignUp = () => {
                   I have an account?
                   <Link
                     to="/SignIn"
-                    className="transition duration-150 ease-in-out hover:text-blue-600 "
+                    className="transition duration-150 ease-in-out text-blue-500 opacity-60 "
                   >
                     Login
                   </Link>
