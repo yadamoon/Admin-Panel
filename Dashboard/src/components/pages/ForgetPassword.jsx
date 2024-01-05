@@ -3,6 +3,7 @@ import { Form, useForm } from "react-hook-form";
 
 const ForgetPassword = () => {
   const [show, setShow] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -10,11 +11,12 @@ const ForgetPassword = () => {
     reset,
   } = useForm();
 
-  const ClickEmail = () => {
-    setShow(true);
-  };
+  // const ClickEmail = () => {
+  //   setShow(true);
+  // };
   const handleClick = ({ email }) => {
     console.log(email);
+    setShow(true);
   };
   return (
     <div>
@@ -81,7 +83,15 @@ const ForgetPassword = () => {
 export default ForgetPassword;
 
 export const CreateNewPassword = () => {
-  const handleRegister = ({ password, confirm_password }) => {};
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, watch },
+    reset,
+  } = useForm();
+  const handleRegister = ({ password, confirm_password }) => {
+    console.log(password, confirm_password);
+  };
   return (
     <div className="">
       <section className="">

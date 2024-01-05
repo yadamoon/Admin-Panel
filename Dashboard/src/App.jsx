@@ -42,7 +42,9 @@ function App() {
             <Route path="/Product" element={<Products />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/SignIn" element={<SignIn />} />
+
             <Route path="/ForgetPassword" element={<ForgetPassword />} />
+
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
