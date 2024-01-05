@@ -53,7 +53,6 @@ const ForgetPassword = () => {
                     })}
                     className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-4 "
                     placeholder="name@company.com"
-                    required=""
                   />
                   {errors.email && (
                     <span className="text-red-700 col-span-1 md:col-span-2 ">
@@ -82,6 +81,7 @@ const ForgetPassword = () => {
 export default ForgetPassword;
 
 export const CreateNewPassword = () => {
+  const handleRegister = ({ password, confirm_password }) => {};
   return (
     <div className="">
       <section className="">
@@ -113,8 +113,12 @@ export const CreateNewPassword = () => {
                   })}
                   placeholder="••••••••"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-4 "
-                  required=""
                 />
+                {errors.password && (
+                  <span className="text-red-700 col-span-1 md:col-span-2 ">
+                    {errors.password.message}
+                  </span>
+                )}
               </div>
               <div>
                 <label
@@ -125,7 +129,7 @@ export const CreateNewPassword = () => {
                 </label>
                 <input
                   type="confirm-password"
-                  {...register("password", {
+                  {...register("confirm_password", {
                     required: "Please Enter New Password!",
                     minLength: {
                       value: 8,
@@ -138,8 +142,12 @@ export const CreateNewPassword = () => {
                   })}
                   placeholder="••••••••"
                   className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-4 "
-                  required=""
                 />
+                {errors.confiremPassword && (
+                  <span className="text-red-700 col-span-1 md:col-span-2 ">
+                    {errors.confiremPassword.message}
+                  </span>
+                )}
               </div>
               <div className="flex items-start">
                 <div className="flex items-center h-5">
@@ -148,7 +156,6 @@ export const CreateNewPassword = () => {
                     aria-describedby="newsletter"
                     type="checkbox"
                     className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 "
-                    required=""
                   />
                 </div>
                 <div className="ml-3 text-sm">
@@ -158,6 +165,7 @@ export const CreateNewPassword = () => {
                 </div>
               </div>
               <button
+                onClick={handleSubmit(handleRegister)}
                 type="submit"
                 className="w-full text-white bg-blue-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center  "
               >
