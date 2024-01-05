@@ -6,8 +6,8 @@ const SignUp = () => {
   const {
     register,
     handleSubmit,
-
-    formState: { errors, watch },
+    watch,
+    formState: { errors },
     reset,
   } = useForm({
     defaultValues: {
@@ -15,18 +15,20 @@ const SignUp = () => {
       password: "",
     },
   });
+  const password = watch("password", ""); // Watch the "newPassword" field
+  const confirm_password = watch("confirm_password", ""); // Watch the "confirmPassword" field
 
   const handleRegister = ({
     firstName,
     lastName,
     email,
     password,
-    confirmePassword,
+    confirm_password,
   }) => {
     console.log(
       email + "<br/>" + firstName + "" + lastName + "<br/>" + password
     ),
-      confirmePassword;
+      confirm_password;
   };
 
   return (
@@ -130,7 +132,7 @@ const SignUp = () => {
                         message: "Please Enter atleast more than 2 character",
                       },
                       maxLength: {
-                        value: 15,
+                        value: 32,
                         message: "Please Enter atleast less than 15 character",
                       },
                     })}
@@ -175,8 +177,10 @@ const SignUp = () => {
                   <input
                     type="password"
                     name="confiremPassword"
-                    {...register("confiremPassword", {
-                      required: "Please Enter Correct Confirem Password !",
+                    {...register("confirm_password", {
+                      required: true,
+                      validate: (value) =>
+                        value === password || "The passwords do not match",
                       minLength: {
                         value: 8,
                         message: "min Length 8",
@@ -185,15 +189,13 @@ const SignUp = () => {
                         value: 12,
                         message: "max Length are 12",
                       },
-                      validate: (value) =>
-                        value === password || "Passwords do not match",
                     })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
                     placeholder="Confirem Password"
                   />
-                  {errors.confiremPassword && (
+                  {errors.confirm_password && (
                     <span className="text-red-700 col-span-1 md:col-span-2 ">
-                      {errors.confiremPassword.message}
+                      {errors.confirm_password.message}
                     </span>
                   )}
                 </div>
