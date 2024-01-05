@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
+  const [showOrHiden, setshowOrHiden] = useState("show");
   const {
     register,
     handleSubmit,
-
     formState: { errors },
     reset,
   } = useForm({
@@ -24,6 +24,7 @@ function SignIn() {
       setIcon(eyeOff);
       setType("password");
     }
+    setshowOrHiden("Hiden");
   };
 
   const handleSignIn = ({ email, password }) => {
@@ -125,7 +126,7 @@ function SignIn() {
                       className="inline-block pl-[0.15rem] hover:cursor-pointer"
                       for="exampleCheck2"
                     >
-                      Show Password
+                      {showOrHiden}
                     </label>
                   </div>
                   <Link
