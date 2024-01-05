@@ -33,7 +33,7 @@ function SignIn() {
 
   return (
     <div
-      className="h-screen  "
+      className="h-screen "
       style={{
         backgroundImage: `url("https://app.dubbpie.com/assets/images/login-img.png")`,
         backgroundRepeat: "no-repeat",
@@ -44,11 +44,11 @@ function SignIn() {
     >
       {/* <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->  */}
       <section className="h-screen mx-5 mb-1">
-        <div className="h-full">
+        <div className=" flex flex-col h-full">
           {/* <!-- Left column container with background--> */}
-          <div className="g-6 flex h-full flex-wrap items-center justify-center lg:justify-between ">
+          <div className="g-6 flex h-full  items-center justify-center lg:justify-between  flex-col ">
             <div className="mb-12 md:mb-0 md:w-8/12 lg:w-2/3 xl:w-2/5 mx-20   shadow-lg  shadow-slate-200 bg-white p-5 rounded-md relative h-auto w-full ">
-              <form className="space-y-4 md:space-y-6 mx-10 my-10 ">
+              <form className="mt-4 space-y-4 lg:mt-5 md:space-y-5 ">
                 {/* <!--Sign in section--> */}
                 <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
                   <p className="mx-4 mb-0 text-center font-bold text-xl text-blue-600">
