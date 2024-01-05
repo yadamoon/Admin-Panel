@@ -33,7 +33,7 @@ function App() {
           <div className=" rounded bg-gray-50 dark:bg-gray-800">
             <HeaderApp />
           </div>
-          <Routes>
+          <Routes className="lg:my-0 md:my-0 sm:my-5">
             <Route path="/" element={<DashboardApp />} />
             <Route path="/Table" element={<ListUser />} />
             <Route path="/User" element={<Profiles />} />
