@@ -6,7 +6,7 @@ export default function IndexPage() {
 
   return (
     <>
-      <div className=" h-full w-full">
+      <div className="left-0 h-full w-full">
         {/* Code block starts */}
         <nav className="bg-white shadow xl:block hidden p-4 ">
           <div className="mx-auto container px-6 py-2 xl:py-0">
@@ -284,7 +284,7 @@ export default function IndexPage() {
               className=" opacity-50 w-full h-full"
               onClick={() => setShow(!show)}
             />
-            <div className="w-60 z-40 fixed overflow-y-auto  top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+            <div className="w-60  z-40 fixed overflow-y-auto  top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
               <div className="px-6 h-full">
                 <div className="flex flex-col justify-between h-full w-full">
                   <div>
@@ -303,44 +303,6 @@ export default function IndexPage() {
                                   Ya Red
                                 </p>
                               </div>
-                              <ul className="flex">
-                                {/* <li className="cursor-pointer text-gray-800 pt-5 pb-3">
-                                  <div className="w-6 h-6 md:w-8 md:h-8">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      className="icon icon-tabler icon-tabler-messages"
-                                      viewBox="0 0 24 24"
-                                      strokeWidth={1}
-                                      stroke="currentColor"
-                                      fill="none"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    >
-                                      <path stroke="none" d="M0 0h24v24H0z" />
-                                      <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
-                                      <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
-                                    </svg>
-                                  </div>
-                                </li> */}
-                                {/* <li className="cursor-pointer text-gray-800 pt-5 pb-3 pl-3">
-                                  <div className="w-6 h-6 md:w-8 md:h-8">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      className="icon icon-tabler icon-tabler-bell"
-                                      viewBox="0 0 24 24"
-                                      strokeWidth={1}
-                                      stroke="currentColor"
-                                      fill="none"
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    >
-                                      <path stroke="none" d="M0 0h24v24H0z" />
-                                      <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
-                                      <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
-                                    </svg>
-                                  </div>
-                                </li> */}
-                              </ul>
                             </div>
                           </div>
                         </div>
