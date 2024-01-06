@@ -6,7 +6,7 @@ import { Progress, Space } from "antd";
 
 const DashboardApp = () => {
   return (
-    <div className="p-4 h-screen ">
+    <div className="p-4  ">
       <div className=" rounded-lg dark:border-gray-700 ">
         {/* //todo dashboard */}
         <div className="flex  p-2 mb-4 rounded bg-gray-100">
@@ -117,40 +117,50 @@ const DashboardApp = () => {
 
         {/* //todo title chart */}
         <div className="flex p-2 mb-4 rounded bg-gray-100">
-          <p className="text-2xl text-gray-400 dark:text-gray-500">Charts</p>
+          <p className="text-2xl text-gray-400 ">Charts</p>
         </div>
 
         {/* //todo charts */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           {/* Chart component */}
           <div className="flex items-center justify-center rounded bg-white col-span-2">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">
+            <p className="text-2xl text-gray-400 ">
               <Chart />
             </p>
           </div>
+
+          <div className="flex items-center justify-center rounded bg-white col-span-2">
+            <p className="text-2xl text-gray-400 ">
+              <SpaceWrap />
+            </p>
+          </div>
           {/* Pie chart component */}
-          <div className="flex items-center justify-center rounded bg-white col-span-1">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+          {/* Chart component */}
+          <div className="flex items-center justify-center rounded bg-white col-span-2">
+            <p className="text-2xl text-gray-400 ">
+              <ProgressBarApp />
+            </p>
+          </div>
+
+          <div className="flex items-center justify-center rounded bg-white col-span-2">
+            <p className="text-2xl text-gray-400 ">
               <PieComponent />
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-          {/* Chart component */}
-          <div className="flex items-center justify-center rounded bg-white col-span-2">
+        {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 mb-4">
+         
+          <div className="flex items-center justify-center rounded bg-white col-span-1">
             <p className="text-2xl text-gray-400 dark:text-gray-500">
               <ProgressBarApp />{" "}
             </p>
           </div>
-          {/* Pie chart component */}
-          <div className="flex items-center justify-center rounded bg-white col-span-1">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">
-              <SpaceWrap />
-            </p>
-          </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -166,7 +176,6 @@ export const SpaceWrap = () => {
           <Progress type="dashboard" percent={75} />
           <Progress type="dashboard" percent={70} status="exception" />
           <Progress type="circle" percent={100} />
-          <Progress type="circle" percent={50} />
         </Space>
       </div>
     </div>
