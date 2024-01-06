@@ -42,7 +42,7 @@ const Products = () => {
 
   return (
     <>
-      <div className="bg-gray-100 w-full h-screen">
+      <div className="bg-gray-100 w-full h-full">
         <div className="container mx-auto">
           <div role="article" className="bg-gray-100 py-12 md:px-8">
             <div className="px-4 xl:px-0 py-10">
