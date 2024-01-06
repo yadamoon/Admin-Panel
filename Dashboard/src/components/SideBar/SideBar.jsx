@@ -189,6 +189,21 @@ const SideBar = () => {
                 <span className="flex-1 ms-3 whitespace-nowrap">Settings</span>
               </Link>
             </motion.li>
+
+            <motion.li
+              whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Link
+                to="/About"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
+              >
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                <span className="flex-1 ms-3 whitespace-nowrap">
+                  Information
+                </span>
+              </Link>
+            </motion.li>
           </ul>
         </div>
       </aside>
