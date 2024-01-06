@@ -13,8 +13,8 @@ const Profiles = () => {
     },
   ];
   return (
-    <div className="space-y-6 ">
-      <div className="bg-gray-100 h-full flex sm:mb-6 md-mb-6 lg:mb-0">
+    <div className="space-y-6 flex flex-wrap ">
+      <div className="bg-gray-100 h-full flex  mb-80 ">
         <div className="container mx-auto py-8">
           {/* //!? total user information  */}
           <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4 ">
@@ -27,7 +27,6 @@ const Profiles = () => {
                       src="public/feveb.jpg"
                       className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
                     />
-
                     <h1 className="text-xl font-bold">{userList.name}</h1>
                   </div>
                   <hr className="my-6 border-t border-gray-300" />
