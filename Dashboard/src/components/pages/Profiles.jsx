@@ -14,7 +14,7 @@ const Profiles = () => {
   ];
   return (
     <div>
-      <div className="bg-gray-100 h-screen">
+      <div className="bg-gray-100 h-full flex">
         <div className="container mx-auto py-8">
           {/* //!? total user information  */}
           <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
@@ -59,8 +59,8 @@ const Profiles = () => {
             {userInfo.map((moreInfo) => (
               <div key={moreInfo.id} className="col-span-4 sm:col-span-9">
                 <div className="bg-white shadow rounded-lg p-6">
+                  <h2 className="text-xl font-bold mb-4">{moreInfo.titel}</h2>
                   <div className="border bg-gray-200 p-2">
-                    <h2 className="text-xl font-bold mb-4">{moreInfo.titel}</h2>
                     <p className="text-gray-500">{moreInfo.detail}</p>
                   </div>
 
