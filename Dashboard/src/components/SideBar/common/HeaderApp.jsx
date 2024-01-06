@@ -88,47 +88,11 @@ export default function IndexPage() {
                         </div>
                       </li>
                     </ul>
-                    {/* <svg
-                      onclick="MenuHandler(this,true)"
-                      aria-haspopup="true"
-                      aria-label="Main Menu"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="show-m-menu icon icon-tabler icon-tabler-menu"
-                      width={28}
-                      height={28}
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <line x1={4} y1={8} x2={20} y2={8} />
-                      <line x1={4} y1={16} x2={20} y2={16} />
-                    </svg> */}
                   </div>
                   <div
                     className="hidden close-m-menu text-gray-700"
                     onclick="MenuHandler(this,false)"
-                  >
-                    {/* <svg
-                      aria-label="Close"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={24}
-                      height={24}
-                      viewBox="0 0 24 24"
-                      strokeWidth="1.5"
-                      stroke="currentColor"
-                      fill="none"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path stroke="none" d="M0 0h24v24H0z" />
-                      <line x1={18} y1={6} x2={6} y2={18} />
-                      <line x1={6} y1={6} x2={18} y2={18} />
-                    </svg> */}
-                  </div>
+                  ></div>
                 </div>
               </div>
 
@@ -235,7 +199,7 @@ export default function IndexPage() {
           </div>
         </nav>
         <nav className=" bg-white ">
-          <div className="py-4 px-6 w-full flex xl:hidden justify-between items-start bg-white fixed top-0 z-40 ">
+          <div className="py-4 px-6 w-full flex xl:hidden justify-between items-start bg-white fixed top-0 left-0 z-40 ">
             <div className="w-24">Admin Panel</div>
             <div className="flex items-center">
               <div
@@ -267,19 +231,20 @@ export default function IndexPage() {
               </div>
             </div>
           </div>
+          cd
           {/*Mobile responsive sidebar*/}
           <div
             className={
               show
-                ? "w-full xl:hidden h-full absolute z-40  transform  translate-x-0 "
-                : "   w-full xl:hidden h-full absolute z-40  transform -translate-x-full"
+                ? "w-full xl:hidden h-full absolute z-40  transform  translate-x-0 top-0 left-0"
+                : "   w-full xl:hidden h-full absolute z-40  transform -translate-x-[100%] "
             }
           >
             <div
               className=" opacity-50 w-full h-full"
               onClick={() => setShow(!show)}
             />
-            <div className="w-60  z-40 fixed overflow-y-auto  top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+            <div className="w-60  z-40 fixed overflow-y-auto  top-0 left-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
               <div className="px-6 h-full">
                 <div className="flex flex-col justify-between h-full w-full">
                   <div>
