@@ -35,9 +35,7 @@ export default function IndexPage() {
                     <ul className="p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-8 md:mt-8 hidden">
                       <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
                         <div className="flex items-center">
-                          <p className="text-sm ml-2 cursor-pointer">
-                            Jane Doe
-                          </p>
+                          <p className="text-sm ml-2 cursor-pointer">Ya Red</p>
                           <div className="sm:ml-2 text-white relative">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +195,7 @@ export default function IndexPage() {
                       <div className=" flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
                         <img
                           className="rounded-full h-10 w-10 object-cover float-right"
-                          src="https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_2.png"
+                          src="https://avatars.githubusercontent.com/u/128363342?v=4"
                           alt="logo"
                         />
                       </div>
@@ -298,11 +296,11 @@ export default function IndexPage() {
                               <div className="flex items-center">
                                 <img
                                   alt="profile-pic"
-                                  src="https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png"
+                                  src="https://avatars.githubusercontent.com/u/128363342?v=4"
                                   className="w-8 h-8 rounded-md"
                                 />
                                 <p className=" text-gray-800 text-base leading-4 ml-2">
-                                  Jane Doe
+                                  Ya Red
                                 </p>
                               </div>
                               <ul className="flex">
