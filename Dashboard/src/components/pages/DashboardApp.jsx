@@ -152,15 +152,6 @@ const DashboardApp = () => {
             </p>
           </div>
         </div>
-
-        {/* <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 mb-4">
-         
-          <div className="flex items-center justify-center rounded bg-white col-span-1">
-            <p className="text-2xl text-gray-400 dark:text-gray-500">
-              <ProgressBarApp />{" "}
-            </p>
-          </div>
-        </div> */}
       </div>
     </div>
   );
@@ -171,7 +162,7 @@ export default DashboardApp;
 export const SpaceWrap = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-center items-center ">
-      <div className="justify-center items-center">
+      <div className="justify-center items-center ">
         <Space wrap>
           <Progress type="dashboard" percent={75} />
           <Progress type="dashboard" percent={70} status="exception" />
@@ -184,17 +175,17 @@ export const SpaceWrap = () => {
 
 export const ProgressBarApp = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4  w-64">
       <div className="">
         <Progress
           percent={30}
           className="col-span-1  p-3 flex lg:w-96 "
           status="exception"
         />
-        <Progress percent={60} className="col-span-1 p-2 flex lg:w-96 " />
-        <Progress percent={70} className="col-span-1 p-2 flex lg:w-96 " />
+        <Progress percent={60} className="col-span-1 p-2 flex lg:w-96  " />
+        <Progress percent={70} className="col-span-1 p-2 flex lg:w-96  " />
         <Progress percent={40} className="col-span-1 p-2 flex lg:w-96 " />
-        <Progress percent={100} className="col-span-1 p-2 flex  lg:w-96 " />
+        <Progress percent={100} className="col-span-1 p-2 flex  lg:w-96   " />
         <Progress
           percent={100}
           className="col-span-1 p-2 flex lg:w-96 "
