@@ -185,19 +185,19 @@ export const SpaceWrap = () => {
 export const ProgressBarApp = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 ">
-      <div className="w-full">
+      <div className="">
         <Progress
           percent={30}
-          className="col-span-1 w-80 p-3 flex"
+          className="col-span-1  p-3 flex lg:w-96 "
           status="exception"
         />
-        <Progress percent={60} className="col-span-1 p-2 flex" />
-        <Progress percent={70} className="col-span-1 p-2 flex" />
-        <Progress percent={40} className="col-span-1 p-2 flex" />
-        <Progress percent={100} className="col-span-1 p-2 flex " />
+        <Progress percent={60} className="col-span-1 p-2 flex lg:w-96 " />
+        <Progress percent={70} className="col-span-1 p-2 flex lg:w-96 " />
+        <Progress percent={40} className="col-span-1 p-2 flex lg:w-96 " />
+        <Progress percent={100} className="col-span-1 p-2 flex  lg:w-96 " />
         <Progress
           percent={100}
-          className="col-span-1 p-2 flex"
+          className="col-span-1 p-2 flex lg:w-96 "
           status="success"
         />
       </div>
