@@ -61,32 +61,44 @@ function Table() {
   const headTable = ["FullName", "Email", "Address", "Information"];
   return (
     <div className="flex justify-center">
-      <div className=" w-full">
+      <div className="w-full">
         <Search users={users} setter={setUsersFiltered} />
-        <div className=" flex  ">
-          <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <div className="overflow-x-auto">
+          <table className="min-w-full divide-y divide-gray-200">
             {/* //todo Header of Table */}
-            <thead className="text-xs text-black uppercase  bg-gray-200">
+            <thead className="bg-gray-50">
               <tr>
                 {headTable.map((title) => (
-                  <th scope="col" className="px-6 py-3" key={title.id}>
+                  <th
+                    scope="col"
+                    className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    key={title.id}
+                  >
                     {title}
                   </th>
                 ))}
               </tr>
             </thead>
             {displayedUsers.map((person) => (
-              <tbody key={person.id}>
-                <tr className="bg-gray-100 ">
-                  <th
-                    scope="row"
-                    className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-gray-900"
-                  >
-                    {person.name}
-                  </th>
-                  <td className="px-6 py-4"> {person.email} </td>
-                  <td className="px-6 py-4"> {person.address.city} </td>
-                  <td className="px-6 py-4">
+              <tbody
+                key={person.id}
+                className="bg-white divide-y divide-gray-200 px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
+              >
+                <tr>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm font-medium text-gray-900">
+                      {person.name}
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm text-gray-500">{person.email}</div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="text-sm text-gray-500">
+                      {person.address.city}
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
                     <a
                       href=""
                       className="bg-blue-500 text-white p-3 rounded hover:opacity-75"

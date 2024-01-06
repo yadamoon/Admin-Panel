@@ -13,11 +13,11 @@ const Profiles = () => {
     },
   ];
   return (
-    <div>
-      <div className="bg-gray-100 h-full flex">
+    <div className="space-y-6 ">
+      <div className="bg-gray-100 h-full flex sm:mb-6 md-mb-6 lg:mb-0">
         <div className="container mx-auto py-8">
           {/* //!? total user information  */}
-          <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
+          <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4 ">
             {/* //!? rendering the user information img , fullName , etc.. */}
             {userInfo.map((userList) => (
               <div key={userInfo.id} className="col-span-4 sm:col-span-3">

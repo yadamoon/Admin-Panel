@@ -15,7 +15,7 @@ import ForgetPassword from "./components/pages/ForgetPassword";
 
 function App() {
   return (
-    <div className="bg-gray-100 w-full ">
+    <div className="bg-gray-100 w-full  ">
       {/* //!? sidebar */}
       <aside
         id="sidebar-multi-level-sidebar"
@@ -27,7 +27,7 @@ function App() {
         </div>
       </aside>
 
-      <div className="p-4 sm:ml-64">
+      <div className="p-4 sm:ml-64 h-full">
         <div className="rounded-lg dark:border-gray-700 ">
           {/* //!? HeaderPart */}
           <div className=" rounded bg-gray-50 dark:bg-gray-800">
