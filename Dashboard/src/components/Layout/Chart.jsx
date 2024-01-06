@@ -47,7 +47,7 @@ const Chart = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-center items-center">
       <div className="flex justify-center items-center">
         <LineChart
-          width={window.innerWidth > 640 ? 640 : window.innerWidth - 20}
+          width={window.innerWidth > 800 ? 800 : window.innerWidth - 20}
           height={400}
           data={data}
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
