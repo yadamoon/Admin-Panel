@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
-import Search from "../pages/Search";
+import Search from "../pages/Search.1";
 function RCPaginate({ items, itemsPerPage, setter }) {
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
