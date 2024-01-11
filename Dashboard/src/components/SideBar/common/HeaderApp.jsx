@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
   const listNav = [
     { name: "Dashboard", icon: "" },
     { name: "Table", icon: "" },
@@ -91,7 +92,7 @@ export default function IndexPage() {
                   </div>
                   <div
                     className="hidden close-m-menu text-gray-700"
-                    onclick="MenuHandler(this,false)"
+                    onClick="MenuHandler(this,false)"
                   ></div>
                 </div>
               </div>
@@ -343,7 +344,7 @@ export default function IndexPage() {
                         <li className="text-gray-800 pt-10">
                           <div className="flex items-center">
                             <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
-                              <i class="fa fa-table"></i>
+                              <i className="fa fa-table"></i>
                             </div>
                             <p className="text-indigo-700 xl:text-base text-base ml-3">
                               Table
@@ -356,7 +357,7 @@ export default function IndexPage() {
                         <li className="text-gray-800 pt-10">
                           <div className="flex items-center">
                             <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
-                              <i class="fa fa-inbox"></i>
+                              <i className="fa fa-inbox"></i>
                             </div>
                             <p className="text-indigo-700 xl:text-base text-base ml-3">
                               Inbox
@@ -368,7 +369,7 @@ export default function IndexPage() {
                         <li className="text-gray-800 pt-10">
                           <div className="flex items-center">
                             <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
-                              <i class="fa fa-user"></i>
+                              <i className="fa fa-user"></i>
                             </div>
                             <p className="text-indigo-700 xl:text-base text-base ml-3">
                               User
@@ -404,7 +405,7 @@ export default function IndexPage() {
                           <div className="flex items-center justify-between">
                             <div className="flex items-center">
                               <div className="w-6 h-6 md:w-8 md:h-8 text-gray-800">
-                                <i class="fa fa-gears"></i>
+                                <i className="fa fa-gears"></i>
                               </div>
                               <p className="text-gray-800 xl:text-base md:text-2xl text-base ml-3">
                                 Settings
@@ -428,9 +429,9 @@ export default function IndexPage() {
                                 >
                                   <path
                                     stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
                                     d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"
                                   />
                                 </svg>
@@ -470,31 +471,7 @@ export default function IndexPage() {
                   </div>
                   <div className="w-full pt-4">
                     <div className="flex justify-center mb-4 w-full">
-                      {/* <div className="relative w-full">
-                        <div className="text-gray-500 absolute ml-4 inset-0 m-auto w-4 h-4">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-search"
-                            width={16}
-                            height={16}
-                            viewBox="0 0 24 24"
-                            strokeWidth={1}
-                            stroke="#A0AEC0"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <circle cx={10} cy={10} r={7} />
-                            <line x1={21} y1={21} x2={15} y2={15} />
-                          </svg>
-                        </div>
-                        <input
-                          className="bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500  pl-10 py-2"
-                          type="text"
-                          placeholder="Search"
-                        />
-                      </div> */}
+                   
                     </div>
                   </div>
                 </div>
