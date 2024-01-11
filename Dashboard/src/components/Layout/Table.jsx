@@ -1,17 +1,21 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
-import Search from "../pages/Search.1";
+import Search from "../pages/Search";
+// eslint-disable-next-line react/prop-types
 function RCPaginate({ items, itemsPerPage, setter }) {
   const [itemOffset, setItemOffset] = useState(0);
   const endOffset = itemOffset + itemsPerPage;
+  // eslint-disable-next-line react/prop-types
   const currentItems = items.slice(itemOffset, endOffset);
   useEffect(() => {
     setter(currentItems);
   }, [itemOffset, endOffset, items]);
+  // eslint-disable-next-line react/prop-types
   const pageCount = Math.ceil(items.length / itemsPerPage);
 
   const handlePageClick = (event) => {
+    // eslint-disable-next-line react/prop-types
     const newOffset = (event.selected * itemsPerPage) % items.length;
     setItemOffset(newOffset);
   };
