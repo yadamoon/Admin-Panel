@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function IndexPage() {
@@ -15,7 +16,7 @@ export default function IndexPage() {
     { name: "SignIn", icon: "" },
     { name: "SignUp", icon: "" },
   ];
-  const hello;
+  
   return (
     <>
       <div className="left-0 h-full w-full">
