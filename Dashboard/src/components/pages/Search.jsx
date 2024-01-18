@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 const Search = ({ users, setter }) => {
+  const [a, setA]=useState();
   const [search, setSearch] = useState();
 
   const searchHandel = () => {
     const usersFiltered = users.filter((item) =>
       item.name.toLowerCase().includes(search.toLowerCase())
     );
+
     setter(usersFiltered);
   };
   return (
