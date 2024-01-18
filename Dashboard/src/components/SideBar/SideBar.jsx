@@ -1,8 +1,9 @@
-import React from "react";
+
+// eslint-disable-next-line no-unused-vars
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 // import { setHide, setShow } from "../../store/Slice/authSlice";
-import { frame, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 
 const SideBar = () => {
   // const controller = useSelector((state) => state.controller);
@@ -91,7 +92,7 @@ const SideBar = () => {
                 to="/Table"
                 className="flex items-center w-full p-2 text-base text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
-                <i class="fa fa-table"></i>
+                <i className="fa fa-table"></i>
                 <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
                   Table
                 </span>
@@ -133,7 +134,7 @@ const SideBar = () => {
                 href="#"
                 className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
-                <i class="fa fa-inbox"></i>
+                <i className="fa fa-inbox"></i>
                 <span className="flex-1 ms-3 whitespace-nowrap">Inbox</span>
                 <span className="inline-flex items-center justify-center w-3 h-3 p-3 ms-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
                   3
@@ -150,7 +151,7 @@ const SideBar = () => {
                 to="/User"
                 className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
-                <i class="fa fa-user"></i>
+                <i className="fa fa-user"></i>
                 <span className="flex-1 ms-3 whitespace-nowrap">Users</span>
               </Link>
             </motion.li>
@@ -185,7 +186,7 @@ const SideBar = () => {
                 to="/Setting"
                 className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
-                <i class="fa fa-gears"></i>
+                <i className="fa fa-gears"></i>
                 <span className="flex-1 ms-3 whitespace-nowrap">Settings</span>
               </Link>
             </motion.li>
@@ -198,7 +199,7 @@ const SideBar = () => {
                 to="/About"
                 className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
-                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                <i className="fa fa-info-circle" aria-hidden="true"></i>
                 <span className="flex-1 ms-3 whitespace-nowrap">
                   Information
                 </span>
