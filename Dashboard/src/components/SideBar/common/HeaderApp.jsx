@@ -15,7 +15,7 @@ export default function IndexPage() {
     { name: "SignIn", icon: "" },
     { name: "SignUp", icon: "" },
   ];
-
+  const hello;
   return (
     <>
       <div className="left-0 h-full w-full">
