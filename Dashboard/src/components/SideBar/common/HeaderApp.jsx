@@ -1,10 +1,10 @@
-/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
   const listNav = [
     { name: "Dashboard", icon: "" },
     { name: "Table", icon: "" },
@@ -232,7 +232,7 @@ export default function IndexPage() {
               </div>
             </div>
           </div>
-        
+          
           {/*Mobile responsive sidebar*/}
           <div
             className={
@@ -471,7 +471,7 @@ export default function IndexPage() {
                   </div>
                   <div className="w-full pt-4">
                     <div className="flex justify-center mb-4 w-full">
-           
+                   
                     </div>
                   </div>
                 </div>

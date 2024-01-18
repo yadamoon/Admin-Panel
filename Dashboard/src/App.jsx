@@ -14,6 +14,7 @@ import Error from "./components/pages/Error";
 import ForgetPassword from "./components/pages/ForgetPassword";
 
 function App() {
+
   return (
     <div className="bg-gray-100 w-full  ">
       {/* //!? sidebar */}
