@@ -231,7 +231,7 @@ export default function IndexPage() {
               </div>
             </div>
           </div>
-          cd
+        
           {/*Mobile responsive sidebar*/}
           <div
             className={
