@@ -1,4 +1,4 @@
-import React from "react";
+
 import Chart from "../Layout/Chart";
 import PieComponent from "../Layout/PieComponent";
 import HeaderApp from "../SideBar/common/HeaderApp";
@@ -161,8 +161,8 @@ export default DashboardApp;
 
 export const SpaceWrap = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-center items-center ">
-      <div className="justify-center items-center ">
+    <div className=" ">
+      <div className=" ">
         <Space wrap>
           <Progress type="dashboard" percent={75} />
           <Progress type="dashboard" percent={70} status="exception" />
@@ -175,20 +175,20 @@ export const SpaceWrap = () => {
 
 export const ProgressBarApp = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4  w-64">
+    <div className="">
       <div className="">
         <Progress
           percent={30}
-          className="col-span-1  p-3 flex lg:w-96 "
+          className=""
           status="exception"
         />
-        <Progress percent={60} className="col-span-1 p-2 flex lg:w-96  " />
-        <Progress percent={70} className="col-span-1 p-2 flex lg:w-96  " />
-        <Progress percent={40} className="col-span-1 p-2 flex lg:w-96 " />
-        <Progress percent={100} className="col-span-1 p-2 flex  lg:w-96   " />
+        <Progress percent={60} className="" />
+        <Progress percent={70} className=" " />
+        <Progress percent={40} className=" " />
+        <Progress percent={100} className=" " />
         <Progress
           percent={100}
-          className="col-span-1 p-2 flex lg:w-96 "
+          className=" "
           status="success"
         />
       </div>
