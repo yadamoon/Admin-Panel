@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import Chart from "../Layout/Chart";
 import PieComponent from "../Layout/PieComponent";
@@ -140,13 +141,13 @@ const DashboardApp = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           {/* Chart component */}
-          <div className="flex items-center justify-center rounded bg-white col-span-2">
+          <div className=" rounded bg-white col-span-2">
             <p className="text-2xl text-gray-400 ">
               <ProgressBarApp />
             </p>
           </div>
 
-          <div className="flex items-center justify-center rounded bg-white col-span-2">
+          <div className="rounded bg-white col-span-2">
             <p className="text-2xl text-gray-400 ">
               <PieComponent />
             </p>
