@@ -106,7 +106,7 @@ export default function IndexPage() {
                       onClick={() => setProfile(!profile)}
                     >
                       {profile && (
-                        <ul className="p-2 w-40 border-r bg-white absolute rounded  shadow top-0 mt-16 ">
+                        <ul className="p-2 w-32 border-r bg-white absolute rounded  shadow top-0 mt-16 ">
                           <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                             <div className="flex items-center">
                               <svg
@@ -165,7 +165,7 @@ export default function IndexPage() {
                               <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                               <circle cx={12} cy={12} r={3} />
                             </svg>
-                            <span className="ml-2">Account Settings</span>
+                            <span className="ml-2"> Settings</span>
                           </li>
                         </ul>
                       )}
