@@ -125,7 +125,7 @@ const DashboardApp = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           {/* Chart component */}
-          <div className="flex items-center justify-center rounded bg-white col-span-2">
+          <div className="frounded bg-white col-span-2">
             <p className="text-2xl text-gray-400 ">
               <Chart />
             </p>
