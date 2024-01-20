@@ -147,10 +147,10 @@ const DashboardApp = () => {
             </p>
           </div>
 
-          <div className="rounded bg-white col-span-2">
-            <p className="text-2xl text-gray-400 ">
+          <div className="flex items-center justify-center rounded bg-white col-span-2">
+            {/* <p className="text-2xl text-gray-400  "> */}
               <PieComponent />
-            </p>
+            {/* </p> */}
           </div>
         </div>
       </div>
