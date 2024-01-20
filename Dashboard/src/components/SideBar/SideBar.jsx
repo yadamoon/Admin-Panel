@@ -94,7 +94,7 @@ const SideBar = () => {
               >
                 <i className="fa fa-table"></i>
                 <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
-                  Table
+                  Users
                 </span>
               </Link>
             </motion.li>
@@ -152,7 +152,7 @@ const SideBar = () => {
                 className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
               >
                 <i className="fa fa-user"></i>
-                <span className="flex-1 ms-3 whitespace-nowrap">Users</span>
+                <span className="flex-1 ms-3 whitespace-nowrap">Profile</span>
               </Link>
             </motion.li>
 
