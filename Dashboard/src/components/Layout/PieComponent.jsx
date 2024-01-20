@@ -1,4 +1,4 @@
-import React from "react";
+
 import { PieChart, Pie, Cell } from "recharts";
 
 const data = [
@@ -18,6 +18,7 @@ const renderCustomizedLabel = ({
   innerRadius,
   outerRadius,
   percent,
+  // eslint-disable-next-line no-unused-vars
   index,
 }) => {
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
@@ -40,7 +41,7 @@ const renderCustomizedLabel = ({
 
 const PieComponent = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 justify-center items-center">
+    <div className="my-3">
       <div>
         <PieChart width={300} height={300}>
           <Pie
