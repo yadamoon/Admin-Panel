@@ -1,4 +1,4 @@
-import React from "react";
+
 const Profiles = () => {
   // !? information of user
   const userInfo = [
@@ -38,13 +38,13 @@ const Profiles = () => {
                       <li className="mb-2">
                         {" "}
                         <span className="mx-4">
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
+                          <i className="fa fa-envelope" aria-hidden="true"></i>
                         </span>
                         {userList.email}
                       </li>
                       <li className="mb-2">
                         <span className="mx-4">
-                          <i class="fa fa-phone" aria-hidden="true"></i>{" "}
+                          <i className="fa fa-phone" aria-hidden="true"></i>{" "}
                         </span>
                         {userList.telephone}
                       </li>

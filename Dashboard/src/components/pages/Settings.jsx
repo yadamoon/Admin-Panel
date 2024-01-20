@@ -1,7 +1,8 @@
 import Item from "antd/es/list/Item";
-import React, { useState } from "react";
+import  { useState } from "react";
 
 const Settings = () => {
+  // eslint-disable-next-line no-unused-vars
   const [show, setShow] = useState(false);
 
   const items = [

@@ -1,10 +1,14 @@
+
 import  { useState } from "react";
 
+ // eslint-disable-next-line react/prop-types
 const Search = ({ users, setter }) => {
-  const [a, setA]=useState();
+ 
   const [search, setSearch] = useState();
 
   const searchHandel = () => {
+    
+    // eslint-disable-next-line react/prop-types
     const usersFiltered = users.filter((item) =>
       item.name.toLowerCase().includes(search.toLowerCase())
     );

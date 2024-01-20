@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { Form, useForm } from "react-hook-form";
 const ForgetPassword = () => {
   const [show, setShow] = useState(false);
   const {
     register,
     handleSubmit,
-    formState: { errors, watch },
+   
+    formState: { errors },
   } = useForm();
   const handleClick = ({ email }) => {
     console.log(email);
@@ -24,7 +26,7 @@ const ForgetPassword = () => {
               <form className="mt-4 space-y-4 lg:mt-5 md:space-y-5" action="#">
                 <div>
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="block mb-2 text-sm font-medium text-gray-900  "
                   >
                     Your email
@@ -81,9 +83,10 @@ export const CreateNewPassword = () => {
     handleSubmit,
     watch,
     formState: { errors },
-    reset,
+   
   } = useForm();
   const password = watch("password", ""); // Watch the "password" field
+  // eslint-disable-next-line no-unused-vars
   const confirm_password = watch("confirm_password", ""); // Watch the "confirm_password" field
 
   const handleRegister = (data) => {
@@ -100,7 +103,7 @@ export const CreateNewPassword = () => {
             <form className="mt-4 space-y-4 lg:mt-5 md:space-y-5" action="#">
               <div>
                 <label
-                  for="password"
+                  htmlFor="password"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   New Password
@@ -129,7 +132,7 @@ export const CreateNewPassword = () => {
               </div>
               <div>
                 <label
-                  for="confirm-password"
+                  htmlFor="confirm-password"
                   className="block mb-2 text-sm font-medium text-gray-900 "
                 >
                   Confirm password
@@ -168,7 +171,7 @@ export const CreateNewPassword = () => {
                   />
                 </div>
                 <div className="ml-3 text-sm">
-                  <label for="newsletter" className="font-light text-gray-900 ">
+                  <label htmlFor="newsletter" className="font-light text-gray-900 ">
                     Show Password
                   </label>
                 </div>
