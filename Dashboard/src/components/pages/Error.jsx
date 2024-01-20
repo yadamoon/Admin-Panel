@@ -3,12 +3,12 @@
 const Error = () => {
   return (
     <>
-      <section className="relative z-10 bg-primary py-[320px] bg-white rounded my-3 ">
+      <section className="relative z-10 bg-primary py-[310px] bg-white rounded my-3 ">
         <div className="container mx-auto">
           <div className="-mx-4 flex">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[400px] text-center">
-                <h2 className="mb-2 text-[50px] font-bold leading-none sm:text-[80px] md:text-[100px]">
+                <h2 className="mb-2 text-[50px] font-bold text-blue-600  leading-none sm:text-[80px] md:text-[100px]">
                   404
                 </h2>
                 <h4 className="mb-3 text-[22px] font-semibold leading-tight ">
@@ -17,7 +17,7 @@ const Error = () => {
 
                 <a
                   href="javascript:void(0)"
-                  className="inline-block rounded-lg border border-white px-8 py-3 text-center text-base font-semibold transition hover:bg-gray-600"
+                  className="inline-block rounded-lg border border-blue-700 px-8 py-3 text-center text-base font-semibold transition hover:bg-blue-600 hover:text-white"
                 >
                   Go To Home
                 </a>
