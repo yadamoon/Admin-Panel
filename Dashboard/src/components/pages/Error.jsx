@@ -3,7 +3,7 @@
 const Error = () => {
   return (
     <>
-      <section className="relative z-10 bg-primary py-[120px] bg-gray-900 rounded">
+      <section className="relative z-10 bg-primary py-[120px] bg-white rounded">
         <div className="container mx-auto">
           <div className="-mx-4 flex">
             <div className="w-full px-4">
