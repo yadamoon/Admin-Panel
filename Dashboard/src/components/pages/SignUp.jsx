@@ -1,4 +1,5 @@
-import React from "react";
+
+// eslint-disable-next-line no-unused-vars
 import { Form, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
@@ -8,6 +9,7 @@ const SignUp = () => {
     handleSubmit,
     watch,
     formState: { errors },
+    // eslint-disable-next-line no-unused-vars
     reset,
   } = useForm({
     defaultValues: {
@@ -16,6 +18,7 @@ const SignUp = () => {
     },
   });
   const password = watch("password", ""); // Watch the "newPassword" field
+  // eslint-disable-next-line no-unused-vars
   const confirm_password = watch("confirm_password", ""); // Watch the "confirmPassword" field
 
   const handleRegister = ({
