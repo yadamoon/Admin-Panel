@@ -2,6 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import { Form, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { http } from "../../services/http/http"
 
 const SignUp = () => {
   const {
@@ -13,26 +14,29 @@ const SignUp = () => {
     reset,
   } = useForm({
     defaultValues: {
-      username: "",
-      password: "",
+      firstname :'',
+    lastname:'',
+    email:'',
+    password:''
+   
     },
   });
   const password = watch("password", ""); // Watch the "newPassword" field
   // eslint-disable-next-line no-unused-vars
   const confirm_password = watch("confirm_password", ""); // Watch the "confirmPassword" field
 
-  const handleRegister = ({
-    firstName,
-    lastName,
-    email,
-    password,
-    confirm_password,
-  }) => {
-    console.log(
-      email + "<br/>" + firstName + "" + lastName + "<br/>" + password
-    ),
-      confirm_password;
-  };
+  const addNewUser = async ({ firstname, lastname, email, password }) => {
+    const result = await http.request({
+      method: 'post',
+      url: 'users',
+      data: { firstname, lastname, email, password },
+    })
+    if (!result.isError) {
+      reset()
+    }
+    console.log(result)
+  }
+
 
   return (
     <div
@@ -74,7 +78,7 @@ const SignUp = () => {
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
                     type="text"
-                    {...register("firstName", {
+                    {...register("firstname", {
                       required: "Enter Your username please!",
                       minLength: {
                         value: 2,
@@ -88,9 +92,9 @@ const SignUp = () => {
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
                     placeholder="First Name"
                   />
-                  {errors.firstName && (
+                  {errors.firstname && (
                     <span className="text-red-700 col-span-1 md:col-span-2 ">
-                      {errors.firstName.message}
+                      {errors.firstname.message}
                     </span>
                   )}
                 </div>
@@ -99,7 +103,7 @@ const SignUp = () => {
                 <div className="relative mb-6" data-te-input-wrapper-init>
                   <input
                     type="text"
-                    {...register("lastName", {
+                    {...register("lastname", {
                       required: "Enter Your username please!",
                       minLength: {
                         value: 2,
@@ -113,9 +117,9 @@ const SignUp = () => {
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
                     placeholder="LastName"
                   />
-                  {errors.lastName && (
+                  {errors.lastname && (
                     <span className="text-red-700 col-span-1 md:col-span-2 ">
-                      {errors.lastName.message}
+                      {errors.lastname.message}
                     </span>
                   )}
                 </div>
@@ -208,7 +212,7 @@ const SignUp = () => {
                   <button
                     type="button"
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-10 pr-10  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
-                    onClick={handleSubmit(handleRegister)}
+                    onClick={handleSubmit(addNewUser)}
                   >
                     Sign UP
                   </button>
