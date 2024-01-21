@@ -98,8 +98,8 @@ const SideBar = () => {
                 </span>
               </Link>
             </motion.li>
-
-            <motion.li
+{/* overview */}
+            {/* <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -122,10 +122,10 @@ const SideBar = () => {
                   new
                 </span>
               </Link>
-            </motion.li>
+            </motion.li> */}
 
             {/* inbox */}
-            <motion.li
+            {/* <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -140,7 +140,7 @@ const SideBar = () => {
                   3
                 </span>
               </Link>
-            </motion.li>
+            </motion.li> */}
 
             {/* user */}
             <motion.li
@@ -155,7 +155,7 @@ const SideBar = () => {
                 <span className="flex-1 ms-3 whitespace-nowrap">Profile</span>
               </Link>
             </motion.li>
-
+{/* products */}
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
