@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { tokenService } from '../storageService'
-import { BASE_URL } from '../../config/config'
+import { BASE_URL } from '../../../config/config'
 
 const apiService = {
   init() {
