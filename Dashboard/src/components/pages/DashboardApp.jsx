@@ -176,7 +176,7 @@ export const SpaceWrap = () => {
 
 export const ProgressBarApp = () => {
   return (
-    <div className="">
+    <div className="mx-3">
       <div className="">
         <Progress
           percent={30}
