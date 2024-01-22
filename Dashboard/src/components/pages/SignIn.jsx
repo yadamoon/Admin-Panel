@@ -1,8 +1,12 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 import  { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
+import auth from '../../services/http/auth'
+import { useDispatch } from 'react-redux'
+import { setStatus ,setUser } from "../../store/Slice/authSlice";
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [showOrHiden, setshowOrHiden] = useState("show");
@@ -13,7 +17,7 @@ function SignIn() {
     reset,
   } = useForm({
     defaultValues: {
-      username: "",
+      email: "",
       password: "",
     },
   });
@@ -33,12 +37,27 @@ function SignIn() {
     }
     setshowOrHiden("Hiden");
   };
-
-  const handleSignIn = ({ email, password }) => {
-    console.log(email + "" + password);
-    console.log("hello");
-  };
-
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const handleLogin = async ({ email, password }) => {
+    const result = await auth.signIn({
+      method: 'post',
+      url: 'auth/login',
+      data: { email, password },
+    })
+    if (!result.isError) {
+      dispatch(setStatus({ status: true }))
+      dispatch(setUser({ user: result.user }))
+      navigate('/')
+    
+      reset()
+      console.log("sucessfuly")
+   
+    } else {
+      console.log({ error: result.error })
+    
+    }
+  }
   return (
       <div
         className="h-screen  "
@@ -150,7 +169,7 @@ function SignIn() {
                     <button
                       type="button"
                       className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-10 pr-10  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
-                      onClick={handleSubmit(handleSignIn)}
+                      onClick={handleSubmit(handleLogin)}
                     >
                       Login
                     </button>
