@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { Link , useNavigate } from "react-router-dom";
 import auth from '../../services/http/auth'
 import { useDispatch } from 'react-redux'
-import { setStatus ,setUser } from "../../store/Slice/authSlice";
+import { setStatus ,setUser  } from "../../store/Slice/authSlice";
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [showOrHiden, setshowOrHiden] = useState("show");
