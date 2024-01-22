@@ -5,14 +5,17 @@
 
 
 import {  motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+
 
 const SideBar = () => {
-  const { signedIn } = useSelector((state) => state.auth);
-
+  // const authState = useSelector((state) => state.auth);
+ const signedIn = useSelector((state)=>state.auth)
   return (
+
     <div className="">
+
       <aside
         id="sidebar-multi-level-sidebar"
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
@@ -20,13 +23,17 @@ const SideBar = () => {
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-white">
           <div className=" mb-4 justify-center items-center text-center ">
+          
             <motion.h1
               className="text-blue-600  text-2xl items-center justify-center uppercase font-bold "
               initial={{ y: -100 }}
               animate={{ y: -10 }}
             >
               Admin Panel
+
             </motion.h1>
+           
+
           </div>
           <div className="flex border h-1 bg-black"></div>
           <ul className="space-y-2 my-5 font-medium">
@@ -101,9 +108,10 @@ const SideBar = () => {
                 </span>
               </Link>
             </motion.li>
-
-            
+                 
 {/* overview */}
+           
+
             {/* <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -128,7 +136,7 @@ const SideBar = () => {
                 </span>
               </Link>
             </motion.li> */}
-
+        
             {/* inbox */}
             {/* <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
@@ -146,8 +154,9 @@ const SideBar = () => {
                 </span>
               </Link>
             </motion.li> */}
-
-            {/* user */}
+ {/* user */}
+{!signedIn && (
+           
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -160,6 +169,7 @@ const SideBar = () => {
                 <span className="flex-1 ms-3 whitespace-nowrap">Profile</span>
               </Link>
             </motion.li>
+)}
 {/* products */}
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
