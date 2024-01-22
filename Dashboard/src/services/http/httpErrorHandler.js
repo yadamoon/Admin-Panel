@@ -4,6 +4,7 @@ export function errorHandler(error) {
      * The request was made and the server responded with a
      * status code that falls out of the range of 2xx
      */
+    
     return Error(error.response.data.message)
   } else if (error.request) {
     /*
@@ -15,7 +16,7 @@ export function errorHandler(error) {
     return Error('Something went wrong. Try again later!')
   } else {
     // Something happened in setting up the request and triggered an Error
-
+    console.log("hello")
     return Error('Something went wrong. Try again later!')
   }
 }
