@@ -1,14 +1,15 @@
-
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 // eslint-disable-next-line no-unused-vars
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
-// import { setHide, setShow } from "../../store/Slice/authSlice";
+
+
+
 import {  motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const SideBar = () => {
-  // const controller = useSelector((state) => state.controller);
-
-  // const { signedIn } = useSelector((state) => state.auth);
+  const { signedIn } = useSelector((state) => state.auth);
 
   return (
     <div className="">
@@ -59,8 +60,9 @@ const SideBar = () => {
                 />
               </svg>
             </div>
-
-            {/* Dashboard */}
+              {/* Dashboard */}
+            
+          
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -83,6 +85,7 @@ const SideBar = () => {
               </Link>
             </motion.li>
 
+
             {/* table */}
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
@@ -98,6 +101,8 @@ const SideBar = () => {
                 </span>
               </Link>
             </motion.li>
+
+            
 {/* overview */}
             {/* <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
