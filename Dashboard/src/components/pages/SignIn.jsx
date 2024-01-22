@@ -8,6 +8,7 @@ import auth from '../../services/http/auth'
 import { useDispatch } from 'react-redux'
 import { setStatus ,setUser  } from "../../store/Slice/authSlice";
 function SignIn() {
+  
   const [showPassword, setShowPassword] = useState(false);
   const [showOrHiden, setshowOrHiden] = useState("show");
   const {
@@ -46,9 +47,10 @@ function SignIn() {
       data: { email, password },
     })
     if (!result.isError) {
+      
+      navigate('/')
       dispatch(setStatus({ status: true }))
       dispatch(setUser({ user: result.user }))
-      navigate('/')
     
       reset()
       console.log("sucessfuly")
@@ -69,8 +71,7 @@ function SignIn() {
           backgroundSize: "cover",
         }}
       >
-        {/* <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->  */}
-        V
+       
         <section className="h-screen">
           <div className="h-full">
             {/* <!-- Left column container with background--> */}
