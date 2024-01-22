@@ -20,7 +20,7 @@ const DashboardApp = () => {
             {/* earing */}
             <div className="flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:border-t-blue-500 dark:shadow-slate-500/[.7]">
               <div className="p-4 md:p-5">
-                <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+                <h3 className="text-lg font-bold text-gray-800 ">
                   Card title
                 </h3>
                 <p className="mt-2 text-gray-500 dark:text-gray-400">
@@ -53,7 +53,7 @@ const DashboardApp = () => {
           {/* another */}
           <div className="flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:border-t-blue-500 dark:shadow-slate-500/[.7]">
             <div className="p-4 md:p-5">
-              <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+              <h3 className="text-lg font-bold text-gray-800">
                 Card title
               </h3>
               <p className="mt-2 text-gray-500 dark:text-gray-400">
@@ -85,7 +85,7 @@ const DashboardApp = () => {
           {/* another */}
           <div className="flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:border-t-blue-500 dark:shadow-slate-500/[.7]">
             <div className="p-4 md:p-5">
-              <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+              <h3 className="text-lg font-bold text-gray-800 ">
                 Card title
               </h3>
               <p className="mt-2 text-gray-500 dark:text-gray-400">
