@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import "./App.css";
 import SideBar from "./components/SideBar/SideBar";
 import HeaderApp from "./components/SideBar/common/HeaderApp";
@@ -38,12 +39,14 @@ function App() {
             className="lg:my-0 md:my-0 sm:my-5
           "
           >
+          
             <Route path="/" element={<DashboardApp />} />
             <Route path="/Table" element={<ListUser />} />
             <Route path="/User" element={<Profiles />} />
             <Route path="/Inbox" element={<Inbox />} />
             <Route path="/Setting" element={<Settings />} />
             <Route path="/Product" element={<Products />} />
+       
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/SignIn" element={<SignIn />} />
 
