@@ -69,7 +69,7 @@ const SideBar = () => {
             </div>
               {/* Dashboard */}
             
-          
+              {signedIn && (
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -91,9 +91,10 @@ const SideBar = () => {
                 <span className="ms-3">Dashboard</span>
               </Link>
             </motion.li>
-
-
-            {/* table */}
+              )}
+ {/* table */}
+            {signedIn && (
+           
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -108,10 +109,10 @@ const SideBar = () => {
                 </span>
               </Link>
             </motion.li>
+            )}
                  
-{/* overview */}
-           
 
+{/* overview */}
             {/* <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -155,7 +156,7 @@ const SideBar = () => {
               </Link>
             </motion.li> */}
  {/* user */}
-{!signedIn && (
+{signedIn && (
            
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
@@ -171,6 +172,7 @@ const SideBar = () => {
             </motion.li>
 )}
 {/* products */}
+{signedIn && (
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
               transition={{ type: "spring", stiffness: 300 }}
@@ -192,6 +194,7 @@ const SideBar = () => {
                 <span className="flex-1 ms-3 whitespace-nowrap">Products</span>
               </Link>
             </motion.li>
+)}
             {/* settings */}
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
