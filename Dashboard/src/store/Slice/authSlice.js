@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 import { createSlice } from "@reduxjs/toolkit";
 import { tokenService, userService } from "../../services/storageService";
 const initialState = {
