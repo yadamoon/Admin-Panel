@@ -103,7 +103,7 @@ function SignIn() {
                       {...register("password", {
                         required: "Please Enter Correct Password!",
                         minLength: {
-                          value: 6,
+                          value: 8,
                           message: "Please Enter atleast more than 6 character",
                         },
                         maxLength: {
