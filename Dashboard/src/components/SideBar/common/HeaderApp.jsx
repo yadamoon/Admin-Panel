@@ -1,9 +1,14 @@
+/* eslint-disable no-unused-vars */
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { setHide, setShow } from '../../../store/Slice/authSlice'
+import {useDispatch, useSelector } from "react-redux";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
+  const signedIn = useSelector((state)=>state.auth)
+
 
   // eslint-disable-next-line no-unused-vars
   const listNav = [
@@ -27,18 +32,22 @@ export default function IndexPage() {
               {/* //!? button of signIn and SignUp */}
               <div className="">
                 <div className=" grid grid-cols-2 gap-2 text-center mx-3 ">
+                {signedIn && (
                   <Link
                     to="/SignIn"
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
                   >
                     SignIn
                   </Link>
+               )}
                   <Link
                     to="/SignUp"
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
                   >
                     SignUp
                   </Link>
+
+                   
                 </div>
               </div>
 
