@@ -93,7 +93,7 @@ const SideBar = () => {
             </motion.li>
               )}
  {/* table */}
-            {signedIn && (
+            {!signedIn && (
            
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
@@ -156,7 +156,7 @@ const SideBar = () => {
               </Link>
             </motion.li> */}
  {/* user */}
-{signedIn && (
+{!signedIn && (
            
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
