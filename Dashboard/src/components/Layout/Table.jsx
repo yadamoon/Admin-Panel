@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+import React from 'react';
 import axios from "axios";
 import  { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
@@ -72,7 +74,7 @@ function Table() {
             {/* //todo Header of Table */}
             <thead className="bg-gray-50">
               <tr>
-                {headTable.map((title) => (
+                {React.Children.toArray(headTable.map(title=> 
                   <th
                     scope="col"
                     className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
@@ -83,7 +85,7 @@ function Table() {
                 ))}
               </tr>
             </thead>
-            {displayedUsers.map((person) => (
+            {React.Children.toArray (displayedUsers.map(person=>  
               <tbody
                 key={person.id}
                 className="bg-white divide-y divide-gray-200 px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
