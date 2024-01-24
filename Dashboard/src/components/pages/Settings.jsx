@@ -1,5 +1,5 @@
 import Item from "antd/es/list/Item";
-import  { useState } from "react";
+import  React, { useState } from "react";
 
 const Settings = () => {
   // eslint-disable-next-line no-unused-vars
@@ -93,8 +93,10 @@ const Settings = () => {
             </div>
             <div className="px-6 xl:px-0">
               <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8">
-                {items.map((item) => (
-                  <div key={item.id} role="cell" className="bg-gray-100">
+               
+               {React.Children.toArray(items.map(item => 
+               
+                  <div  role="cell" className="bg-gray-100">
                     <div className="bg-white p-5 rounded-md relative h-full w-full">
                       {/* class="absolute inset-0 object-center object-cover h-full w-full"  */}
                       <span>
