@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 import { Form, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import { http } from "../../services/http/http"
+import { http } from "../services/http/http"
 
 const SignUp = () => {
   const {
