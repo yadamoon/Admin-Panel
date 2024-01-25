@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { setHide, setShow } from '../../../store/Slice/authSlice'
+import { setHide, setShow } from '../../store/Slice/authSlice'
 import {useDispatch, useSelector } from "react-redux";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
@@ -21,7 +21,7 @@ export default function IndexPage() {
     { name: "SignIn", icon: "" },
     { name: "SignUp", icon: "" },
   ];
-  
+
   return (
     <>
       <div className="left-0 h-full w-full">
@@ -32,23 +32,22 @@ export default function IndexPage() {
               {/* //!? button of signIn and SignUp */}
               <div className="">
                 <div className=" grid grid-cols-2 gap-2 text-center mx-3 ">
-                {signedIn && (
+                {!signedIn && (
                   <Link
                     to="/SignIn"
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
                   >
                     SignIn
                   </Link>
-               )}
+ )}
+                {!signedIn && (
                   <Link
                     to="/SignUp"
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
                   >
                     SignUp
                   </Link>
-
-                   
-                </div>
+ )}  </div>
               </div>
 
               <div className="inset-y-0 left-0 flex items-end xl:hidden">

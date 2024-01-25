@@ -1,18 +1,18 @@
 /* eslint-disable no-unused-vars */
 import "./App.css";
-import SideBar from "./components/SideBar/SideBar";
-import HeaderApp from "./components/SideBar/common/HeaderApp";
+import SideBar from "./SideBar/SideBar";
+import HeaderApp from "./SideBar/common/HeaderApp";
 import { Routes, Route } from "react-router-dom";
-import DashboardApp from "./components/pages/DashboardApp";
-import ListUser from "./components/pages/ListUser";
-import Profiles from "./components/pages/Profiles";
-import Products from "./components/pages/Products";
-import SignIn from "./components/pages/SignIn";
-import SignUp from "./components/pages/SignUp";
-import Settings from "./components/pages/Settings";
-import Inbox from "./components/pages/Inbox";
-import Error from "./components/pages/Error";
-import ForgetPassword from "./components/pages/ForgetPassword";
+import DashboardApp from "./pages/DashboardApp";
+import ListUser from "./pages/ListUser";
+import Profiles from "./pages/Profiles";
+import Products from "./pages/Products";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
+import Settings from "./pages/Settings";
+import Inbox from "./pages/Inbox";
+import Error from "./pages/Error";
+import ForgetPassword from "./pages/ForgetPassword";
 
 function App() {
 
@@ -39,19 +39,15 @@ function App() {
             className="lg:my-0 md:my-0 sm:my-5
           "
           >
-          
             <Route path="/" element={<DashboardApp />} />
             <Route path="/Table" element={<ListUser />} />
             <Route path="/User" element={<Profiles />} />
             <Route path="/Inbox" element={<Inbox />} />
             <Route path="/Setting" element={<Settings />} />
             <Route path="/Product" element={<Products />} />
-       
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/SignIn" element={<SignIn />} />
-
             <Route path="/ForgetPassword" element={<ForgetPassword />} />
-
             <Route path="*" element={<Error />} />
           </Routes>
         </div>
