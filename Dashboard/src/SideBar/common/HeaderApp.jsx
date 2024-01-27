@@ -7,9 +7,8 @@ import { useSelector } from "react-redux";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
-  const { signedIn } = useSelector(state => state.user) || {};
-
-
+  const signedIn  = useSelector(state => state.user);
+ 
   // eslint-disable-next-line no-unused-vars
   const listNav = [
     { name: "Dashboard", icon: "" },
