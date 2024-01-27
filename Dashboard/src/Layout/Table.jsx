@@ -93,7 +93,6 @@ function Table() {
             {React.Children.toArray (displayedUsers.map(person=>  
             //TODO Chereka Yared  
               <tbody
-                key={person.id}
                 className="bg-white divide-y divide-gray-200 px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider  "
               >
                 <tr className=' '>
