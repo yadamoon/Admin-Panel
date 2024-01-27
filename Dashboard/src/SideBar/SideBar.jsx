@@ -3,23 +3,23 @@
 // eslint-disable-next-line no-unused-vars
 
 
-
+import {useState} from 'react';
 import {  motion } from "framer-motion";
+import  {setHide , setShow} from "../store/Slice/authSlice"
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 
 const SideBar = () => {
-  // const authState = useSelector((state) => state.auth);
- const signedIn = useSelector((state)=>state.auth)
+  const { signedIn } = useSelector(state => state.user) || {};
+
   return (
 
     <div className="">
 
-      <aside
-        id="sidebar-multi-level-sidebar"
+      <aside 
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
-        aria-label="Sidebar"
+
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-white">
           <div className=" mb-4 justify-center items-center text-center ">
@@ -93,7 +93,7 @@ const SideBar = () => {
             </motion.li>
               )}
  {/* table */}
-            {!signedIn && (
+            {signedIn && (
            
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
@@ -156,7 +156,7 @@ const SideBar = () => {
               </Link>
             </motion.li> */}
  {/* user */}
-{!signedIn && (
+{signedIn && (
            
             <motion.li
               whileHover={{ scale: 1.3, originX: 0, color: "#f8e112" }}
