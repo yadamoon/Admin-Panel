@@ -10,7 +10,7 @@ const Search = ({ users, setter }) => {
     
     // eslint-disable-next-line react/prop-types
     const usersFiltered = users.filter((item) =>
-      item.name.toLowerCase().includes(search.toLowerCase())
+      item.firstname.toLowerCase().includes(search.toLowerCase())
     );
 
     setter(usersFiltered);
