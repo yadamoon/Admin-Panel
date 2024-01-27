@@ -1,5 +1,7 @@
-/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+
+
 import { createSlice } from "@reduxjs/toolkit";
 import { tokenService, userService } from "../../services/storageService";
 const initialState = {
@@ -11,8 +13,8 @@ export const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    setStatus: (state, { payload }) => {
-      state.signedIn = payload.status;
+    setStatus: (state, action) => {
+      state.signedIn = action.payload.status;
     },
 
     setUser: (state, { payload }) => {
