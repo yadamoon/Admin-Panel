@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
- 
+  const { signedIn } = useSelector(state => state.user) || {};
 
 
   // eslint-disable-next-line no-unused-vars
@@ -21,7 +21,7 @@ export default function IndexPage() {
     { name: "SignIn", icon: "" },
     { name: "SignUp", icon: "" },
   ];
-  const signedIn = useSelector((state)=>state.auth)
+
   return (
     <>
       <div className="left-0 h-full w-full">
