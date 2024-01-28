@@ -10,10 +10,9 @@ import { Link, useNavigate } from 'react-router-dom'
 
 
 function SignIn() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [showOrHiden, setshowOrHiden] = useState('show')
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+
+
+
   const {
     register,
     handleSubmit,
@@ -26,6 +25,10 @@ function SignIn() {
     },
   })
 
+  const [showPassword, setShowPassword] = useState(false)
+  const [showOrHiden, setshowOrHiden] = useState('show')
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
   const handleCkeckBox = () => {
     // eslint-disable-next-line no-undef
     if (type === 'password') {
@@ -63,10 +66,10 @@ function SignIn() {
   }
   return (
     <div
-      className="h-screen  "
+      className="h-screen"
       style={{
         backgroundImage:
-          'url("https://app.dubbpie.com/assets/images/login-img.png")',
+        'url("https://app.dubbpie.com/assets/images/login-img.png")',
         backgroundRepeat: 'no-repeat',
         width: 'auto',
         backgroundPosition: 'center',
