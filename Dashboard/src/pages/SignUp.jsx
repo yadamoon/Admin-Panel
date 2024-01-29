@@ -1,10 +1,11 @@
 
 // eslint-disable-next-line no-unused-vars
 import { Form, useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link  , useNavigate} from "react-router-dom";
 import { http } from "../services/http/http"
 import Swal from 'sweetalert2';
 const SignUp = () => {
+  const navigate = useNavigate(); 
 
   const {
     register,
@@ -34,6 +35,7 @@ const SignUp = () => {
     })
     if (!result.isError) {
       reset()
+      navigate('/SignIn')
       Swal.fire({
         icon: 'success',
         title: 'Registration Successful',
