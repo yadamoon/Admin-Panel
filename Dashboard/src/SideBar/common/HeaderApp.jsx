@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { setHide, setShow } from '../../store/Slice/authSlice'
+import { } from '../../store/Slice/authSlice'
 import { useSelector } from 'react-redux';
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
-  const signedIn  = useSelector(state => state.user);
+  const { signedIn } = useSelector(state => state.user) || {};
+  
  
   // eslint-disable-next-line no-unused-vars
   const listNav = [
