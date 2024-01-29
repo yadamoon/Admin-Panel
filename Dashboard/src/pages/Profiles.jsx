@@ -24,7 +24,7 @@ const Profiles = () => {
                 <div className="bg-white shadow rounded-lg p-6  ">
                   <div className="flex flex-col items-center">
                     <img
-                      src="public/feveb.jpg"
+                      src="https://avatars.githubusercontent.com/u/128363342?v=4"
                       className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
                     />
                     <h1 className="text-xl font-bold">{userList.name}</h1>
