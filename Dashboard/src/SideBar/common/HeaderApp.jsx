@@ -51,14 +51,7 @@ export default function IndexPage() {
                     SignUp
                   </Link>
   )} 
-           {/* {signedIn && ( 
-                  <Link
-                    to="/SignUp"
-                    className="inline-block  bg-red-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
-                  >
-                    LogOut
-                  </Link>
-  )}  */}
+       
   </div>
               </div>
 
