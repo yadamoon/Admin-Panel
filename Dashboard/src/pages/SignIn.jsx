@@ -121,7 +121,7 @@ function SignIn() {
                       },
                     })}
                     className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
-                    placeholder="Email address"
+                    placeholder="Email "
                   />
                   {errors.email && (
                     <span className="text-red-700 col-span-1 md:col-span-2 ">
