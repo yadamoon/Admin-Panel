@@ -7,6 +7,11 @@ import { tokenService, userService } from "../../services/storageService";
 const initialState = {
   signedIn: !!tokenService.getToken(),
   user: userService.getUser(),
+  show: {
+    signIn: true,
+    signUp: true,
+    logOut: true,
+  },
 };
 
 export const authSlice = createSlice({
@@ -27,9 +32,11 @@ export const authSlice = createSlice({
     setHide: (state, { payload }) => {
       state.show = { ...state, [action.payload]: false };
     },
+    
   },
 });
 
 export const { setStatus, setUser, setShow, setHide } = authSlice.actions;
+
 
 export default authSlice.reducer;
