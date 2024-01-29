@@ -3,8 +3,9 @@
 import { Form, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { http } from "../services/http/http"
-
+import Swal from 'sweetalert2';
 const SignUp = () => {
+
   const {
     register,
     handleSubmit,
@@ -33,6 +34,12 @@ const SignUp = () => {
     })
     if (!result.isError) {
       reset()
+      Swal.fire({
+        icon: 'success',
+        title: 'Registration Successful',
+        showConfirmButton: false,
+        timer: 1500  // Auto close after 1.5 seconds
+      });
     }
     console.log(result)
   }
