@@ -53,7 +53,7 @@ function SignIn() {
       data: { email, password },
     })
     if (!result.isError) {
-      dispatch(setStatus({ status: true }))
+      dispatch(setStatus({ status: true }));
       dispatch(setUser({ user: result.user }))
       navigate('/')
       
