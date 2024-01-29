@@ -5,19 +5,16 @@
 
 import {useState} from 'react';
 import {  motion } from "framer-motion";
-import  {setHide , setShow} from "../store/Slice/authSlice"
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-
 const SideBar = () => {
-  const { signedIn } = useSelector(state => state.user) || {};
-
+  const { signedIn } = useSelector((state) => state.auth) || {};
+  
   return (
 
     <div className="">
-
-      <aside 
+    <aside 
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
 
       >
@@ -35,7 +32,7 @@ const SideBar = () => {
            
 
           </div>
-          <div className="flex border h-1 bg-black"></div>
+        <div className="flex border h-1 bg-black"></div>
           <ul className="space-y-2 my-5 font-medium">
             <div className=" flex justify-start items-center py-7 relative">
               <input
