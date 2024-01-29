@@ -7,6 +7,7 @@ import auth from '../services/http/auth'
 import { useDispatch } from 'react-redux'
 import { setStatus, setUser } from '../store/Slice/authSlice'
 import { Link, useNavigate } from 'react-router-dom'
+import Swal from 'sweetalert2';
 
 
 function SignIn() {
@@ -57,8 +58,13 @@ function SignIn() {
       dispatch(setUser({ user: result.user }))
       navigate('/')
       
-
       reset()
+      Swal.fire({
+        icon: 'success',
+        title: 'Login Successful',
+        showConfirmButton: false,
+        timer: 1500  // Auto close after 1.5 seconds
+      });
       console.log('sucessfuly')
     } else {
       console.log({ error: result.error })
