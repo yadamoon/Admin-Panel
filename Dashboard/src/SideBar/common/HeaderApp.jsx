@@ -2,12 +2,15 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { } from '../../store/Slice/authSlice'
-import { useSelector } from 'react-redux';
+import { useSelector  } from 'react-redux';
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
-  const { signedIn } = useSelector(state => state.user) || {};
+  const { signedIn } = useSelector((state) => state.auth) || {};
+  
+  // useSelector(selectSignedIn);
+
+
   
  
   // eslint-disable-next-line no-unused-vars
@@ -39,15 +42,16 @@ export default function IndexPage() {
                   >
                     SignIn
                   </Link>
- )}
-                {!signedIn && (
+)}
+                 {!signedIn && ( 
                   <Link
                     to="/SignUp"
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
                   >
                     SignUp
                   </Link>
- )}  </div>
+  )} 
+  </div>
               </div>
 
               <div className="inset-y-0 left-0 flex items-end xl:hidden">
