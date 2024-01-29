@@ -42,8 +42,18 @@ const SignUp = () => {
         showConfirmButton: false,
         timer: 1500  // Auto close after 1.5 seconds
       });
+      console.log(result)
     }
-    console.log(result)
+   
+    else {
+      console.log({ error: result.error })
+      Swal.fire({
+        icon: 'error',
+        title: 'Wrong please try again',
+        timer: 2000,
+        showConfirmButton: false,
+      })
+    }
   }
 
 
