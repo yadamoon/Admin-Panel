@@ -1,15 +1,42 @@
 /* eslint-disable no-unused-vars */
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { useSelector  } from 'react-redux';
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector , useDispatch  } from 'react-redux';
+import auth from '../../services/http/auth'
+import Swal from 'sweetalert2';
+import { setStatus } from "../../store/Slice/authSlice";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
   const [profile, setProfile] = useState(false);
   const { signedIn } = useSelector((state) => state.auth) || {};
-  
+const navigate = useNavigate();
+const dispatch = useDispatch();
   // useSelector(selectSignedIn);
+  const handlLogout = () => {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: "You won't be able to revert this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, logout !',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: 'Logout!',
+          icon: 'success',
+          showConfirmButton: false,
+          timer: 2000,
+        })
 
+        auth.signOut()
+        dispatch(setStatus({ status: false }))
+        navigate('/')
+      }
+    })
+  }
 
   
  
@@ -180,7 +207,7 @@ export default function IndexPage() {
                             </svg>
                             <span className="ml-2"> Settings</span>
                           </li>
-                          <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                          <li onClick={handlLogout} className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               className="icon icon-tabler icon-tabler-settings"
