@@ -12,8 +12,6 @@ import Swal from 'sweetalert2';
 
 function SignIn() {
 
-
-
   const {
     register,
     handleSubmit,
@@ -68,6 +66,12 @@ function SignIn() {
       console.log('sucessfuly')
     } else {
       console.log({ error: result.error })
+      Swal.fire({
+        title: 'Error!',
+        icon: 'error',
+        timer: 2000,
+        showConfirmButton: false,
+      })
     }
   }
   return (
