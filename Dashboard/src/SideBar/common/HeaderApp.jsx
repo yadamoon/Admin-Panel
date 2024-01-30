@@ -33,7 +33,7 @@ const dispatch = useDispatch();
 
         auth.signOut()
         dispatch(setStatus({ status: false }))
-        navigate('/')
+        navigate('/Landing')
       }
     })
   }
