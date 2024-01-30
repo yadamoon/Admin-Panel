@@ -8,6 +8,7 @@ import Swal from 'sweetalert2';
 import { setStatus } from "../../store/Slice/authSlice";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
+  const [hide , setHide] = useState(false)
   const [profile, setProfile] = useState(false);
   const { signedIn } = useSelector((state) => state.auth) || {};
 const navigate = useNavigate();
@@ -62,6 +63,7 @@ const dispatch = useDispatch();
               {/* //!? button of signIn and SignUp */}
               <div className="">
                 <div className=" grid grid-cols-3 gap-2 text-center mx-3 ">
+                  
                 {!signedIn && (
                   <Link
                     to="/SignIn"
@@ -70,7 +72,9 @@ const dispatch = useDispatch();
                     SignIn
                   </Link>
 )}
-                 {!signedIn && ( 
+                    
+                 {!signedIn  && ( 
+                  
                   <Link
                     to="/SignUp"
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
