@@ -66,18 +66,18 @@ function Table() {
   };
   const headTable = ["FullName", "Email", "Information"];
   return (
-    <div className="flex justify-center">
+    <div className="relative overflow-x-auto sm:rounded-lg">
       <div className="w-full">
         <Search users={users} setter={setUsersFiltered} />
         <div className="overflow-x-auto justify-center items-center">
           <table className="min-w-full divide-y divide-gray-200 ">
             {/* //todo Header of Table */}
-            <thead className="bg-gray-50">
+            <thead className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 bg-white">
               <tr>
                 {React.Children.toArray(headTable.map(title=> 
                   <th
                     scope="col"
-                    className="px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider"
+                    className=" px-6 py-3"
                    
                   >
                     {title}
@@ -93,19 +93,19 @@ function Table() {
             {React.Children.toArray (displayedUsers.map(person=>  
             //TODO Chereka Yared  
               <tbody
-                className="bg-white divide-y divide-gray-200 px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider  "
+                className=" bg-gray-300 px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider  "
               >
-                <tr className=' '>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                <tr className=' bg-white border-b   hover:bg-gray-50 dark:hover:bg-gray-600"'>
+                  <td className="px-6 py-4">
                     <div className="text-sm font-medium text-gray-900">
                       {person.firstname +" "+person.lastname}
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4">
                     <div className="text-sm text-gray-500">{person.email}</div>
                   </td>
                   
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-6 py-4">
                     <a
                       href=""
                       className="bg-blue-500 text-white p-3 rounded hover:opacity-75"
@@ -139,3 +139,12 @@ function Table() {
 }
 
 export default Table;
+
+
+
+
+
+
+
+
+
