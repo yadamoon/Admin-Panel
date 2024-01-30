@@ -13,6 +13,7 @@ import Settings from "./pages/Settings";
 import Inbox from "./pages/Inbox";
 import Error from "./pages/Error";
 import ForgetPassword from "./pages/ForgetPassword";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
 
@@ -47,6 +48,7 @@ function App() {
             <Route path="/Product" element={<Products />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/SignIn" element={<SignIn />} />
+            <Route path="/Landing" element={<LandingPage />} />
             <Route path="/ForgetPassword" element={<ForgetPassword />} />
             <Route path="*" element={<Error />} />
           </Routes>
