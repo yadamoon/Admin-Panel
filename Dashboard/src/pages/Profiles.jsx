@@ -13,11 +13,11 @@ const Profiles = () => {
     },
   ];
   return (
-    <div className="space-y-6 flex flex-wrap ">
-      <div className="bg-gray-100 h-full flex  mb-80 ">
+    <div className="space-y-6 flex  justify-center items-center ">
+      <div className="bg-gray-100 h-[50vh] flex w-2/3   mb-80 ">
         <div className="container mx-auto py-8">
           {/* //!? total user information  */}
-          <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4 ">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 px-4 ">
             {/* //!? rendering the user information img , fullName , etc.. */}
             {userInfo.map((userList) => (
               <div key={userInfo.id} className="col-span-4 sm:col-span-3">
@@ -55,7 +55,7 @@ const Profiles = () => {
             ))}
 
             {/* //!? rendering the more information like detail information ...  */}
-            {userInfo.map((moreInfo) => (
+            {/* {userInfo.map((moreInfo) => (
               <div key={moreInfo.id} className="col-span-4 sm:col-span-9">
                 <div className="bg-white shadow rounded-lg p-6">
                   <h2 className="text-xl font-bold mb-4">{moreInfo.titel}</h2>
@@ -156,7 +156,7 @@ const Profiles = () => {
                   </div>
                 </div>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
