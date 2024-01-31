@@ -66,19 +66,18 @@ function Table() {
   };
   const headTable = ["FullName", "Email", "Information"];
   return (
-    <div className="relative overflow-x-auto sm:rounded-lg">
+    <div className="">
       <div className="w-full">
         <Search users={users} setter={setUsersFiltered} />
         <div className="overflow-x-auto justify-center items-center">
           <table className="min-w-full divide-y divide-gray-200 ">
             {/* //todo Header of Table */}
-            <thead className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 bg-white">
+            <thead className="w-full text-sm text-left  text-gray-500 dark:text-gray-400 bg-white">
               <tr>
                 {React.Children.toArray(headTable.map(title=> 
                   <th
                     scope="col"
                     className=" px-6 py-3"
-                   
                   >
                     {title}
                   </th>
