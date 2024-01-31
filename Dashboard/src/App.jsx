@@ -14,6 +14,7 @@ import Inbox from "./pages/Inbox";
 import Error from "./pages/Error";
 import ForgetPassword from "./pages/ForgetPassword";
 import LandingPage from "./pages/LandingPage";
+import DetailsUsers from "./Layout/DetailsUsers";
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/SignIn" element={<SignIn />} />
             <Route path="/Landing" element={<LandingPage />} />
+            <Route path="/DetailsUser" element={<DetailsUsers />} />
             <Route path="/ForgetPassword" element={<ForgetPassword />} />
             <Route path="*" element={<Error />} />
           </Routes>
