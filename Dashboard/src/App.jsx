@@ -44,13 +44,14 @@ function App() {
             <Route path="/" element={<DashboardApp />} />
             <Route path="/Table" element={<ListUser />} />
             <Route path="/User" element={<Profiles />} />
+            <Route path="DetailsUser/:id" element={<DetailsUsers />} />
             <Route path="/Inbox" element={<Inbox />} />
             <Route path="/Setting" element={<Settings />} />
             <Route path="/Product" element={<Products />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/SignIn" element={<SignIn />} />
             <Route path="/Landing" element={<LandingPage />} />
-            <Route path="/DetailsUser" element={<DetailsUsers />} />
+           
             <Route path="/ForgetPassword" element={<ForgetPassword />} />
             <Route path="*" element={<Error />} />
           </Routes>
