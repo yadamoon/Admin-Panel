@@ -4,6 +4,8 @@ import axios from "axios";
 import  { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import Search from "../pages/Search";
+import { Link } from 'react-router-dom';
+
 // eslint-disable-next-line react/prop-types
 function RCPaginate({ items, itemsPerPage, setter }) {
   const [itemOffset, setItemOffset] = useState(0);
@@ -105,12 +107,12 @@ function Table() {
                   </td>
                   
                   <td className="px-6 py-4">
-                    <a
-                      href=""
+                    <Link  to={'/DetailsUser/' + person._id}
+                    
                       className="bg-blue-500 text-white p-3 rounded hover:opacity-75"
                     >
                       Details
-                    </a>
+                    </Link>
                   </td>
                 </tr>
               </tbody>
