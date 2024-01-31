@@ -13,9 +13,9 @@ const  DetailsUsers =() =>{
   
               <div className="w-2/3 sm:text-center pl-5 mt-10 text-start">
                   <p className="font-poppins font-bold text-heading sm:text-4xl text-2xl">
-                      Amit Pachange
+                     Yared Chereka
                   </p>
-                  <p className="text-heading">Software Engineer</p>
+                  {/* <p className="text-heading"></p> */}
               </div>
   
           </div>
@@ -28,10 +28,11 @@ const  DetailsUsers =() =>{
                   <div className="flex flex-col sm:w-1/3">
                       {/* <!-- My contact --> */}
                       <div className="py-3 sm:order-none order-3">
-                          <h2 className="text-lg font-poppins font-bold text-top-color">My Contact</h2>
-                          <div className="border-2 w-20 border-top-color my-3"></div>
+                          <h2 className="text-lg font-poppins font-bold text-blue-500">My Contact</h2>
+                          <div className="border-2 w-20 border-blue-500 my-3"></div>
   
                           <div>
+                            {/* LinkedIn */}
                               <div className="flex items-center my-1">
                                   <a className="w-6 text-gray-700 hover:text-orange-600"><svg
                                           xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="h-4">
@@ -42,6 +43,7 @@ const  DetailsUsers =() =>{
                                   </a>
                                   <div className="ml-2 truncate">amitpachange@gmail.com</div>
                               </div>
+                              {/* Youtube */}
                               <div className="flex items-center my-1">
                                   <a className="w-6 text-gray-700 hover:text-orange-600"
                                       aria-label="Visit TrendyMinds YouTube" href="" target="_blank"><svg
@@ -53,6 +55,7 @@ const  DetailsUsers =() =>{
                                   </a>
                                   <div>9145258775</div>
                               </div>
+                              {/* facebook */}
                               <div className="flex items-center my-1">
                                   <a className="w-6 text-gray-700 hover:text-orange-600"
                                       aria-label="Visit TrendyMinds Facebook" href="" target="_blank"><svg
@@ -64,6 +67,7 @@ const  DetailsUsers =() =>{
                                   </a>
                                   <div>sale galli latur</div>
                               </div>
+                              {/* twitter */}
                               <div className="flex items-center my-1">
                                   <a className="w-6 text-gray-700 hover:text-orange-600"
                                       aria-label="Visit TrendyMinds Twitter" href="" target="_blank"><svg className="h-4"
@@ -80,9 +84,9 @@ const  DetailsUsers =() =>{
                       </div>
                    
                       {/* <!-- Education Background --> */}
-                      <div className="py-3 sm:order-none order-1">
-                          <h2 className="text-lg font-poppins font-bold text-top-color">Education Background</h2>
-                          <div className="border-2 w-20 border-top-color my-3"></div>
+                      {/* <div className="py-3 sm:order-none order-1">
+                          <h2 className="text-lg font-poppins font-bold text-blue-500">Education Background</h2>
+                          <div className="border-2 w-20 border-blue-500 my-3"></div>
   
                           <div className="flex flex-col space-y-1">
   
@@ -108,7 +112,7 @@ const  DetailsUsers =() =>{
                               </div>
   
                           </div>
-                      </div>
+                      </div> */}
   
                   </div>
   
@@ -117,17 +121,17 @@ const  DetailsUsers =() =>{
   
                       {/* <!-- About me --> */}
                       <div className="py-3">
-                          <h2 className="text-lg font-poppins font-bold text-top-color">About Me</h2>
-                          <div className="border-2 w-20 border-top-color my-3"></div>
+                          <h2 className="text-lg font-poppins font-bold text-blue-500">About Me</h2>
+                          <div className="border-2 w-20 border-blue-500 my-3"></div>
                           <p>To get a career opportunity which would help me to utilize my academic background to assist
                               me to gain experience, employ my excellent skills, and enable me to make positive
                               contribution.</p>
                       </div>
   
                       {/* <!-- Professional Experience --> */}
-                      <div className="py-3">
-                          <h2 className="text-lg font-poppins font-bold text-top-color">Professional Experience</h2>
-                          <div className="border-2 w-20 border-top-color my-3"></div>
+                      {/* <div className="py-3">
+                          <h2 className="text-lg font-poppins font-bold text-blue-500">Professional Experience</h2>
+                          <div className="border-2 w-20 border-blue-500 my-3"></div>
   
                           <div className="flex flex-col">
   
@@ -155,12 +159,12 @@ const  DetailsUsers =() =>{
   
                           </div>
   
-                      </div>
+                      </div> */}
   
                       {/* <!-- Projects --> */}
                       <div className="py-3">
-                          <h2 className="text-lg font-poppins font-bold text-top-color">Projects</h2>
-                          <div className="border-2 w-20 border-top-color my-3"></div>
+                          <h2 className="text-lg font-poppins font-bold text-blue-500">Projects</h2>
+                          <div className="border-2 w-20 border-blue-500 my-3"></div>
   
                           <div className="flex flex-col">
   
