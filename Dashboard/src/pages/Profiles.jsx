@@ -107,6 +107,19 @@ const Profiles = () => {
                   
                 </div>
             </div>
+            <div className="flex flex-row items-center justify-between mb-6">
+                <div className="flex flex-col items-start">
+                    <span className="text-sm font-medium text-gray-600">
+                    <i className="fa fa-phone" aria-hidden="true"></i>{" "}
+                    </span>
+                    <span className="text-sm font-medium text-gray-600">{userList.telephone}</span>
+         
+                </div>
+                <div className="flex flex-col items-start">
+                    <span className="text-sm font-medium text-blue-600">Edit</span>
+                  
+                </div>
+            </div>
            
         </div>
         </div>
