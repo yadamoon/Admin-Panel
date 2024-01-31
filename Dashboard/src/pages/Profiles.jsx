@@ -49,10 +49,71 @@ const Profiles = () => {
                         {userList.telephone}
                       </li>
                     </ul>
-                  </div>
+                 
+             
+            
+            
+            
+            
+            <div className="px-4 py-5 sm:p-6">
+            {/* <div className="flex flex-col items-start justify-between mb-6">
+                <span className="text-sm font-medium text-gray-600">FullName</span>
+                <span className="text-lg font-medium text-gray-800">Yared  Chereka</span>
+            </div> */}
+            {/* <div className="flex flex-col items-start justify-between mb-6">
+                {/* <span className="text-sm font-medium text-gray-600">Email</span> */}
+
+                {/* <span className="text-lg font-medium text-gr">
+                          <i className="fa fa-envelope" aria-hidden="true"></i>
+                          </span> */}
+                          
+                        {/* {userList.email} */}
+                        
+
+            {/* </div> */}
+
+            <div className="flex flex-row items-center justify-between mb-6">
+                <div className="flex flex-col items-start">
+                    <span className="text-sm font-medium text-gray-600">First Name</span>
+                    <span className="text-sm font-medium text-gray-600">{userList.name}</span>
                 </div>
-              </div>
-            ))}
+                <div className="flex flex-col items-start">
+               
+                    <span className="text-sm font-medium text-blue-600">Edit</span>
+                  
+                </div>
+            </div>
+            <div className="flex flex-row items-center justify-between mb-6">
+                <div className="flex flex-col items-start">
+                    <span className="text-sm font-medium text-gray-600">Last Name</span>
+                    <span className="text-sm font-medium text-gray-600">{userList.name}</span>
+                </div>
+                <div className="flex flex-col items-start">
+               
+                    <span className="text-sm font-medium text-blue-600">Edit</span>
+                  
+                </div>
+            </div>
+            <div className="flex flex-row items-center justify-between mb-6">
+                <div className="flex flex-col items-start">
+                    <span className="text-sm font-medium text-gray-600">
+                    <i className="fa fa-envelope" aria-hidden="true"></i>
+                    </span>
+                    <span className="text-sm font-medium text-gray-600">{userList.email}</span>
+         
+                </div>
+                <div className="flex flex-col items-start">
+                    <span className="text-sm font-medium text-blue-600">Edit</span>
+                  
+                </div>
+            </div>
+           
+        </div>
+        </div>
+        </div>
+                </div>
+        ))}
+        
 
             {/* //!? rendering the more information like detail information ...  */}
             {/* {userInfo.map((moreInfo) => (
