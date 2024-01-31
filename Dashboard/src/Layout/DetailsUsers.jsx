@@ -1,6 +1,29 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-no-duplicate-props */
+
+import axios from "axios"
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import { BASE_URL } from "../config/config"
+const apiURL = BASE_URL + '/DetailsUser'
 /* eslint-disable react/no-unknown-property */
 const  DetailsUsers =() =>{
+ const [data, setData] = useState(null)
+  const { _id } = useParams()
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(`${apiURL}/${_id}`)
+      console.log("Hello")
+      setData(response.data)
+    }
+    fetchData()
+  }, [_id])
+  if (!data) {
+    return <div > Please try  </div>
+  }
+
     return(
       <div className="bg-gray-100 p-4">
 
@@ -13,7 +36,10 @@ const  DetailsUsers =() =>{
   
               <div className="w-2/3 sm:text-center pl-5 mt-10 text-start">
                   <p className="font-poppins font-bold text-heading sm:text-4xl text-2xl">
-                     Yared Chereka
+                  {/* {data. +" "+data.lastname} */}
+
+
+                  {data}
                   </p>
                   {/* <p className="text-heading"></p> */}
               </div>
