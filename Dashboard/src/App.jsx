@@ -41,7 +41,7 @@ function App() {
             className="lg:my-0 md:my-0 sm:my-5
           "
           >
-            <Route path="/" element={<DashboardApp />} />
+            <Route path="/Dashboard" element={<DashboardApp />} />
             <Route path="/Table" element={<ListUser />} />
             <Route path="/User" element={<Profiles />} />
             <Route path="DetailsUser/:id" element={<DetailsUsers />} />
@@ -50,7 +50,7 @@ function App() {
             <Route path="/Product" element={<Products />} />
             <Route path="/SignUp" element={<SignUp />} />
             <Route path="/SignIn" element={<SignIn />} />
-            <Route path="/Landing" element={<LandingPage />} />
+            <Route path="/" element={<LandingPage />} />
            
             <Route path="/ForgetPassword" element={<ForgetPassword />} />
             <Route path="*" element={<Error />} />
