@@ -9,19 +9,20 @@ const apiURL = BASE_URL + '/DetailsUser'
 /* eslint-disable react/no-unknown-property */
 const  DetailsUsers =() =>{
  const [data, setData] = useState(null)
-  const { _id } = useParams()
+  const { id } = useParams()
 
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(`${apiURL}/${_id}`)
-      console.log("Hello")
+      const response = await axios.get(`${apiURL}/${id}`)
+     
       setData(response.data)
     }
     fetchData()
-  }, [_id])
+ 
+  }, [id])
   if (!data) {
-    return <div > Please try  </div>
+    return <div > Users Not Found  </div>
   }
 
     return(
@@ -36,10 +37,7 @@ const  DetailsUsers =() =>{
   
               <div className="w-2/3 sm:text-center pl-5 mt-10 text-start">
                   <p className="font-poppins font-bold text-heading sm:text-4xl text-2xl">
-                  {/* {data. +" "+data.lastname} */}
-
-
-                  {data}
+                  {data.firstName} {data.lastName}
                   </p>
                   {/* <p className="text-heading"></p> */}
               </div>
