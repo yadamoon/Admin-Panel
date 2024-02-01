@@ -51,7 +51,7 @@ const Profiles = () => {
                 </div>
                 <div className="flex flex-col items-start">
                
-                    <span className="text-sm font-medium text-blue-600">Edit</span>
+                    <span className="text-sm font-medium text-blue-600 hover:underline">Edit</span>
                   
                 </div>
             </div>
@@ -62,7 +62,7 @@ const Profiles = () => {
                 </div>
                 <div className="flex flex-col items-start">
                
-                    <span className="text-sm font-medium text-blue-600">Edit</span>
+                    <span className="text-sm font-medium text-blue-600 hover:underline">Edit</span>
                   
                 </div>
             </div>
@@ -75,7 +75,7 @@ const Profiles = () => {
          
                 </div>
                 <div className="flex flex-col items-start">
-                    <span className="text-sm font-medium text-blue-600">Edit</span>
+                    <span className="text-sm font-medium text-blue-600 hover:underline">Edit</span>
                   
                 </div>
             </div>
@@ -88,7 +88,7 @@ const Profiles = () => {
          
                 </div>
                 <div className="flex flex-col items-start">
-                    <span className="text-sm font-medium text-blue-600">Edit</span>
+                    <span className="text-sm font-medium text-blue-600 hover:underline">Edit</span>
                   
                 </div>
             </div>
