@@ -34,7 +34,7 @@ const dispatch = useDispatch();
 
         auth.signOut()
         dispatch(setStatus({ status: false }))
-        navigate('/Landing')
+        navigate('/')
       }
     })
   }
@@ -384,7 +384,7 @@ const dispatch = useDispatch();
                           placeholder="Search"
                         />
                       </div>
-                      <Link to="/" className="cursor-pointer">
+                      <Link to="/Dashboard" className="cursor-pointer">
                         <li className="text-gray-800 pt-10">
                           <div className="flex items-center">
                             <div className="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
