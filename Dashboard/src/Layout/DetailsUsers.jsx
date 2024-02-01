@@ -5,22 +5,34 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { BASE_URL } from "../config/config"
-const apiURL = BASE_URL + '/DetailsUser'
+const apiURL = BASE_URL + '/users'
 /* eslint-disable react/no-unknown-property */
 const  DetailsUsers =() =>{
+
  const [data, setData] = useState(null)
-  const { id } = useParams()
+  const { _id } = useParams()
 
 
   useEffect(() => {
+  
     const fetchData = async () => {
-      const response = await axios.get(`${apiURL}/${id}`)
-     
-      setData(response.data)
+      try {
+        const response = await axios.get('http://localhost:3000/api/v1/users/65ac811b78da824169bcd7b8');
+        if (response.status === 200) {
+          setData(response.data);
+          console.log(... response)
+        } else {
+          // Handle error if the response status is not 200
+        }
+      } catch (error) {
+        // Handle any errors that occurred during the fetch
+        console.error('Error fetching data:', error);
+      }
     }
-    fetchData()
+    
+    fetchData();
  
-  }, [id])
+  }, [_id])
   if (!data) {
     return <div > Users Not Found  </div>
   }
@@ -37,7 +49,7 @@ const  DetailsUsers =() =>{
   
               <div className="w-2/3 sm:text-center pl-5 mt-10 text-start">
                   <p className="font-poppins font-bold text-heading sm:text-4xl text-2xl">
-                  {data.firstName} {data.lastName}
+                  {data}
                   </p>
                   {/* <p className="text-heading"></p> */}
               </div>
