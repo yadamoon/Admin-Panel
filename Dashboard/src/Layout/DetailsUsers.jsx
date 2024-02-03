@@ -419,16 +419,8 @@ const DetailsUsers = () => {
   }
 
   return (
-    <div className="space-y-6 flex  justify-center items-center ">
+    <div className="space-y-6 flex  h-screen ">
 
-
-
-
-
-
-
-
-  
   <div className="border-1 shadow-lg shadow-gray-700 rounded-lg my-5">
 
       {/* <!-- top content --> */}
@@ -456,12 +448,21 @@ const DetailsUsers = () => {
                       <div className="border-2 w-20 border-blue-500 my-3"></div>
 
                       <div>
-                        {/* LinkedIn */}
+                        {/* firstName */}
                           <div className="flex items-center my-1">
-                              <a className="w-6 text-gray-700 hover:text-blue-600">
-                              <i class="fa fa-envelope" aria-hidden="true"></i>
-                              </a>
-                              <div className="ml-2 truncate"> {userDetails.email}</div>
+                          <p>FirstName -  <span>{userDetails.firstname}</span></p> 
+                         </div>
+{/* lastName */}
+                          <div className="flex items-center my-1">
+                        
+                          
+                          <p>LastName - <span>{userDetails.lastname}</span></p>
+                        
+                          </div>
+
+                          <div className="flex items-center my-1 space-x-2">
+                          <i class="fa fa-envelope" aria-hidden="true"></i> 
+                          <p>    {userDetails.email}</p>
                           </div>
                        
 
@@ -479,15 +480,19 @@ const DetailsUsers = () => {
                   <div className="py-3">
                       <h2 className="text-lg font-poppins font-bold text-blue-500">About Me</h2>
                       <div className="border-2 w-20 border-blue-500 my-3"></div>
-                      <p>To get a career opportunity which would help me to utilize my academic background to assist
-                          me to gain experience, employ my excellent skills, and enable me to make positive
-                          contribution.</p>
+                      <p>
+                        
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quo ratione dolores ipsum magni tenetur nobis hic facere consequuntur eaque? Eveniet optio molestiae in autem laudantium quos cum accusantium obcaecati!
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, unde culpa consectetur, quas maxime a quisquam harum minima nostrum aspernatur ipsum illum quibusdam eveniet. Ab vel sit assumenda ad laborum.
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur quo ratione dolores ipsum magni tenetur nobis hic facere consequuntur eaque? Eveniet optio molestiae in autem laudantium quos cum accusantium obcaecati!
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, unde culpa consectetur, quas maxime a quisquam harum minima nostrum aspernatur ipsum illum quibusdam eveniet. Ab vel sit assumenda ad laborum.
+                      </p>
                   </div>
 
                 
 
                   {/* <!-- Projects --> */}
-                  <div className="py-3">
+                  {/* <div className="py-3">
                       <h2 className="text-lg font-poppins font-bold text-blue-500">Projects</h2>
                       <div className="border-2 w-20 border-blue-500 my-3"></div>
 
@@ -509,7 +514,7 @@ const DetailsUsers = () => {
 
                       </div>
 
-                  </div>
+                  </div> */}
 
               </div>
           </div>
