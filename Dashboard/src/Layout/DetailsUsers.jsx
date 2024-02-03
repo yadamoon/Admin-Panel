@@ -419,7 +419,7 @@ const DetailsUsers = () => {
   }
 
   return (
-    <div className="border-1 shadow-lg shadow-gray-700 rounded-lg">
+    <div className="space-y-6 flex  justify-center items-center ">
 
 
 
@@ -427,9 +427,9 @@ const DetailsUsers = () => {
 
 
 
-<div className="bg-gray-100 p-4">
+
   
-  <div className="border-1 shadow-lg shadow-gray-700 rounded-lg">
+  <div className="border-1 shadow-lg shadow-gray-700 rounded-lg my-5">
 
       {/* <!-- top content --> */}
       <div className="flex rounded-t-lg bg-blue-500 sm:px-2 w-full">
@@ -523,11 +523,8 @@ const DetailsUsers = () => {
 
 
 
-      <p>ID: {userDetails._id}</p>
-      <p>Name: {userDetails.firstname} {userDetails.lastname}</p>
-      <p>Email: {userDetails.email}</p>
      
-    </div>
+   
     </div></div>
   );
 };
