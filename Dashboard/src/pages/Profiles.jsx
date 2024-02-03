@@ -13,7 +13,7 @@ const Profiles = () => {
     },
   ];
   return (
-    <div className="space-y-6 flex  justify-center items-center ">
+    <div className="space-y-6 flex  justify-center items-center h-screen ">
       <div className="bg-gray-100 h-[50vh] flex w-2/3   mb-80 ">
         <div className="container mx-auto py-8">
           {/* //!? total user information  */}
