@@ -66,7 +66,7 @@ function Table() {
   const handlePageChange = (newPageItems) => {
     setDisplayedUsers(newPageItems);
   };
-  const headTable = ["FullName", "Email", "Information"];
+  const headTable = ["Photo","FullName", "Email", "Information"];
   return (
     <div className="">
       <div className="w-full">
@@ -97,8 +97,19 @@ function Table() {
                 className=" bg-gray-300 px-6 py-3 text-xs font-medium text-gray-500 uppercase tracking-wider  "
               >
                 <tr className=' bg-white border-b   hover:bg-gray-50 dark:hover:bg-gray-600"'>
+                  <td className='px-6 py-4'>
+                  <div className="h-10 w-10 overflow-hidden sm:rounded-full sm:relative sm:p-0  left-5 p-3">
+            {person.profilePicture ? ( // Check if profile picture is available
+    <img src={person.profilePicture} alt="Profile" /> // Use the provided profile picture
+  ) : (
+    <div className="bg-blue-500 flex items-center w-full h-full justify-center text-white font-bold text-2xl rounded-full">
+      {person.firstname.charAt(0).toUpperCase()} {/* Display the first character of the first name */}
+    </div>
+  )}
+                 </div>
+                  </td>
                   <td className="px-6 py-4">
-                    <div className="text-sm font-medium text-gray-900">
+                  <div className="text-sm font-medium text-gray-900">
                       {person.firstname +" "+person.lastname}
                     </div>
                   </td>
