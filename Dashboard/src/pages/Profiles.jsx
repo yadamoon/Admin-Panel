@@ -46,7 +46,7 @@ const Profiles = () => {
 
             <div className="flex flex-row items-center justify-between mb-6">
                 <div className="flex flex-col items-start">
-                    <span className="text-sm font-medium text-gray-600">First Name</span>
+                    <span className="text-sm font-medium text-blue-300">First Name</span>
                     <span className="text-sm font-medium text-gray-600">{userList.name}</span>
                 </div>
                 <div className="flex flex-col items-start">
@@ -57,7 +57,7 @@ const Profiles = () => {
             </div>
             <div className="flex flex-row items-center justify-between mb-6">
                 <div className="flex flex-col items-start">
-                    <span className="text-sm font-medium text-gray-600">Last Name</span>
+                    <span className="text-sm font-medium text-blue-300">Last Name</span>
                     <span className="text-sm font-medium text-gray-600">{userList.name}</span>
                 </div>
                 <div className="flex flex-col items-start">
@@ -68,7 +68,7 @@ const Profiles = () => {
             </div>
             <div className="flex flex-row items-center justify-between mb-6">
                 <div className="flex flex-col items-start">
-                    <span className="text-sm font-medium text-gray-600">
+                    <span className="text-sm font-medium text-blue-600">
                     <i className="fa fa-envelope" aria-hidden="true"></i>
                     </span>
                     <span className="text-sm font-medium text-gray-600">{userList.email}</span>
@@ -81,7 +81,7 @@ const Profiles = () => {
             </div>
             <div className="flex flex-row items-center justify-between mb-6">
                 <div className="flex flex-col items-start">
-                    <span className="text-sm font-medium text-gray-600">
+                    <span className="text-sm font-medium text-blue-600">
                     <i className="fa fa-phone" aria-hidden="true"></i>{" "}
                     </span>
                     <span className="text-sm font-medium text-gray-600">{userList.telephone}</span>
