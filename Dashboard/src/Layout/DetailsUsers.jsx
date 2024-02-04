@@ -444,7 +444,7 @@ const DetailsUsers = () => {
 
             <div className="w-2/3 sm:text-center pl-5 mt-10 text-start">
                 <p className="font-poppins font-bold text-heading sm:text-4xl text-2xl">
-              {userDetails.firstname} {userDetails.lastname}</p>
+              {userDetails.firstname} {userDetails.lastname} </p>
             </div>
 
         </div> 
