@@ -438,6 +438,7 @@ const DetailsUsers = () => {
       {userDetails.firstname.charAt(0).toUpperCase()} {/* Display the first character of the first name */}
     </div>
   )}
+
                  </div>
         
 

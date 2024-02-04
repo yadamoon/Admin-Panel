@@ -66,7 +66,7 @@ function Table() {
   const handlePageChange = (newPageItems) => {
     setDisplayedUsers(newPageItems);
   };
-  const headTable = ["Photo","FullName", "Email", "Information"];
+  const headTable = ["Profile Picture","FullName", "Email", "Information"];
   return (
     <div className="">
       <div className="w-full">
