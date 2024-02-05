@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector , useDispatch  } from 'react-redux';
 import auth from '../../services/http/auth'
@@ -8,11 +8,16 @@ import Swal from 'sweetalert2';
 import { setStatus } from "../../store/Slice/authSlice";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
-  const [showOrHide , setShowOrHide] = useState(true);
+  const [showOrHideSignIn , setShowOrHideSignIn] = useState(true);
+  const [showOrHideSignUp , setShowOrHideSignUp] = useState(true);
   const [profile, setProfile] = useState(false);
   const { signedIn } = useSelector((state) => state.auth) || {};
 const navigate = useNavigate();
 const dispatch = useDispatch();
+   useEffect(()=>{  
+    setShowOrHideSignIn(true)
+    setShowOrHideSignUp(true)
+   },[])
   // useSelector(selectSignedIn);
   const handlLogout = () => {
     Swal.fire({
@@ -53,6 +58,15 @@ const dispatch = useDispatch();
     { name: "SignUp", icon: "" },
   ];
 
+  const handleSignIN = () => {
+    setShowOrHideSignIn(false);
+    setShowOrHideSignUp(true);
+  }
+  const handleSignUP = () => {
+    setShowOrHideSignUp(false);
+    setShowOrHideSignIn(true);
+  }
+
   return (
     <>
       <div className="left-0 h-full w-full">
@@ -64,19 +78,21 @@ const dispatch = useDispatch();
               <div className="">
                 <div className=" grid grid-cols-3 gap-2 text-center mx-3 ">
                   
-                {(!signedIn && showOrHide )&& (
+                {(!signedIn && showOrHideSignIn )&& (
                   <Link
                     to="/SignIn"
+                    onClick={handleSignIN}
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
                   >
                     SignIn
                   </Link>
 )}
                     
-                 {(!signedIn && showOrHide)  && ( 
+                 {(!signedIn && showOrHideSignUp)  && ( 
                   
                   <Link
                     to="/SignUp"
+                    onClick={handleSignUP}
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
                   >
                     SignUp
