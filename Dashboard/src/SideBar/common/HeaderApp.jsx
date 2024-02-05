@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 import { setStatus } from "../../store/Slice/authSlice";
 export default function IndexPage() {
   const [show, setShow] = useState(null);
-  const [hide , setHide] = useState(false)
+  const [showOrHide , setShowOrHide] = useState(true);
   const [profile, setProfile] = useState(false);
   const { signedIn } = useSelector((state) => state.auth) || {};
 const navigate = useNavigate();
@@ -64,7 +64,7 @@ const dispatch = useDispatch();
               <div className="">
                 <div className=" grid grid-cols-3 gap-2 text-center mx-3 ">
                   
-                {!signedIn && (
+                {(!signedIn && showOrHide )&& (
                   <Link
                     to="/SignIn"
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
@@ -73,7 +73,7 @@ const dispatch = useDispatch();
                   </Link>
 )}
                     
-                 {!signedIn  && ( 
+                 {(!signedIn && showOrHide)  && ( 
                   
                   <Link
                     to="/SignUp"
@@ -151,7 +151,7 @@ const dispatch = useDispatch();
                     >
                       {profile && (
                         <ul className="p-2 w-32 border-r bg-white absolute rounded  shadow top-0 mt-16 ">
-                          <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                          <Link to="/User" className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
                             <div className="flex items-center">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +171,7 @@ const dispatch = useDispatch();
                               </svg>
                               <span className="ml-2">My Profile</span>
                             </div>
-                          </li>
+                          </Link>
                           <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -192,7 +192,7 @@ const dispatch = useDispatch();
                             </svg>
                             <span className="ml-2">Help Center</span>
                           </li>
-                          <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                          <Link to="/Setting" className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               className="icon icon-tabler icon-tabler-settings"
@@ -210,7 +210,7 @@ const dispatch = useDispatch();
                               <circle cx={12} cy={12} r={3} />
                             </svg>
                             <span className="ml-2"> Settings</span>
-                          </li>
+                          </Link>
                           <li onClick={handlLogout} className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
