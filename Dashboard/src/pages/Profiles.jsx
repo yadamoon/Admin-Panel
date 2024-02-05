@@ -34,25 +34,14 @@ const Profiles = () => {
                     <span className="text-gray-600 uppercase font-bold tracking-wider mb-2">
                       information
                     </span>
-                   
-                 
-             
-            
-            
-            
-            
             <div className="px-4 py-5 sm:p-6">
-         
-
             <div className="flex flex-row items-center justify-between mb-6">
                 <div className="flex flex-col items-start">
                     <span className="text-sm font-medium text-blue-300">First Name</span>
                     <span className="text-sm font-medium text-gray-600">{userList.name}</span>
                 </div>
                 <div className="flex flex-col items-start">
-               
-                    <span className="text-sm font-medium text-blue-600 hover:underline">Edit</span>
-                  
+               <span className="text-sm font-medium text-blue-600 hover:underline">Edit</span>
                 </div>
             </div>
             <div className="flex flex-row items-center justify-between mb-6">
