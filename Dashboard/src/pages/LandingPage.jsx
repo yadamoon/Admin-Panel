@@ -9,7 +9,6 @@ function LandingPage (){
     backgroundSize: 'cover',
   }}
  >
-   
 <div className="flex w-2/3 h-auto mx-3 my-16 ">
 
     <div className="h-auto bg-white ">
