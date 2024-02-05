@@ -1,5 +1,5 @@
 function LandingPage (){
- return(<div className="bg-gray-200 my-2 flex justify-center items-center "
+ return(<div className="bg-gray-200 my-2 flex justify-center items-center h-screen "
  style={{
     backgroundImage:
     'url("public/La.png")',
