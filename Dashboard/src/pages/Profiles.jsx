@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
 const Profiles = () => {
   // !? information of user
@@ -19,7 +20,7 @@ const Profiles = () => {
           {/* //!? total user information  */}
           <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 px-4 ">
             {/* //!? rendering the user information img , fullName , etc.. */}
-            {userInfo.map((userList) => (
+            {React.Children.toArray(userInfo.map((userList) => (
               <div key={userInfo.id} className="col-span-4 sm:col-span-3">
                 <div className="bg-white shadow rounded-lg p-6  ">
                   <div className="flex flex-col items-center bg-blue-500">
@@ -86,7 +87,7 @@ const Profiles = () => {
         </div>
         </div>
                 </div>
-        ))}
+        )))}
         
 
           </div>
