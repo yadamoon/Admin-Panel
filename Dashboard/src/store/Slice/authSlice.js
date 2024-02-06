@@ -5,6 +5,7 @@ import { tokenService, userService } from '../../services/storageService'
 const initialState = {
   signedIn: !!tokenService.getToken(),
   user: userService.getUser(),
+ 
 }
 
 export const authSlice = createSlice({
