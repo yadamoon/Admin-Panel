@@ -5,6 +5,7 @@ import { tokenService, userService } from '../../services/storageService'
 const initialState = {
   signedIn: !!tokenService.getToken(),
   user: userService.getUser(),
+  id:null,
  
 }
 
@@ -26,9 +27,13 @@ export const authSlice = createSlice({
     setHide: (state, { payload }) => {
       state.show = { ...state, [action.payload]: false }
     },
+    setId: (state, action) => {
+      state.id = action.payload;
+      console.log("hello " + state.id)
+    },
   },
 })
 
-export const { setStatus, setUser, setShow, setHide } = authSlice.actions
+export const { setStatus, setUser, setShow, setHide , setId} = authSlice.actions
 
 export default authSlice.reducer
