@@ -109,7 +109,7 @@ const Profiles = () => {
     //   </div>
     // </div>
 
-    <div className="space-y-6 flex  justify-center items-center h-screen bg-gray-150  ">
+    <div className="space-y-6 flex  justify-center items-center h-screen bg-gray-200  ">
     <div className=" h-[50vh] flex w-2/3  mb-80 ">
 
 
@@ -117,9 +117,9 @@ const Profiles = () => {
          <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 px-4">
           { userDetails && (
               <div className="col-span-4 sm:col-span-3">
-                <div className="bg-gray-100 shadow rounded-lg p-6  ">
+                <div className="bg-gray-100 shadow rounded-lg   ">
                   <div className="flex flex-col items-center bg-blue-500">
-                  <div className="justify-center items-center w-40 h-40 p-2">
+                  <div className="justify-center items-center w-40 h-40 p-1">
                   {userDetails.profilePicture ? ( // Check if profile picture is available
     <img src={userDetails.profilePicture} alt="Profile" /> // Use the provided profile picture
   ) : (
@@ -128,10 +128,14 @@ const Profiles = () => {
     </div>
   )}
                   </div>
+                  <div className="w-2/3 sm:text-center pl-5 mt-10 text-start">
+                <p className="font-poppins font-bold text-heading sm:text-4xl text-2xl">
+              {userDetails.firstname} {userDetails.lastname} </p>
+            </div>
                     </div>
-                  <hr className="my-6 border-t border-gray-300" />
+                  {/* <hr className="my-6 border-t border-gray-300" /> */}
                   <div className="flex flex-col">
-                    <span className="text-gray-600 uppercase font-bold tracking-wider mb-2">
+                    <span className="text-blue-600 mx-3 uppercase font-bold tracking-wider mb-2">
                       information
                     </span>
                     <div className="px-4 py-5 sm:p-6">
