@@ -7,6 +7,7 @@ import axios from 'axios'
 
 const Profiles = () => {
   const [userDetails, setUserDetails] = useState(null)
+  const [profilePictureUrl, setProfilePictureUrl]=useState();
   const userId = useSelector((state) => state.auth.id)
   console.log('Id is' + userId)
  
@@ -118,10 +119,15 @@ const Profiles = () => {
               <div className="col-span-4 sm:col-span-3">
                 <div className="bg-gray-100 shadow rounded-lg p-6  ">
                   <div className="flex flex-col items-center bg-blue-500">
-                    <img
-                      src="https:avatars.githubusercontent.com/u/128363342?v=4"
-                      className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
-                    />
+                  <div className="justify-center items-center w-40 h-40 p-2">
+                  {userDetails.profilePicture ? ( // Check if profile picture is available
+    <img src={userDetails.profilePicture} alt="Profile" /> // Use the provided profile picture
+  ) : (
+    <div className="bg-gray-200 flex items-center w-full h-full justify-center text-blue-500 text-4xl font-bold  rounded-full">
+      {userDetails.firstname.charAt(0).toUpperCase()} {/* Display the first character of the first name */}
+    </div>
+  )}
+                  </div>
                     </div>
                   <hr className="my-6 border-t border-gray-300" />
                   <div className="flex flex-col">
