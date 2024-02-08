@@ -2,15 +2,14 @@
 /* eslint-disable no-unused-vars */
 // import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import React ,{useEffect, useState}from 'react';
-
+import React,{useEffect, useState} from 'react';
+import axios from "axios";
 
 
 const Profiles = () => {
- const [userProfile , setUserProfile] = useState(null);
+  const [userDetails, setUserDetails] = useState(null);
   const userId = useSelector((state) => state.auth.id); // Assuming "auth" is the name of the slice in your Redux store
-  console.log(userId);
-
+  console.log("Id is"+userId);
   let userInfo;
 
     userInfo = [
@@ -25,27 +24,28 @@ const Profiles = () => {
       },
     ];
 
-    useEffect(() => {
-      console.log(id);
-
-      axios.get(`http://localhost:3000/api/v1/users/${id}`)
-        .then(response => {
-          setUserDetails(response.data);
-        })
-        .catch(error => {
-          console.error('Error fetching user details:', error);
-        });
-
-    }, [userId]);
+   useEffect(()=>{
+    console.log("say sth "+ userId)
+    axios.get(`http://localhost:3000/api/v1/users/${userId}`)
+    .then(response => {
+      setUserDetails(response.data);
+    })
+    .catch(error => {
+      console.error('Error fetching user details:', error);
+    });
+  
+  },[])
     return (
       <div className="space-y-6 flex  justify-center items-center h-screen ">
+        
+        {userDetails}
         <div className="bg-gray-100 h-[50vh] flex w-2/3   mb-80 ">
           <div className="container mx-auto py-8">
             {/* //!? total user information  */}
             <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 px-4">
               {/* //!? rendering the user information img , fullName , etc.. */}
-              { userInfo.map((userList) => (
-                <div key={userList.id} className="col-span-4 sm:col-span-3">
+              {React.Children.toArray(userInfo.map((userList) => (
+                <div  className="col-span-4 sm:col-span-3">
                   <div className="bg-white shadow rounded-lg p-6  ">
                     <div className="flex flex-col items-center bg-blue-500">
                       <img
@@ -111,7 +111,7 @@ const Profiles = () => {
           </div>
           </div>
                   </div>
-          ))}
+          )))}
           
 
             </div>
