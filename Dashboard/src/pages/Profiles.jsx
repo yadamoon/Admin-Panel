@@ -122,11 +122,7 @@ const Profiles = () => {
                       src="https:avatars.githubusercontent.com/u/128363342?v=4"
                       className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
                     />
-                    <h1 className="text-xl font-bold text-gray-400">
-                 
-                      {userDetails.firstname} {userDetails.lastname}
-                    </h1>
-                  </div>
+                    </div>
                   <hr className="my-6 border-t border-gray-300" />
                   <div className="flex flex-col">
                     <span className="text-gray-600 uppercase font-bold tracking-wider mb-2">
