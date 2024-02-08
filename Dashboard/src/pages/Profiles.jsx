@@ -150,7 +150,7 @@ const Profiles = () => {
                       </div>
                       <div className="flex flex-row items-center justify-between mb-6">
                         <div className="flex flex-col items-start">
-                          <span className="text-sm font-medium text-blue-300">
+                          <span className="text-sm text-gray-700 font-bold">
                             Last Name
                           </span>
                           <span className="text-sm font-medium text-gray-600">
@@ -165,7 +165,7 @@ const Profiles = () => {
                       </div>
                       <div className="flex flex-row items-center justify-between mb-6">
                         <div className="flex flex-col items-start">
-                          <span className="text-sm font-medium text-blue-600">
+                          <span className="text-sm text-gray-700 font-bold">
                             <i
                               className="fa fa-envelope"
                               aria-hidden="true"
