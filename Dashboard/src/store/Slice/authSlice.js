@@ -2,10 +2,11 @@
 /* eslint-disable no-undef */
 import { createSlice } from '@reduxjs/toolkit'
 import { tokenService, userService } from '../../services/storageService'
+const user = userService.getUser();
 const initialState = {
   signedIn: !!tokenService.getToken(),
-  user: userService.getUser(),
-  id:null,
+  user: user,
+  id:user.id,
  
 }
 

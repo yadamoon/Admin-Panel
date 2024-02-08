@@ -13,10 +13,10 @@ export default function IndexPage() {
   const [showOrHideSignIn , setShowOrHideSignIn] = useState(true);
   const [showOrHideSignUp , setShowOrHideSignUp] = useState(true);
   const [profile, setProfile] = useState(false);
-  // const [userDetails, setUserDetails] = useState(null)
-  // const [profilePictureUrl, setProfilePictureUrl] = useState()
-  // const userId = useSelector((state) => state.auth.id)
-  // console.log('Id is' + userId)
+  const [userDetails, setUserDetails] = useState(null)
+  const [profilePictureUrl, setProfilePictureUrl] = useState()
+  const userId = useSelector((state) => state.auth.id)
+  console.log('Id is' + userId)
   const { signedIn } = useSelector((state) => state.auth) || {};
 const navigate = useNavigate();
 const dispatch = useDispatch();
@@ -24,18 +24,17 @@ const dispatch = useDispatch();
     setShowOrHideSignIn(true)
     setShowOrHideSignUp(true)
    },[])
-  //  useEffect(() => {
-  //   console.log('say sth ' + userId)
-  //   axios
-  //     .get(`http://localhost:3000/api/v1/users/${userId}`)
-  //     .then((response) => {
-  //       setUserDetails(response.data)
-  //       console.log(response.data)
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error fetching user details:', error)
-  //     })
-  // }, [userId]) 
+   useEffect(() => {
+    console.log('say sth ' + userId)
+    axios.get(`http://localhost:3000/api/v1/users/${userId}`)
+      .then((response) => {
+        setUserDetails(response.data)
+        console.log(response.data)
+      })
+      .catch((error) => {
+        console.error('Error fetching user details:', error)
+      })
+  }, [userId]) 
 
   // useSelector(selectSignedIn);
   const handlLogout = () => {
@@ -121,7 +120,7 @@ const dispatch = useDispatch();
   </div>
               </div>
 
-              <div className="inset-y-0 left-0 flex items-end xl:hidden">
+             { userDetails &&  <div className="inset-y-0 left-0 flex items-end xl:hidden">
                 <div className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-100 focus:outline-none transition duration-150 ease-in-out">
                   <div className="visible xl:hidden">
                     <ul className="p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-8 md:mt-8 hidden">
@@ -129,7 +128,7 @@ const dispatch = useDispatch();
                         <div className="flex items-center">
                           <p className="text-sm ml-2 cursor-pointer">
 
-                          {/* {userDetails.firstname} {userDetails.lastname} */}
+                          {userDetails.firstname} {userDetails.lastname}
                           </p>
                           <div className="sm:ml-2 text-white relative">
                             <svg
@@ -178,7 +177,8 @@ const dispatch = useDispatch();
                     onClick="MenuHandler(this,false)"
                   ></div>
                 </div>
-              </div>
+              </div>}
+
               {signedIn && (
               <div className="flex ">
                 <div className="hidden xl:flex  justify-end items-end ">
@@ -270,13 +270,16 @@ const dispatch = useDispatch();
                           </li>
                         </ul>
                       )}
-                      <div className=" flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
-                        <img
-                          className="rounded-full h-10 w-10 object-cover float-right"
-                          src="https://avatars.githubusercontent.com/u/128363342?v=4"
-                          alt="logo"
-                        />
-                      </div>
+                     { userDetails && <div className=" flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
+                      {userDetails.profilePicture ? ( // Check if profile picture is available
+                        <img src={userDetails.profilePicture} alt="Profile" /> // Use the provided profile picture
+                      ) : (
+                        <div className="bg-gray-200 flex items-center w-10 h-10 flex-shrink-0 justify-center text-blue-500 text-4xl font-bold  rounded-full">
+                          {userDetails.firstname.charAt(0).toUpperCase()}{' '}
+                          {/* Display the first character of the first name */}
+                        </div>
+                      )}
+                      </div>}
                       <div className="ml-2 text-gray-600">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -357,20 +360,22 @@ const dispatch = useDispatch();
                         <div className="flex items-center">
                           <div className="">
                             <div className="w-full flex items-center justify-between pt-1">
-                              <div className="flex items-center">
+                             { userDetails  && <div className="flex items-center">
                                 
-                                <img
-                                  alt="profile-pic"
-                                  src="https://avatars.githubusercontent.com/u/128363342?v=4"
-                                  className="rounded-md"
-                                  width={500}
-                                />
+                              {userDetails.profilePicture ? ( // Check if profile picture is available
+                        <img src={userDetails.profilePicture} className="w-20 h-20" alt="Profile" /> // Use the provided profile picture
+                      ) : (
+                        <div className="bg-gray-200 flex items-center w-10 h-10 flex-shrink-0 justify-center text-blue-500 text-4xl font-bold  rounded-full">
+                          {userDetails.firstname.charAt(0).toUpperCase()}{' '}
+                          {/* Display the first character of the first name */}
+                        </div>
+                      )} 
 
 
-                                <p className=" text-gray-800 text-base leading-4 ml-2">
-                                {/* {userDetails.firstname} {userDetails.lastname} */}
-                                </p>
-                              </div>
+                               {userDetails && <p className=" text-gray-800 text-base leading-4 ml-2">
+                                {userDetails.firstname} {userDetails.lastname}
+                                </p>}
+                              </div>}
                             </div>
                           </div>
                         </div>

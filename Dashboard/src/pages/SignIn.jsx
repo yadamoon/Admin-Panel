@@ -55,7 +55,7 @@ function SignIn() {
   
     if (!result.isError) {
       const { id } = result.user; // Assuming the server sends back the user's ID and user object
-      console.log('id is '+result.user.id);
+      // console.log('id is '+result.user.id);
       console.log('id is  dis'+id);
       dispatch(setId(result.user.id));
        
