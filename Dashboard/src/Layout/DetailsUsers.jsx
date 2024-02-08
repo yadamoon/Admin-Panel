@@ -43,11 +43,8 @@ const DetailsUsers = () => {
       {userDetails.firstname.charAt(0).toUpperCase()} {/* Display the first character of the first name */}
     </div>
   )}
-
-                 </div>
-        
-
-            <div className="w-2/3 sm:text-center pl-5 mt-10 text-start">
+   </div> 
+   <div className="w-2/3 sm:text-center pl-5 mt-10 text-start">
                 <p className="font-poppins font-bold text-heading sm:text-4xl text-2xl">
               {userDetails.firstname} {userDetails.lastname} </p>
             </div>
@@ -62,25 +59,27 @@ const DetailsUsers = () => {
                 <div className="flex flex-col sm:w-1/3">
                     {/* <!-- My contact --> */}
                     <div className="py-3 sm:order-none order-3">
-                        <h2 className="text-lg font-poppins font-bold text-blue-500">My Contact</h2>
+                        <h2 className="text-lg font-poppins font-bold text-blue-500">Details Information</h2>
                         <div className="border-2 w-20 border-blue-500 my-3"></div>
 
                         <div>
                           {/* firstName */}
                             <div className="flex items-center my-1">
-                            <p>FirstName -  <span>{userDetails.firstname}</span></p> 
+                            <p className="font-bold">FirstName -  <span className="font-medium">{userDetails.firstname}</span></p> 
                            </div>
   {/* lastName */}
                             <div className="flex items-center my-1">
                           
                             
-                            <p>LastName - <span>{userDetails.lastname}</span></p>
+                            <p className="font-bold">LastName - <span className="font-medium">{userDetails.lastname}</span></p>
                           
                             </div>
 
                             <div className="flex items-center my-1 space-x-2">
-                            <i class="fa fa-envelope" aria-hidden="true"></i> 
-                            <p>    {userDetails.email}</p>
+                            <i class="fa fa-envelope" aria-hidden="true" ></i> 
+                            
+                             <span className="font-medium"> - {userDetails.email}</span>
+                            
                             </div>
                          
 
