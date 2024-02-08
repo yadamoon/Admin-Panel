@@ -37,6 +37,7 @@ function App() {
           <div className=" rounded bg-gray-50 dark:bg-gray-800">
             <HeaderApp />
           </div>
+          
           <Routes
             className="lg:my-0 md:my-0 sm:my-5
           "

@@ -6,11 +6,17 @@ import { useSelector , useDispatch  } from 'react-redux';
 import auth from '../../services/http/auth'
 import Swal from 'sweetalert2';
 import { setStatus } from "../../store/Slice/authSlice";
+import axios from "axios";
 export default function IndexPage() {
+ 
   const [show, setShow] = useState(null);
   const [showOrHideSignIn , setShowOrHideSignIn] = useState(true);
   const [showOrHideSignUp , setShowOrHideSignUp] = useState(true);
   const [profile, setProfile] = useState(false);
+  // const [userDetails, setUserDetails] = useState(null)
+  // const [profilePictureUrl, setProfilePictureUrl] = useState()
+  // const userId = useSelector((state) => state.auth.id)
+  // console.log('Id is' + userId)
   const { signedIn } = useSelector((state) => state.auth) || {};
 const navigate = useNavigate();
 const dispatch = useDispatch();
@@ -18,11 +24,24 @@ const dispatch = useDispatch();
     setShowOrHideSignIn(true)
     setShowOrHideSignUp(true)
    },[])
+  //  useEffect(() => {
+  //   console.log('say sth ' + userId)
+  //   axios
+  //     .get(`http://localhost:3000/api/v1/users/${userId}`)
+  //     .then((response) => {
+  //       setUserDetails(response.data)
+  //       console.log(response.data)
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error fetching user details:', error)
+  //     })
+  // }, [userId]) 
+
   // useSelector(selectSignedIn);
   const handlLogout = () => {
     Swal.fire({
       title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      text: "do you went logOut",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -108,7 +127,10 @@ const dispatch = useDispatch();
                     <ul className="p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-8 md:mt-8 hidden">
                       <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
                         <div className="flex items-center">
-                          <p className="text-sm ml-2 cursor-pointer">Ya Red</p>
+                          <p className="text-sm ml-2 cursor-pointer">
+
+                          {/* {userDetails.firstname} {userDetails.lastname} */}
+                          </p>
                           <div className="sm:ml-2 text-white relative">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -336,14 +358,17 @@ const dispatch = useDispatch();
                           <div className="">
                             <div className="w-full flex items-center justify-between pt-1">
                               <div className="flex items-center">
+                                
                                 <img
                                   alt="profile-pic"
                                   src="https://avatars.githubusercontent.com/u/128363342?v=4"
                                   className="rounded-md"
                                   width={500}
                                 />
+
+
                                 <p className=" text-gray-800 text-base leading-4 ml-2">
-                                  Ya Red
+                                {/* {userDetails.firstname} {userDetails.lastname} */}
                                 </p>
                               </div>
                             </div>
