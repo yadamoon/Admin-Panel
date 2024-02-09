@@ -21,21 +21,21 @@ function App() {
   const { signedIn } = useSelector((state) => state.auth) || {};
 
  return (
-    <div className="bg-gray-100 w-full  ">
+    <div className="bg-white w-full  ">
       {/* //!? sidebar */}
       {signedIn && 
       <aside
         id="sidebar-multi-level-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 "
         aria-label="Sidebar"
       >
-        <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 ">
+        <div className="h-full border   w-full px-3 py-4 overflow-y-auto bg-gray-500 ">
           <SideBar />
         </div>
       </aside>
       }
 
-      <div className="p-4 sm:ml-64 h-full">
+      <div className="p-4 sm:ml-64 h-full ">
         <div className="rounded-lg dark:border-gray-700 ">
           {/* //!? HeaderPart */}
           <div className=" rounded bg-gray-50 dark:bg-gray-800">

@@ -13,9 +13,9 @@ const SideBar = () => {
   
   return (
 
-    <div className="">
+    <div className=" ">
     <aside 
-        className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
+        className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 shadow border-gray-200"
 
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-white">
@@ -29,8 +29,6 @@ const SideBar = () => {
               Admin Panel
 
             </motion.h1>
-           
-
           </div>
         <div className="flex border h-1 bg-black"></div>
           <ul className="space-y-2 my-5 font-medium">
