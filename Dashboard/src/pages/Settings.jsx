@@ -46,9 +46,9 @@ const Settings = () => {
 
   return (
     <>
-      <div className="bg-gray-100 w-full h-screen">
+      <div className="bg-white w-full h-screen">
         <div className="container mx-auto">
-          <div role="article" className="bg-gray-100 py-12 md:px-8">
+          <div role="article" className="bg-white py-12 md:px-8">
             <div className="px-4 xl:px-0 py-10">
               <div className="flex flex-col lg:flex-row flex-wrap">
                 <div className="mt-4 lg:mt-0 lg:w-3/5">
@@ -61,7 +61,7 @@ const Settings = () => {
                 <div className="lg:w-2/5 flex mt-10 ml-2 lg:ml-0 lg:mt-0 lg:justify-end">
                   <div className="pt-2 relative  text-gray-600">
                     <input
-                      className="focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                      className="focus:ring-2 focus:ring-offset-2 border focus:ring-gray-400 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
                       type="search"
                       name="search"
                       placeholder="Search"
@@ -91,13 +91,13 @@ const Settings = () => {
                 </div>
               </div>
             </div>
-            <div className="px-6 xl:px-0">
-              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8">
+            <div className="px-6 xl:px-0 ">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8 ">
                
                {React.Children.toArray(items.map(item => 
                
-                  <div  role="cell" className="bg-gray-100">
-                    <div className="bg-white p-5 rounded-md relative h-full w-full">
+                  <div  role="cell" className="bg-white shadow border">
+                    <div className="bg-white  shawo p-5 rounded-md relative h-full w-full">
                       {/* class="absolute inset-0 object-center object-cover h-full w-full"  */}
                       <span>
                         <img

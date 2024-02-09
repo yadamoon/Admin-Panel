@@ -27,15 +27,15 @@ const DetailsUsers = () => {
   }
 
   return (
-    <div className="space-y-6 flex  h-screen ">
-      <div className="border-1 shadow-lg shadow-gray-700 rounded-lg my-5">
+    <div className="space-y-6 flex  h-screen bg-white ">
+      <div className="border-1 shadow rounded-lg my-5 mx-10">
         {/* <!-- top content --> */}
         <div className="flex rounded-t-lg bg-blue-500 sm:px-2 w-full">
-          <div className="h-40 w-40 overflow-hidden sm:rounded-full sm:relative sm:p-0 top-10 left-5 p-3">
+          <div className="h-40 w-40 overflow-hidden sm:rounded-full sm:relative sm:p-0 top-10 left-5 p-3 border">
             {userDetails.profilePicture ? ( // Check if profile picture is available
               <img src={userDetails.profilePicture} alt="Profile" /> // Use the provided profile picture
             ) : (
-              <div className="bg-gray-200 flex items-center w-full h-full justify-center text-blue-500 text-4xl font-bold  rounded-full">
+              <div className="bg-white flex items-center w-full h-full justify-center text-blue-500 text-8xl font-bold  rounded-full">
                 {userDetails.firstname.charAt(0).toUpperCase()}{' '}
                 {/* Display the first character of the first name */}
               </div>
@@ -49,7 +49,7 @@ const DetailsUsers = () => {
         </div>
 
         {/* <!-- main content --> */}
-        <div className="p-5">
+        <div className="p-5 bg-white ">
           <div className="flex flex-col sm:flex-row sm:mt-10">
             <div className="flex flex-col sm:w-1/3">
               {/* <!-- My contact --> */}

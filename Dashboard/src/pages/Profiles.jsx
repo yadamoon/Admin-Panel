@@ -27,7 +27,7 @@ const Profiles = () => {
     <div className="space-y-6 flex  justify-center items-center h-screen bg-white ">
       <div className=" h-[50vh] flex w-2/3  mb-80 ">
         <div className="container mx-auto py-8">
-          <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 px-4">  
             {userDetails && (
               <div className="col-span-4 sm:col-span-3">
                 <div className="bg-gray-100 shadow rounded-lg   ">

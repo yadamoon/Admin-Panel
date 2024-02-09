@@ -134,12 +134,12 @@ const Products = () => {
                 </div>
               </div>
             </div>
-            <div className="px-6 xl:px-0 bg-white">
-              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8 bg-white">
+            <div className="px-6 xl:px-0 ">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8 ">
               {React.Children.toArray(items.map(item => 
                
                   <div>
-                    <div className="bg-gray-50 shadow-lg  rounded-md relative h-full w-full">
+                    <div className="bg-white shadow-lg  rounded-md relative h-full w-full">
                       {/* class="absolute inset-0 object-center object-cover h-full w-full"  */}
                       <span className="hover:opacity-75 w-full ">
                         <img
