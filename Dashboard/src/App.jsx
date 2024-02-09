@@ -15,12 +15,15 @@ import Error from "./pages/Error";
 import ForgetPassword from "./pages/ForgetPassword";
 import LandingPage from "./pages/LandingPage";
 import DetailsUsers from "./Layout/DetailsUsers";
+import { useSelector } from "react-redux";
 
 function App() {
+  const { signedIn } = useSelector((state) => state.auth) || {};
 
-  return (
+ return (
     <div className="bg-gray-100 w-full  ">
       {/* //!? sidebar */}
+      {signedIn && 
       <aside
         id="sidebar-multi-level-sidebar"
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0"
@@ -30,6 +33,7 @@ function App() {
           <SideBar />
         </div>
       </aside>
+      }
 
       <div className="p-4 sm:ml-64 h-full">
         <div className="rounded-lg dark:border-gray-700 ">
