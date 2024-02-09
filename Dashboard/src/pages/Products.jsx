@@ -250,24 +250,7 @@ const Products = () => {
 
 
 
-              {/* {React.Children.toArray(items.map(item => 
-               
-                  <div>
-                    <div className="bg-white shadow-lg  rounded-md relative h-full w-full">
-                     
-                      <span className="hover:opacity-75 w-full  bg-white shadow">
-                        <img
-                          className="p-2 mb-5  w-full"
-                          src={item.src}
-                          alt={item.msg}
-                        />
-                      </span>
-                      <h1 className="pb-4 text-xlfont-semibold text-center items-center bg-white p-2 text-blue-500 hover:opacity-60">
-                        {item.name}
-                      </h1>
-                    </div>
-                  </div>
-                ))} */}
+           
                 
               </div>
             </div>
