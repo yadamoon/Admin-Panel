@@ -49,58 +49,11 @@ const Products = () => {
               <div className="flex flex-col lg:flex-row flex-wrap">
                 <div className="mt-4 lg:mt-0 lg:w-3/5">
                   <div>
-                    <h1 className="text-3xl ml-2 lg:ml-0 lg:text-4xl font-bold text-gray-900 tracking-normal lg:w-11/12">
+                    <h1 className="text-3xl ml-2 lg:ml-0 lg:text-4xl font-bold text-blue-600 underline tracking-normal lg:w-11/12">
                       Products
                     </h1>
                   </div>
                 </div>
-
-                {/* <div>
-                  <ul className="flex flex-col md:flex-row items-start md:items-center text-gray-600 dark:text-gray-400 text-sm mt-3">
-                    <li className="flex items-center mr-4">
-                      <div className="mr-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="icon icon-tabler icon-tabler-paperclip"
-                          width={16}
-                          height={16}
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" />
-                          <path d="M15 7l-6.5 6.5a1.5 1.5 0 0 0 3 3l6.5 -6.5a3 3 0 0 0 -6 -6l-6.5 6.5a4.5 4.5 0 0 0 9 9 l6.5 -6.5" />
-                        </svg>
-                      </div>
-                      <span>Active</span>
-                    </li>
-                    <li className="flex items-center mr-4 mt-4 md:mt-0">
-                      <div className="mr-1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="icon icon-tabler icon-tabler-trending-up"
-                          width={16}
-                          height={16}
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" />
-                          <polyline points="3 17 9 11 13 15 21 7" />
-                          <polyline points="14 7 21 7 21 14" />
-                        </svg>
-                      </div>
-                      <span> Trending</span>
-                    </li>
-                  </ul>
-                </div> */}
-
                 <div className="lg:w-2/5 flex mt-10 ml-2 lg:ml-0 lg:mt-0 lg:justify-end">
                   <div className="pt-2 relative  text-gray-600">
                     <input
@@ -134,11 +87,11 @@ const Products = () => {
                 </div>
               </div>
             </div>
-            <div className="px-6 xl:px-0 ">
-              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8 ">
+            <div className="px-6 xl:px-0 justify-center items-center flex ">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8 justify-center items-center">
               {React.Children.toArray(items.map(item => 
                
-               <div  role="cell" className="bg-white shadow border">
+               <div  role="cell" className="bg-white shadow border ">
                  <div className="bg-white  shawo p-5 rounded-md relative h-full w-full">
                   
                    <span>
@@ -148,7 +101,7 @@ const Products = () => {
                        alt={item.msg}
                      />
                    </span>
-                   <h1 className="pb-4 text-2xl font-semibold">
+                   <h1 className="pb-4 text-2xl font-semibold text-center">
                      {item.name}
                    </h1>
                  
