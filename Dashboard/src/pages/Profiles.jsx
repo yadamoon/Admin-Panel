@@ -36,7 +36,7 @@ const Profiles = () => {
                       {userDetails.profilePicture ? ( // Check if profile picture is available
                         <img src={userDetails.profilePicture} alt="Profile" /> // Use the provided profile picture
                       ) : (
-                        <div className="bg-gray-200 flex items-center w-full h-full justify-center text-blue-500 text-4xl font-bold  rounded-full">
+                        <div className="bg-white flex items-center w-full h-full justify-center text-blue-500 text-4xl font-bold  rounded-full">
                           {userDetails.firstname.charAt(0).toUpperCase()}{' '}
                           {/* Display the first character of the first name */}
                         </div>
