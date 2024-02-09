@@ -24,7 +24,7 @@ const Profiles = () => {
   }, [userId])
   console.log({ userDetails })
   return (
-    <div className="space-y-6 flex  justify-center items-center h-screen bg-gray-200  ">
+    <div className="space-y-6 flex  justify-center items-center h-screen bg-white ">
       <div className=" h-[50vh] flex w-2/3  mb-80 ">
         <div className="container mx-auto py-8">
           <div className="grid grid-cols-1 sm:grid-cols-1 gap-6 px-4">
@@ -49,7 +49,7 @@ const Profiles = () => {
                     </div>
                   </div>
                   {/* <hr className="my-6 border-t border-gray-300" /> */}
-                  <div className="flex flex-col">
+                  <div className="flex flex-col bg-white">
                     <span className="text-blue-600 mx-3 uppercase font-bold tracking-wider mb-2">
                       information
                     </span>
