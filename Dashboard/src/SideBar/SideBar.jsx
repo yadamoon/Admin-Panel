@@ -71,10 +71,10 @@ const SideBar = () => {
             >
               <Link
                 to="/Dashboard"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-blue-500 hover:text-white dark:hover:bg-gray-200"
               >
                 <svg
-                  className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
+                  className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white dark:group-hover:text-gray-500"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -96,7 +96,7 @@ const SideBar = () => {
             >
               <Link
                 to="/Table"
-                className="flex items-center w-full p-2 text-base text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
+                className="flex items-center w-full p-2 text-base text-gray-500 transition duration-75 rounded-lg group hover:bg-blue-500 hover:text-white dark:hover:bg-gray-200"
               >
                 <i className="fa fa-table"></i>
                 <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
@@ -116,7 +116,7 @@ const SideBar = () => {
             >
               <Link
                 to="/User"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-blue-500 hover:text-white dark:hover:bg-gray-200"
               >
                 <i className="fa fa-user"></i>
                 <span className="flex-1 ms-3 whitespace-nowrap">Profile</span>
@@ -131,10 +131,10 @@ const SideBar = () => {
             >
               <Link
                 to="/Product"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-blue-500 hover:text-white dark:hover:bg-gray-200"
               >
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-500"
+                  className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-white  dark:group-hover:text-gray-500"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -154,7 +154,7 @@ const SideBar = () => {
             >
               <Link
                 to="/Setting"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-blue-500 hover:text-white dark:hover:bg-gray-200"
               >
                 <i className="fa fa-gears"></i>
                 <span className="flex-1 ms-3 whitespace-nowrap">Settings</span>
@@ -167,7 +167,7 @@ const SideBar = () => {
             >
               <Link
                 to="/About"
-                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-gray-200 dark:text-gray-500 dark:hover:bg-gray-200"
+                className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-blue-500 hover:text-white dark:hover:bg-gray-200"
               >
                 <i className="fa fa-info-circle" aria-hidden="true"></i>
                 <span className="flex-1 ms-3 whitespace-nowrap">

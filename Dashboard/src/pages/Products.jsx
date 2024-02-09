@@ -42,9 +42,9 @@ const Products = () => {
 
   return (
     <>
-      <div className="bg-gray-100 w-full h-full">
+      <div className="bg-white w-full h-full">
         <div className="container mx-auto">
-          <div role="article" className="bg-gray-100 py-12 md:px-8">
+          <div role="article" className="bg-white py-12 md:px-8">
             <div className="px-4 xl:px-0 py-10">
               <div className="flex flex-col lg:flex-row flex-wrap">
                 <div className="mt-4 lg:mt-0 lg:w-3/5">
@@ -55,7 +55,7 @@ const Products = () => {
                   </div>
                 </div>
 
-                <div>
+                {/* <div>
                   <ul className="flex flex-col md:flex-row items-start md:items-center text-gray-600 dark:text-gray-400 text-sm mt-3">
                     <li className="flex items-center mr-4">
                       <div className="mr-1">
@@ -99,12 +99,12 @@ const Products = () => {
                       <span> Trending</span>
                     </li>
                   </ul>
-                </div>
+                </div> */}
 
                 <div className="lg:w-2/5 flex mt-10 ml-2 lg:ml-0 lg:mt-0 lg:justify-end">
                   <div className="pt-2 relative  text-gray-600">
                     <input
-                      className="focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                      className="focus:ring-2 focus:ring-offset-2 border  focus:ring-gray-400 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
                       type="search"
                       name="search"
                       placeholder="Search"
@@ -134,21 +134,21 @@ const Products = () => {
                 </div>
               </div>
             </div>
-            <div className="px-6 xl:px-0">
-              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8">
+            <div className="px-6 xl:px-0 bg-white">
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8 bg-white">
               {React.Children.toArray(items.map(item => 
                
                   <div>
-                    <div className="bg-white  rounded-md relative h-full w-full">
+                    <div className="bg-gray-50 shadow-lg  rounded-md relative h-full w-full">
                       {/* class="absolute inset-0 object-center object-cover h-full w-full"  */}
-                      <span className="hover:opacity-75 w-full">
+                      <span className="hover:opacity-75 w-full ">
                         <img
                           className="p-2 mb-5  w-full"
                           src={item.src}
                           alt={item.msg}
                         />
                       </span>
-                      <h1 className="pb-4 text-xlfont-semibold text-center items-center text-blue-500 hover:opacity-60">
+                      <h1 className="pb-4 text-xlfont-semibold text-center items-center bg-white p-2 text-blue-500 hover:opacity-60">
                         {item.name}
                       </h1>
                     </div>
