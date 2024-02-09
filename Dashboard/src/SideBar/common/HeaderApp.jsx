@@ -87,9 +87,9 @@ const dispatch = useDispatch();
 
   return (
     <>
-      <div className="left-0 h-full w-full">
+      <div className="left-0 h-full w-full bg-white ">
         {/* Code block starts */}
-        <nav className="bg-white shadow xl:block hidden p-4 ">
+        <nav className="rounded bg-gray-100 shadow xl:block hidden p-4 ">
           <div className="mx-auto container px-6 py-2 xl:py-0">
             <div className="flex items-end justify-end">
               {/* //!? button of signIn and SignUp */}
