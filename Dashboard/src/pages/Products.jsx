@@ -50,7 +50,7 @@ const Products = () => {
                 <div className="mt-4 lg:mt-0 lg:w-3/5">
                   <div>
                     <h1 className="text-3xl ml-2 lg:ml-0 lg:text-4xl font-bold text-blue-600 underline tracking-normal lg:w-11/12">
-                      Products
+                      ProducDts
                     </h1>
                   </div>
                 </div>
