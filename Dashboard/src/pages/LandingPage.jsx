@@ -2,7 +2,7 @@ function LandingPage (){
  return(<div className="bg-gray-200 my-2 flex justify-center items-center h-screen "
  style={{
     backgroundImage:
-    'url("public/La.png")',
+    'url("public/Screenshot from 2024-02-10 14-27-04.png")',
     backgroundRepeat: 'no-repeat',
     width: 'auto',
     backgroundPosition: 'center',
