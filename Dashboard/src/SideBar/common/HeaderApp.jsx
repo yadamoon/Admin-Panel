@@ -94,7 +94,7 @@ const dispatch = useDispatch();
             <div className="flex items-end justify-end">
               {/* //!? button of signIn and SignUp */}
               <div className="">
-                <div className=" grid grid-cols-3 gap-2 text-center mx-3 ">
+                <div className=" grid grid-cols-4 gap-2 text-center mx-3 ">
                   
                 {(!signedIn && showOrHideSignIn )&& (
                   <Link
@@ -114,6 +114,26 @@ const dispatch = useDispatch();
                     className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
                   >
                     SignUp
+                  </Link>
+  )} 
+                  {(!signedIn && showOrHideSignIn )&& (
+                  <Link
+                    to="/SignIn"
+                    onClick={handleSignIN}
+                    className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
+                  >
+                    Lang
+                  </Link>
+)}
+                    
+                 {(!signedIn && showOrHideSignUp)  && ( 
+                  
+                  <Link
+                    to="/SignUp"
+                    onClick={handleSignUP}
+                    className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
+                  >
+                    About
                   </Link>
   )} 
        
