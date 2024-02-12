@@ -23,7 +23,7 @@ function App() {
  return (
     <div className="bg-white w-full  ">
       {/* //!? sidebar */}
-      {signedIn && 
+    
       <aside
         id="sidebar-multi-level-sidebar"
         className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 "
@@ -33,7 +33,7 @@ function App() {
           <SideBar />
         </div>
       </aside>
-      }
+
 
       <div className="p-4 sm:ml-64 h-full ">
         <div className="rounded-lg dark:border-gray-700 ">

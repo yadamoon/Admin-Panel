@@ -116,26 +116,8 @@ const dispatch = useDispatch();
                     SignUp
                   </Link>
   )} 
-                  {(!signedIn && showOrHideSignIn )&& (
-                  <Link
-                    to="/SignIn"
-                    onClick={handleSignIN}
-                    className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
-                  >
-                    Lang
-                  </Link>
-)}
-                    
-                 {(!signedIn && showOrHideSignUp)  && ( 
-                  
-                  <Link
-                    to="/SignUp"
-                    onClick={handleSignUP}
-                    className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
-                  >
-                    About
-                  </Link>
-  )} 
+   
+      
        
   </div>
               </div>

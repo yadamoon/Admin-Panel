@@ -122,7 +122,7 @@ function SignIn() {
                           message: 'Enter at least one special character',
                         },
                         minLength: {
-                          value: 15,
+                          value: 6,
                           message: 'Please Enter atleast more than 15 character',
                         },
                         maxLength: {
