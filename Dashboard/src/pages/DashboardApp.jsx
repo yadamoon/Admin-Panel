@@ -10,8 +10,8 @@ const DashboardApp = () => {
     <div className="p-4  ">
       <div className=" rounded-lg dark:border-gray-700 ">
         {/* //todo dashboard */}
-        <div className="flex  p-2 mb-4 rounded bg-gray-100">
-          <p className="text-2xl text-gray-400 dark:text-gray-500">Dashboard</p>
+        <div className="flex  p-2 mb-4 rounded">
+          <p className="text-2xl text-blue-500 dark:text-blue-500">Dashboard</p>
         </div>
 
         {/* //todo list Earing */}
@@ -117,21 +117,21 @@ const DashboardApp = () => {
         </div>
 
         {/* //todo title chart */}
-        <div className="flex p-2 mb-4 rounded bg-gray-100">
-          <p className="text-2xl text-gray-400 ">Charts</p>
+        <div className="flex p-2 mb-4 rounded ">
+          <p className="text-2xl text-blue-500 ">Charts</p>
         </div>
 
         {/* //todo charts */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           {/* Chart component */}
-          <div className="frounded bg-white col-span-2">
+          <div className="frounded bg-white col-span-2 border shadow rounded">
             <p className="text-2xl text-gray-400 ">
               <Chart />
             </p>
           </div>
 
-          <div className="flex items-center justify-center rounded bg-white col-span-2">
+          <div className="flex items-center justify-center rounded bg-white col-span-2 border shadow rounded">
             <p className="text-2xl text-gray-400 ">
               <SpaceWrap />
             </p>
@@ -141,13 +141,13 @@ const DashboardApp = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
           {/* Chart component */}
-          <div className=" rounded bg-white col-span-2">
+          <div className=" rounded bg-white col-span-2 border shadow ">
             <p className="text-2xl text-gray-400 ">
               <ProgressBarApp />
             </p>
           </div>
 
-          <div className="flex items-center justify-center rounded bg-white col-span-2">
+          <div className="flex items-center justify-center rounded bg-white col-span-2 border shadow ">
          
               <PieComponent />
           
