@@ -2,7 +2,7 @@
 import "./App.css";
 import SideBar from "./SideBar/SideBar";
 import HeaderApp from "./SideBar/common/HeaderApp";
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes  } from "react-router-dom";
 import DashboardApp from "./pages/DashboardApp";
 import ListUser from "./pages/ListUser";
 import Profiles from "./pages/Profiles";
@@ -16,50 +16,63 @@ import ForgetPassword from "./pages/ForgetPassword";
 import LandingPage from "./pages/LandingPage";
 import DetailsUsers from "./Layout/DetailsUsers";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import PrivateRoute from "./controller/ProtectedRoute";
+
 
 function App() {
   const { signedIn } = useSelector((state) => state.auth) || {};
+  const [showScroll, setShowScroll] = useState(false);
 
- return (
-    <div className="bg-white w-full  ">
-      {/* //!? sidebar */}
-    
-      <aside
-        id="sidebar-multi-level-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 "
-        aria-label="Sidebar"
-      >
-        <div className="h-full   w-full px-3 py-4 overflow-y-auto bg-gray-50 ">
-          <SideBar />
-        </div>
+  const handleMouseEnter = () => {
+    setShowScroll(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowScroll(false);
+  };
+
+  return (
+    <div>
+      {/* Sidebar */}
+      <aside>
+        {/* Sidebar content */}
       </aside>
 
-
-      <div className="p-4 sm:ml-64 h-full ">
-        <div className="rounded-lg dark:border-gray-700 ">
-          {/* //!? HeaderPart */}
-          <div className=" rounded bg-gray-50 dark:bg-gray-800">
-            <HeaderApp />
-          </div>
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{ overflow: showScroll ? 'auto' : 'hidden' }}
+      >
+        <div className="p-4 sm:ml-64 h-full">
+          <div className="rounded-lg dark:border-gray-700">
+            {/* HeaderPart */}
+            <div className="rounded bg-gray-50 dark:bg-gray-800">
+              <HeaderApp />
+            </div>
+            <Routes>
           
-          <Routes
-            className="lg:my-0 md:my-0 sm:my-5
-          "
-          >
-            <Route path="/Dashboard" element={<DashboardApp />} />
-            <Route path="/Table" element={<ListUser />} />
-            <Route path="/User" element={<Profiles />} />
-            <Route path="DetailsUser/:id" element={<DetailsUsers />} />
-            <Route path="/Inbox" element={<Inbox />} />
-            <Route path="/Setting" element={<Settings />} />
-            <Route path="/Product" element={<Products />} />
-            <Route path="/SignUp" element={<SignUp />} />
-            <Route path="/SignIn" element={<SignIn />} />
+  <Route path="/" element={<LandingPage />} />
+  <PrivateRoute path="/dashboard" element={<DashboardApp />} />
+
+</Routes>
+            {/* <Routes>
             <Route path="/" element={<LandingPage />} />
+            <ProtectedRoute path="/dashboard" element={<DashboardApp />}  /> */}
            
-            <Route path="/ForgetPassword" element={<ForgetPassword />} />
-            <Route path="*" element={<Error />} />
-          </Routes>
+              {/* <ProtectedRoute path="/Table" element={<ProtectedRoute element={<ListUser />} />} />
+              <ProtectedRoute path="/User" element={<ProtectedRoute element={<Profiles />} />} />
+              <ProtectedRoute path="/DetailsUser/:id" element={<ProtectedRoute element={<DetailsUsers /> }/>} />
+              <ProtectedRoute path="/Inbox" element={<ProtectedRoute element={<Inbox />}/>} />
+              <ProtectedRoute path="/Setting" element={<ProtectedRoute element={<Settings />} />} />
+              <ProtectedRoute path="/Product" element={ <ProtectedRoute ProtectedRoute element={<Products />}/>} />
+              <ProtectedRoute path="/SignUp" element={<ProtectedRoute element={<SignUp />} />} />
+              <ProtectedRoute path="/SignIn" element={<ProtectedRoute element={<SignIn />} />} />
+             
+              <ProtectedRoute path="/ForgetPassword" element={<ProtectedRoute element={<ForgetPassword />} /> }/>
+              <ProtectedRoute path="*" element={<ProtectedRoute element={<Error />} />} />  */}
+            {/* </Routes> */}
+          </div>
         </div>
       </div>
     </div>
