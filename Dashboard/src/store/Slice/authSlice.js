@@ -6,7 +6,7 @@ const user = userService.getUser();
 const initialState = {
   signedIn: !!tokenService.getToken(),
   user: user,
-  id:user.id,
+  id:user?.id,
  
 }
 
