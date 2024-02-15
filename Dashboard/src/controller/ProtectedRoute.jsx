@@ -1,17 +1,11 @@
 /* eslint-disable react/prop-types */
+import { Route, Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import { Route, Navigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+const ProtectedRoute = ({ element, ...rest }) => {
+  const { signedIn } = useSelector((state) => state.auth);
 
-const PrivateRoute = ({ element, ...rest }) => {
-  const { signedIn } = useSelector((state) => state.auth) || {};
-
-  return (
-    <Route
-      {...rest}
-      element={signedIn ? element : <Navigate to="/SignIn" replace />}
-    />
-  );
+  return signedIn ? <Route {...rest} element={element} /> : <Navigate to="/signin" />;
 };
 
-export default PrivateRoute;
+export default ProtectedRoute;

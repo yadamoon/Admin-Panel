@@ -1,8 +1,10 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import "./App.css";
 import SideBar from "./SideBar/SideBar";
 import HeaderApp from "./SideBar/common/HeaderApp";
-import { Route, Routes  } from "react-router-dom";
+import { Navigate, Route, Routes  } from "react-router-dom";
 import DashboardApp from "./pages/DashboardApp";
 import ListUser from "./pages/ListUser";
 import Profiles from "./pages/Profiles";
@@ -17,12 +19,15 @@ import LandingPage from "./pages/LandingPage";
 import DetailsUsers from "./Layout/DetailsUsers";
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import PrivateRoute from "./controller/ProtectedRoute";
+import ProtectedRoute from "./controller/ProtectedRoute";
+// import Route from "./controller/ProtectedRoute";
 
 
 function App() {
   const { signedIn } = useSelector((state) => state.auth) || {};
   const [showScroll, setShowScroll] = useState(false);
+
+  
 
   const handleMouseEnter = () => {
     setShowScroll(true);
@@ -36,7 +41,7 @@ function App() {
     <div>
       {/* Sidebar */}
       <aside>
-        {/* Sidebar content */}
+      <SideBar/>
       </aside>
 
       <div
@@ -46,32 +51,26 @@ function App() {
       >
         <div className="p-4 sm:ml-64 h-full">
           <div className="rounded-lg dark:border-gray-700">
-            {/* HeaderPart */}
             <div className="rounded bg-gray-50 dark:bg-gray-800">
               <HeaderApp />
             </div>
             <Routes>
-          
-  <Route path="/" element={<LandingPage />} />
-  <PrivateRoute path="/dashboard" element={<DashboardApp />} />
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/dashboard" element={<DashboardApp />} />
+              <Route path="/Table" element={<ListUser />} />
+              <Route path="/User" element={<Profiles />} />
+              <Route path="/DetailsUser/:id" element={<DetailsUsers />} />
+              <Route path="/Inbox" element={<Inbox />} />
+              <Route path="/Setting" element={<Settings />} />
+              <Route path="/Product" element={<Products />} />
+              <Route path="/SignUp" element={<SignUp />} />
+              <Route path="/SignIn" element={<SignIn />} />
+              <Route path="/ForgetPassword" element={<ForgetPassword />} />
+              <Route path="*" element={<Error />} />
+            </Routes>
 
-</Routes>
-            {/* <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <ProtectedRoute path="/dashboard" element={<DashboardApp />}  /> */}
-           
-              {/* <ProtectedRoute path="/Table" element={<ProtectedRoute element={<ListUser />} />} />
-              <ProtectedRoute path="/User" element={<ProtectedRoute element={<Profiles />} />} />
-              <ProtectedRoute path="/DetailsUser/:id" element={<ProtectedRoute element={<DetailsUsers /> }/>} />
-              <ProtectedRoute path="/Inbox" element={<ProtectedRoute element={<Inbox />}/>} />
-              <ProtectedRoute path="/Setting" element={<ProtectedRoute element={<Settings />} />} />
-              <ProtectedRoute path="/Product" element={ <ProtectedRoute ProtectedRoute element={<Products />}/>} />
-              <ProtectedRoute path="/SignUp" element={<ProtectedRoute element={<SignUp />} />} />
-              <ProtectedRoute path="/SignIn" element={<ProtectedRoute element={<SignIn />} />} />
-             
-              <ProtectedRoute path="/ForgetPassword" element={<ProtectedRoute element={<ForgetPassword />} /> }/>
-              <ProtectedRoute path="*" element={<ProtectedRoute element={<Error />} />} />  */}
-            {/* </Routes> */}
+
+
           </div>
         </div>
       </div>
@@ -80,3 +79,8 @@ function App() {
 }
 
 export default App;
+
+export function Routee  ({ signedIn, ...props })  {
+  return signedIn ? <Route {...props} /> : <Navigate to="/login" />;
+
+}

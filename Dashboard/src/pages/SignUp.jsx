@@ -4,8 +4,19 @@ import { Form, useForm } from "react-hook-form";
 import { Link  , useNavigate} from "react-router-dom";
 import { http } from "../services/http/http"
 import Swal from 'sweetalert2';
+import { useState } from "react";
 const SignUp = () => {
   const navigate = useNavigate(); 
+  const [showScroll, setShowScroll] = useState(false);
+   
+  const handleMouseEnter = () => {
+      setShowScroll(true);
+  };
+
+  const handleMouseLeave = () => {
+      setShowScroll(false);
+  };
+
 
   const {
     register,
@@ -59,14 +70,20 @@ const SignUp = () => {
 
   return (
     <div
-      className="h-screen"
+      className="sm:bg-white md:bg-white "
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
       style={{
         backgroundImage: `url("https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp")`,
         backgroundRepeat: "no-repeat",
         width: "auto",
+        height:"auto",
         backgroundPosition: "center",
         backgroundSize: "cover",
+        overflow: showScroll ? 'auto' : 'hidden'
       }}
+  
+  
     >
       {/* <!-- TW Elements is free under AGPL, with commercial license required for specific uses. See more details: https://tw-elements.com/license/ and contact us for queries at tailwind@mdbootstrap.com -->  */}
       <section className="h-screen">
