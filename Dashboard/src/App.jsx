@@ -55,23 +55,20 @@ function App() {
               <HeaderApp />
             </div>
             <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/dashboard" element={<DashboardApp />} />
-              <Route path="/Table" element={<ListUser />} />
-              <Route path="/User" element={<Profiles />} />
-              <Route path="/DetailsUser/:id" element={<DetailsUsers />} />
-              <Route path="/Inbox" element={<Inbox />} />
-              <Route path="/Setting" element={<Settings />} />
-              <Route path="/Product" element={<Products />} />
+              <Route path="/"  element={<LandingPage />}  />
+              <Route path="/dashboard" element={<ProtectedRoute element={<DashboardApp />} />} />
+              <Route path="/Table" element={<ProtectedRoute element={<ListUser />} />} />
+              <Route path="/User" element={<ProtectedRoute element={<Profiles />} />} />
+              <Route path="/DetailsUser/:id" element={<ProtectedRoute element={<DetailsUsers />} />} />
+              <Route path="/Inbox" element={<ProtectedRoute element={<Inbox />} />} />
+              <Route path="/Setting" element={<ProtectedRoute element={<Settings />}/>} />
+              <Route path="/Product" element={<ProtectedRoute element={<Products />} />} />
               <Route path="/SignUp" element={<SignUp />} />
               <Route path="/SignIn" element={<SignIn />} />
               <Route path="/ForgetPassword" element={<ForgetPassword />} />
               <Route path="*" element={<Error />} />
             </Routes>
-
-
-
-          </div>
+         </div>
         </div>
       </div>
     </div>
@@ -80,7 +77,3 @@ function App() {
 
 export default App;
 
-export function Routee  ({ signedIn, ...props })  {
-  return signedIn ? <Route {...props} /> : <Navigate to="/login" />;
-
-}
