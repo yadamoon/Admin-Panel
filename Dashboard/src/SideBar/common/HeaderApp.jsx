@@ -26,14 +26,14 @@ const dispatch = useDispatch();
    },[])
    useEffect(() => {
     console.log('say sth ' + userId)
-    axios.get(`http://localhost:3000/api/v1/users/${userId}`)
+   if(userId){ axios.get(`http://localhost:3000/api/v1/users/${userId}`)
       .then((response) => {
         setUserDetails(response.data)
-        console.log(response.data)
+        console.log(response.data)    
       })
       .catch((error) => {
         console.error('Error fetching user details:', error)
-      })
+      })}
   }, [userId]) 
 
   // useSelector(selectSignedIn);
