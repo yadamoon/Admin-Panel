@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Error = () => {
@@ -15,12 +16,12 @@ const Error = () => {
                   Oops! That page can’t be found
                 </h4>
 
-                <a
-                  href="javascript:void(0)"
+                <Link to="/" 
+                 
                   className="inline-block rounded-lg border border-blue-700 px-8 py-3 text-center text-base font-semibold transition hover:bg-blue-600 hover:text-white"
                 >
                   Go To Home
-                </a>
+                </Link>
               </div>
             </div>
           </div>
