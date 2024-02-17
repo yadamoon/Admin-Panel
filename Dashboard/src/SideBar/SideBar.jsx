@@ -8,7 +8,8 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const SideBar = () => {
-  const { signedIn } = useSelector((state) => state.auth) || {}
+  const { signedIn , user } = useSelector((state) => state.auth) || {}
+
 
   return (
     <div className=" ">
@@ -81,7 +82,7 @@ const SideBar = () => {
               </motion.li>
             )}
             {/* table */}
-            {signedIn && (
+            {signedIn && user.role =="admin" && (
               <motion.li
                 whileHover={{ scale: 1.3, originX: 0, color: '#f8e112' }}
                 transition={{ type: 'spring', stiffness: 300 }}
