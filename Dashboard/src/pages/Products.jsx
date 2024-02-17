@@ -1,6 +1,17 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 const Products = () => {
+  const [showScroll, setShowScroll] = useState(false);
+
+  
+
+  const handleMouseEnter = () => {
+    setShowScroll(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowScroll(false);
+  };
   const items = [
     {
       name: " Account Overview",
@@ -41,8 +52,12 @@ const Products = () => {
   ];
 
   return (
-    <>
-      <div className="bg-white w-full h-full">
+    <div   onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+    style={{ overflow: showScroll ? 'auto' : 'hidden' }}>
+      <div
+       className="bg-white w-full h-full"  
+      > 
         <div className="container mx-auto">
           <div role="article" className="bg-white py-12 md:px-8">
             <div className="px-4 xl:px-0 py-10">
@@ -87,7 +102,7 @@ const Products = () => {
                 </div>
               </div>
             </div>
-            <div className="px-6 xl:px-0 justify-center items-center flex ">
+            <div className="px-6 xl:px-0 justify-center items-center flex "   >
               <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 pb-6 gap-8 justify-center items-center">
               {React.Children.toArray(items.map(item => 
                
@@ -114,7 +129,7 @@ const Products = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

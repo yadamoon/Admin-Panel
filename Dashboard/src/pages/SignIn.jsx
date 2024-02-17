@@ -63,7 +63,7 @@ function SignIn() {
       dispatch(setStatus({ status: true }));
       dispatch(setUser({ user: result.user }))
       
-      navigate('/')
+      navigate('/dashboard')
       
       reset()
       Swal.fire({

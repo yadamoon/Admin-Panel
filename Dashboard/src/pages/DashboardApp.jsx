@@ -4,10 +4,14 @@ import Chart from "../Layout/Chart";
 import PieComponent from "../Layout/PieComponent";
 import HeaderApp from "../SideBar/common/HeaderApp";
 import { Progress, Space } from "antd";
+import {useEffect, useState} from 'react';
 
 const DashboardApp = () => {
+ 
+
   return (
-    <div className="p-4  ">
+    <div className="p-4  overflow-hidden hover:overflow-auto  ">
+           
       <div className=" rounded-lg dark:border-gray-700 ">
         {/* //todo dashboard */}
         <div className="flex  p-2 mb-4 rounded">
@@ -16,6 +20,7 @@ const DashboardApp = () => {
 
         {/* //todo list Earing */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+           
           <div className="flex rounded bg-gray-50">
             {/* earing */}
             <div className="flex flex-col bg-white border border-t-4 border-t-blue-600 shadow-sm rounded-xl dark:border-t-blue-500 dark:shadow-slate-500/[.7]">
@@ -154,6 +159,7 @@ const DashboardApp = () => {
           </div>
         </div>
       </div>
+         
     </div>
   );
 };
