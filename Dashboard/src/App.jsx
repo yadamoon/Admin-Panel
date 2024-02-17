@@ -38,31 +38,32 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="overflow-hidden hover:overflow-auto">
       {/* Sidebar */}
       <aside>
       <SideBar/>
       </aside>
 
       <div
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        style={{ overflow: showScroll ? 'auto' : 'hidden' }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          style={{ overflow: showScroll ? 'auto' : 'hidden' }}
       >
         <div className="p-4 sm:ml-64 h-full">
           <div className="rounded-lg dark:border-gray-700">
             <div className="rounded bg-gray-50 dark:bg-gray-800">
               <HeaderApp />
             </div>
-            <Routes>
+            
+            <Routes >
               <Route path="/"  element={<LandingPage />}  />
-              <Route path="/dashboard" element={<ProtectedRoute element={<DashboardApp />} />} />
-              <Route path="/Table" element={<ProtectedRoute element={<ListUser />} />} />
-              <Route path="/User" element={<ProtectedRoute element={<Profiles />} />} />
-              <Route path="/DetailsUser/:id" element={<ProtectedRoute element={<DetailsUsers />} />} />
-              <Route path="/Inbox" element={<ProtectedRoute element={<Inbox />} />} />
-              <Route path="/Setting" element={<ProtectedRoute element={<Settings />}/>} />
-              <Route path="/Product" element={<ProtectedRoute element={<Products />} />} />
+              <Route path="/dashboard" element={<ProtectedRoute element={<DashboardApp /> } roles={["admin","user"]}  />} />
+              <Route path="/Table" element={<ProtectedRoute element={<ListUser />} roles={["admin"]} />} />
+              <Route path="/User" element={<ProtectedRoute element={<Profiles />}  roles={["admin","user"]} />} />
+              <Route path="/DetailsUser/:id" element={<ProtectedRoute element={<DetailsUsers />}  roles={["admin","user"]} />} />
+              <Route path="/Inbox" element={<ProtectedRoute element={<Inbox />}  roles={["admin","user"]} />} />
+              <Route path="/Setting" element={<ProtectedRoute element={<Settings /> } roles={["admin","user"]} />} />
+              <Route path="/Product" element={<ProtectedRoute element={<Products />} roles={["admin","user"]} />} />
               <Route path="/SignUp" element={<SignUp />} />
               <Route path="/SignIn" element={<SignIn />} />
               <Route path="/ForgetPassword" element={<ForgetPassword />} />
