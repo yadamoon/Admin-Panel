@@ -1,46 +1,46 @@
 /* eslint-disable no-unused-vars */
 
-import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { useSelector , useDispatch  } from 'react-redux';
+import { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 import auth from '../../services/http/auth'
-import Swal from 'sweetalert2';
-import { setStatus } from "../../store/Slice/authSlice";
-import axios from "axios";
+import Swal from 'sweetalert2'
+import { setStatus } from '../../store/Slice/authSlice'
+import axios from 'axios'
 export default function IndexPage() {
- 
-  const [show, setShow] = useState(null);
-  const [showOrHideSignIn , setShowOrHideSignIn] = useState(true);
-  const [showOrHideSignUp , setShowOrHideSignUp] = useState(true);
-  const [profile, setProfile] = useState(false);
+  const [show, setShow] = useState(null)
+  const [showOrHideSignIn, setShowOrHideSignIn] = useState(true)
+  const [showOrHideSignUp, setShowOrHideSignUp] = useState(true)
+  const [profile, setProfile] = useState(false)
   const [userDetails, setUserDetails] = useState(null)
   const [profilePictureUrl, setProfilePictureUrl] = useState()
   const userId = useSelector((state) => state.auth.id)
   console.log('Id is' + userId)
-  const { signedIn } = useSelector((state) => state.auth) || {};
-const navigate = useNavigate();
-const dispatch = useDispatch();
-   useEffect(()=>{  
+  const { signedIn } = useSelector((state) => state.auth) || {}
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  useEffect(() => {
     setShowOrHideSignIn(true)
     setShowOrHideSignUp(true)
-   },[])
-   useEffect(() => {
+  }, [])
+  useEffect(() => {
     console.log('say sth ' + userId)
-   if(userId){ axios.get(`http://localhost:3000/api/v1/users/${userId}`)
-      .then((response) => {
-        setUserDetails(response.data)
-        console.log(response.data)    
-      })
-      .catch((error) => {
-        console.error('Error fetching user details:', error)
-      })}
-  }, [userId]) 
-
-  // useSelector(selectSignedIn);
+    if (userId) {
+      axios
+        .get(`http://localhost:3000/api/v1/users/${userId}`)
+        .then((response) => {
+          setUserDetails(response.data)
+          console.log(response.data)
+        })
+        .catch((error) => {
+          console.error('Error fetching user details:', error)
+        })
+    }
+  }, [userId]) // useSelector(selectSignedIn);
   const handlLogout = () => {
     Swal.fire({
       title: 'Are you sure?',
-      text: "do you went logOut",
+      text: 'do you went logOut',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -61,28 +61,24 @@ const dispatch = useDispatch();
       }
     })
   }
-
-  
- 
   // eslint-disable-next-line no-unused-vars
   const listNav = [
-    { name: "Dashboard", icon: "" },
-    { name: "Table", icon: "" },
-    { name: "Inbox", icon: "" },
-    { name: "User", icon: "" },
-    { name: "Product", icon: "" },
-    { name: "Settings", icon: "" },
-    { name: "SignIn", icon: "" },
-    { name: "SignUp", icon: "" },
-  ];
-
+    { name: 'Dashboard', icon: '' },
+    { name: 'Table', icon: '' },
+    { name: 'Inbox', icon: '' },
+    { name: 'User', icon: '' },
+    { name: 'Product', icon: '' },
+    { name: 'Settings', icon: '' },
+    { name: 'SignIn', icon: '' },
+    { name: 'SignUp', icon: '' },
+  ]
   const handleSignIN = () => {
-    setShowOrHideSignIn(false);
-    setShowOrHideSignUp(true);
+    setShowOrHideSignIn(false)
+    setShowOrHideSignUp(true)
   }
   const handleSignUP = () => {
-    setShowOrHideSignUp(false);
-    setShowOrHideSignIn(true);
+    setShowOrHideSignUp(false)
+    setShowOrHideSignIn(true)
   }
 
   return (
@@ -95,107 +91,42 @@ const dispatch = useDispatch();
               {/* //!? button of signIn and SignUp */}
               <div className="">
                 <div className=" grid grid-cols-4 gap-2 text-center mx-3 ">
-                  
-                {(!signedIn && showOrHideSignIn )&& (
-                  <Link
-                    to="/SignIn"
-                    onClick={handleSignIN}
-                    className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
-                  >
-                    SignIn
-                  </Link>
-)}
-                    
-                 {(!signedIn && showOrHideSignUp)  && ( 
-                  
-                  <Link
-                    to="/SignUp"
-                    onClick={handleSignUP}
-                    className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
-                  >
-                    SignUp
-                  </Link>
-  )} 
-   
-      
-       
-  </div>
+                  {!signedIn && showOrHideSignIn && (
+                    <Link
+                      to="/SignIn"
+                      onClick={handleSignIN}
+                      className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
+                    >
+                      SignIn
+                    </Link>
+                  )}
+
+                  {!signedIn && showOrHideSignUp && (
+                    <Link
+                      to="/SignUp"
+                      onClick={handleSignUP}
+                      className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-5 pr-5  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
+                    >
+                      SignUp
+                    </Link>
+                  )}
+                </div>
               </div>
 
-             { userDetails &&  <div className="inset-y-0 left-0 flex items-end xl:hidden">
-                <div className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-100 focus:outline-none transition duration-150 ease-in-out">
-                  <div className="visible xl:hidden">
-                    <ul className="p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-8 md:mt-8 hidden">
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                        <div className="flex items-center">
-                          <p className="text-sm ml-2 cursor-pointer">
-
-                          {userDetails.firstname} {userDetails.lastname}
-                          </p>
-                          <div className="sm:ml-2 text-white relative">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="icon icon-tabler icon-tabler-chevron-down cursor-pointer"
-                              width={20}
-                              height={20}
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              fill="none"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path stroke="none" d="M0 0h24v24H0z" />
-                              <polyline points="6 9 12 15 18 9" />
-                            </svg>
-                          </div>
-                        </div>
-                      </li>
-                      <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                        <div className="flex items-center">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-user"
-                            width={20}
-                            height={20}
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <circle cx={12} cy={7} r={4} />
-                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-                          </svg>
-                          <span className="ml-2">Profile</span>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div
-                    className="hidden close-m-menu text-gray-700"
-                    onClick="MenuHandler(this,false)"
-                  ></div>
-                </div>
-              </div>}
-
-              {signedIn && (
-              <div className="flex ">
-                <div className="hidden xl:flex  justify-end items-end ">
-                  <div className="">
-                    <div
-                      className="flex   items-center relative  "
-                      onClick={() => setProfile(!profile)}
-                    >
-                      {profile && (
-                        <ul className="p-2 w-32 border-r bg-white absolute rounded  shadow top-0 mt-16 ">
-                          <Link to="/User" className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                            <div className="flex items-center">
+              {userDetails && (
+                <div className="inset-y-0 left-0 flex items-end xl:hidden">
+                  <div className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                    <div className="visible xl:hidden">
+                      <ul className="p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-8 md:mt-8 hidden">
+                        <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                          <div className="flex items-center">
+                            <p className="text-sm ml-2 cursor-pointer">
+                              {userDetails.firstname} {userDetails.lastname}
+                            </p>
+                            <div className="sm:ml-2 text-white relative">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="icon icon-tabler icon-tabler-user"
+                                className="icon icon-tabler icon-tabler-chevron-down cursor-pointer"
                                 width={20}
                                 height={20}
                                 viewBox="0 0 24 24"
@@ -206,16 +137,16 @@ const dispatch = useDispatch();
                                 strokeLinejoin="round"
                               >
                                 <path stroke="none" d="M0 0h24v24H0z" />
-                                <circle cx={12} cy={7} r={4} />
-                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                <polyline points="6 9 12 15 18 9" />
                               </svg>
-                              <span className="ml-2">My Profile</span>
                             </div>
-                          </Link>
-                          <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
+                          </div>
+                        </li>
+                        <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                          <div className="flex items-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="icon icon-tabler icon-tabler-help"
+                              className="icon icon-tabler icon-tabler-user"
                               width={20}
                               height={20}
                               viewBox="0 0 24 24"
@@ -226,83 +157,158 @@ const dispatch = useDispatch();
                               strokeLinejoin="round"
                             >
                               <path stroke="none" d="M0 0h24v24H0z" />
-                              <circle cx={12} cy={12} r={9} />
-                              <line x1={12} y1={17} x2={12} y2="17.01" />
-                              <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
+                              <circle cx={12} cy={7} r={4} />
+                              <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                             </svg>
-                            <span className="ml-2">Help Center</span>
-                          </li>
-                          <Link to="/Setting" className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="icon icon-tabler icon-tabler-settings"
-                              width={20}
-                              height={20}
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              fill="none"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
+                            <span className="ml-2">Profile</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      className="hidden close-m-menu text-gray-700"
+                      onClick="MenuHandler(this,false)"
+                    ></div>
+                  </div>
+                </div>
+              )}
+
+              {signedIn && (
+                <div className="flex ">
+                  <div className="hidden xl:flex  justify-end items-end ">
+                    <div className="">
+                      <div
+                        className="flex   items-center relative  "
+                        onClick={() => setProfile(!profile)}
+                      >
+                        {profile && (
+                          <ul className="p-2 w-32 border-r bg-white absolute rounded  shadow top-0 mt-16 ">
+                            <Link
+                              to="/User"
+                              className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none"
                             >
-                              <path stroke="none" d="M0 0h24v24H0z" />
-                              <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                              <circle cx={12} cy={12} r={3} />
-                            </svg>
-                            <span className="ml-2"> Settings</span>
-                          </Link>
-                          <li onClick={handlLogout} className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="icon icon-tabler icon-tabler-settings"
-                              width={20}
-                              height={20}
-                              viewBox="0 0 24 24"
-                              strokeWidth="1.5"
-                              stroke="currentColor"
-                              fill="none"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
+                              <div className="flex items-center">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  className="icon icon-tabler icon-tabler-user"
+                                  width={20}
+                                  height={20}
+                                  viewBox="0 0 24 24"
+                                  strokeWidth="1.5"
+                                  stroke="currentColor"
+                                  fill="none"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                >
+                                  <path stroke="none" d="M0 0h24v24H0z" />
+                                  <circle cx={12} cy={7} r={4} />
+                                  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                </svg>
+                                <span className="ml-2">My Profile</span>
+                              </div>
+                            </Link>
+                            <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="icon icon-tabler icon-tabler-help"
+                                width={20}
+                                height={20}
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" />
+                                <circle cx={12} cy={12} r={9} />
+                                <line x1={12} y1={17} x2={12} y2="17.01" />
+                                <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
+                              </svg>
+                              <span className="ml-2">Help Center</span>
+                            </li>
+                            <Link
+                              to="/Setting"
+                              className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none"
                             >
-                              <path stroke="none" d="M0 0h24v24H0z" />
-                              <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                              <circle cx={12} cy={12} r={3} />
-                            </svg>
-                            <span className="ml-2"> LogOut</span>
-                          </li>
-                        </ul>
-                      )}
-                     { userDetails && <div className=" flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
-                      {userDetails.profilePicture ? ( // Check if profile picture is available
-                        <img src={userDetails.profilePicture} alt="Profile" /> // Use the provided profile picture
-                      ) : (
-                        <div className="bg-white  flex items-center w-10 h-10 flex-shrink-0 justify-center text-blue-500 text-4xl font-bold  rounded-full">
-                          {userDetails.firstname.charAt(0).toUpperCase()}{' '}
-                          {/* Display the first character of the first name */}
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="icon icon-tabler icon-tabler-settings"
+                                width={20}
+                                height={20}
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" />
+                                <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <circle cx={12} cy={12} r={3} />
+                              </svg>
+                              <span className="ml-2"> Settings</span>
+                            </Link>
+                            <li
+                              onClick={handlLogout}
+                              className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="icon icon-tabler icon-tabler-settings"
+                                width={20}
+                                height={20}
+                                viewBox="0 0 24 24"
+                                strokeWidth="1.5"
+                                stroke="currentColor"
+                                fill="none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                <path stroke="none" d="M0 0h24v24H0z" />
+                                <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <circle cx={12} cy={12} r={3} />
+                              </svg>
+                              <span className="ml-2"> LogOut</span>
+                            </li>
+                          </ul>
+                        )}
+                        {userDetails && (
+                          <div className=" flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
+                            {userDetails.profilePicture ? ( // Check if profile picture is available
+                              <img
+                                src={userDetails.profilePicture}
+                                alt="Profile"
+                              /> // Use the provided profile picture
+                            ) : (
+                              <div className="bg-white  flex items-center w-10 h-10 flex-shrink-0 justify-center text-blue-500 text-4xl font-bold  rounded-full">
+                                {userDetails.firstname.charAt(0).toUpperCase()}{' '}
+                                {/* Display the first character of the first name */}
+                              </div>
+                            )}
+                          </div>
+                        )}
+                        <div className="ml-2 text-gray-600">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="icon icon-tabler icon-tabler-chevron-down cursor-pointer"
+                            width={20}
+                            height={20}
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            fill="none"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path stroke="none" d="M0 0h24v24H0z" />
+                            <polyline points="6 9 12 15 18 9" />
+                          </svg>
                         </div>
-                      )}
-                      </div>}
-                      <div className="ml-2 text-gray-600">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="icon icon-tabler icon-tabler-chevron-down cursor-pointer"
-                          width={20}
-                          height={20}
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          fill="none"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path stroke="none" d="M0 0h24v24H0z" />
-                          <polyline points="6 9 12 15 18 9" />
-                        </svg>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
               )}
             </div>
           </div>
@@ -317,7 +323,7 @@ const dispatch = useDispatch();
                 onClick={() => setShow(!show)}
               >
                 {show ? (
-                  ""
+                  ''
                 ) : (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -340,13 +346,13 @@ const dispatch = useDispatch();
               </div>
             </div>
           </div>
-          
+
           {/*Mobile responsive sidebar*/}
           <div
             className={
               show
-                ? "w-full xl:hidden h-full absolute z-40  transform  translate-x-0 top-0 left-0"
-                : "   w-full xl:hidden h-full absolute z-40  transform -translate-x-[100%] "
+                ? 'w-full xl:hidden h-full absolute z-40  transform  translate-x-0 top-0 left-0'
+                : '   w-full xl:hidden h-full absolute z-40  transform -translate-x-[100%] '
             }
           >
             <div
@@ -362,22 +368,31 @@ const dispatch = useDispatch();
                         <div className="flex items-center">
                           <div className="">
                             <div className="w-full flex items-center justify-between pt-1">
-                             { userDetails  && <div className="flex items-center">
-                                
-                              {userDetails.profilePicture ? ( // Check if profile picture is available
-                        <img src={userDetails.profilePicture} className="w-20 h-20" alt="Profile" /> // Use the provided profile picture
-                      ) : (
-                        <div className="bg-white flex items-center w-10 h-10 flex-shrink-0 justify-center text-blue-500 text-4xl font-bold  rounded-full">
-                          {userDetails.firstname.charAt(0).toUpperCase()}{' '}
-                          {/* Display the first character of the first name */}
-                        </div>
-                      )} 
+                              {userDetails && (
+                                <div className="flex items-center">
+                                  {userDetails.profilePicture ? ( // Check if profile picture is available
+                                    <img
+                                      src={userDetails.profilePicture}
+                                      className="w-20 h-20"
+                                      alt="Profile"
+                                    /> // Use the provided profile picture
+                                  ) : (
+                                    <div className="bg-white flex items-center w-10 h-10 flex-shrink-0 justify-center text-blue-500 text-4xl font-bold  rounded-full">
+                                      {userDetails.firstname
+                                        .charAt(0)
+                                        .toUpperCase()}{' '}
+                                      {/* Display the first character of the first name */}
+                                    </div>
+                                  )}
 
-
-                               {userDetails && <p className=" text-gray-800 text-base leading-4 ml-2">
-                                {userDetails.firstname} {userDetails.lastname}
-                                </p>}
-                              </div>}
+                                  {userDetails && (
+                                    <p className=" text-gray-800 text-base leading-4 ml-2">
+                                      {userDetails.firstname}{' '}
+                                      {userDetails.lastname}
+                                    </p>
+                                  )}
+                                </div>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -490,7 +505,7 @@ const dispatch = useDispatch();
                           </div>
                         </li>
                       </Link>
-                      <Link to="/Product" className="cursor-pointer">
+                      {/* <Link to="/Product" className="cursor-pointer">
                         <li className="text-gray-800 pt-8">
                           <div className="flex items-center justify-between">
                             <div className="flex items-center">
@@ -511,7 +526,7 @@ const dispatch = useDispatch();
                             </div>
                           </div>
                         </li>
-                      </Link>
+                      </Link> */}
 
                       <a className="cursor-pointer">
                         <li className="text-gray-800 pt-8">
@@ -583,9 +598,7 @@ const dispatch = useDispatch();
                     </ul>
                   </div>
                   <div className="w-full pt-4">
-                    <div className="flex justify-center mb-4 w-full">
-                   
-                    </div>
+                    <div className="flex justify-center mb-4 w-full"></div>
                   </div>
                 </div>
               </div>
@@ -595,8 +608,5 @@ const dispatch = useDispatch();
         {/* Code block ends */}
       </div>
     </>
-  );
+  )
 }
-
-
-
