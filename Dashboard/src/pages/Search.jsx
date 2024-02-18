@@ -1,20 +1,19 @@
+/* eslint-disable react/prop-types */
 
-import  { useState } from "react";
+import { useState } from 'react'
 
- // eslint-disable-next-line react/prop-types
+// eslint-disable-next-line react/prop-types
 const Search = ({ users, setter }) => {
- 
-  const [search, setSearch] = useState();
+  const [search, setSearch] = useState()
 
   const searchHandel = () => {
-    
     // eslint-disable-next-line react/prop-types
     const usersFiltered = users.filter((item) =>
       item.firstname.toLowerCase().includes(search.toLowerCase())
-    );
+    )
 
-    setter(usersFiltered);
-  };
+    setter(usersFiltered)
+  }
   return (
     <div className="px-4 xl:px-0 py-10">
       <div className="flex flex-col lg:flex-row flex-wrap">
@@ -33,8 +32,18 @@ const Search = ({ users, setter }) => {
               name="search"
               placeholder="Search"
               onChange={(e) => {
-                setSearch(e.target.value);
+                setSearch(e.target.value)
+                if (search == '') {
+                  const usersFiltered = users.filter((item) =>
+                    item.firstname.toLowerCase().includes(search.toLowerCase())
+                  )
+
+                  setter(usersFiltered)
+                } else {
+                  console.log('Enter some text')
+                }
               }}
+              onClick={searchHandel}
             />
             <button
               type="submit"
@@ -50,7 +59,7 @@ const Search = ({ users, setter }) => {
                 x="0px"
                 y="0px"
                 viewBox="0 0 56.966 56.966"
-                style={{ enableBackground: "new 0 0 56.966 56.966" }}
+                style={{ enableBackground: 'new 0 0 56.966 56.966' }}
                 xmlSpace="preserve"
                 width="512px"
                 height="512px"
@@ -62,7 +71,7 @@ const Search = ({ users, setter }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search
