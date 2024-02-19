@@ -122,7 +122,7 @@ function SignIn() {
                           message: 'Enter at least one special character',
                         },
                         minLength: {
-                          value: 13,
+                          value: 7,
                           message: 'Please Enter atleast more than 15 character',
                         },
                         maxLength: {
@@ -148,8 +148,12 @@ function SignIn() {
                         required: 'Please Enter Correct Password!',
                         minLength: {
                           value: 6,
-                          message: 'Please Enter atleast more than 6 character',
+                          message: 'Min Length are 6 ',
                         },
+                        maxLength:{
+                          value:10,
+                          message:"Max Length are 10"
+                        }
                       
                       })}
                       className="peer block min-h-[auto] w-full rounded border bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none  "
