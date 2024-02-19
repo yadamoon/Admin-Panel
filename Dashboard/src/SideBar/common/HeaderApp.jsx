@@ -38,29 +38,14 @@ export default function IndexPage() {
     }
   }, [userId]) // useSelector(selectSignedIn);
   const handlLogout = () => {
-    Swal.fire({
-      title: 'Are you sure?',
-      text: 'do you went logOut',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, logout !',
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: 'Logout!',
-          icon: 'success',
-          showConfirmButton: false,
-          timer: 2000,
-        })
+   
 
         auth.signOut()
         dispatch(setStatus({ status: false }))
-        navigate('/')
+        navigate('/SignIn')
       }
-    })
-  }
+  
+  
   // eslint-disable-next-line no-unused-vars
   const listNav = [
     { name: 'Dashboard', icon: '' },
