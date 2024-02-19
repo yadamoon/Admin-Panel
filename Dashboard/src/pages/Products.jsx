@@ -52,7 +52,8 @@ const Products = () => {
   ];
 
   return (
-    <div   onMouseEnter={handleMouseEnter}
+    <div   
+    onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
     style={{ overflow: showScroll ? 'auto' : 'hidden' }}>
       <div

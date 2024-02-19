@@ -31,7 +31,7 @@ function App() {
 
   return (
     <div 
-   className="overflow-hidden w-200 h-200 border border-black transition duration-300 ease-in-out hover:overflow-auto"
+   className="overflow-hidden transition duration-300 ease-in-out hover:overflow-auto"
     >
       {/* Sidebar */}
       <aside>

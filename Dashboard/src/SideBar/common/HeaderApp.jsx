@@ -351,7 +351,7 @@ export default function IndexPage() {
           <div
             className={
               show
-                ? 'w-full xl:hidden h-full absolute z-40  transform  translate-x-0 top-0 left-0'
+                ? 'w-full xl:hidden h-screen absolute z-40  transform  translate-x-0 top-0 left-0'
                 : '   w-full xl:hidden h-full absolute z-40  transform -translate-x-[100%] '
             }
           >
@@ -597,7 +597,7 @@ export default function IndexPage() {
                       </Link>
                     </ul>
                   </div>
-                  <div className="w-full pt-4">
+                  <div className="w-full pt-4 h-screen">
                     <div className="flex justify-center mb-4 w-full"></div>
                   </div>
                 </div>
@@ -605,7 +605,7 @@ export default function IndexPage() {
             </div>
           </div>
         </nav>
-        {/* Code block ends */}
+       
       </div>
     </>
   )

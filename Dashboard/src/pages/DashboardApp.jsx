@@ -7,12 +7,21 @@ import { Progress, Space } from "antd";
 import {useEffect, useState} from 'react';
 
 const DashboardApp = () => {
- 
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  const handleScroll = () => {
+    setIsScrolling(true);
+    setTimeout(() => {
+      setIsScrolling(false);
+    }, 300); // Adjust the timeout as needed
+  };
+
 
   return (
-    <div className="p-4  overflow-hidden hover:overflow-auto  ">
+    <div className=""   >
+    <div className="p-4" onScroll={handleScroll}>
            
-      <div className=" rounded-lg dark:border-gray-700 ">
+      <div className=" rounded-lg dark:border-gray-700 my-10 ">
         {/* //todo dashboard */}
         <div className="flex  p-2 mb-4 rounded">
           <p className="text-2xl text-blue-500 dark:text-blue-500">Dashboard</p>
@@ -161,6 +170,7 @@ const DashboardApp = () => {
       </div>
          
     </div>
+    </div>
   );
 };
 
@@ -168,7 +178,8 @@ export default DashboardApp;
 
 export const SpaceWrap = () => {
   return (
-    <div className=" ">
+  
+    <div className=" " >
       <div className=" ">
         <Space wrap>
           <Progress type="dashboard" percent={75} />
