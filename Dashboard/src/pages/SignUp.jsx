@@ -115,7 +115,7 @@ const SignUp = () => {
                         message: "Please Enter atleast more than 2 character",
                       },
                       maxLength: {
-                        value: 15,
+                        value: 30,
                         message: "Please Enter atleast less than 15 character",
                       },
                     })}
@@ -140,7 +140,7 @@ const SignUp = () => {
                         message: "Please Enter atleast more than 2 character",
                       },
                       maxLength: {
-                        value: 15,
+                        value: 30,
                         message: "Please Enter atleast less than 15 character",
                       },
                     })}
@@ -165,7 +165,7 @@ const SignUp = () => {
                         message: "Enter at least one special character",
                       },
                       minLength: {
-                        value: 2,
+                        value: 7,
                         message: "Please Enter atleast more than 2 character",
                       },
                       maxLength: {
@@ -191,10 +191,10 @@ const SignUp = () => {
                     {...register("password", {
                       required: "Please Enter New Password!",
                       minLength: {
-                        value: 8,
+                        value: 6,
                         message: "min Length 8",
                         maxLength: {
-                          value: 12,
+                          value: 10,
                           message: "max Length are 12",
                         },
                       },
@@ -219,11 +219,11 @@ const SignUp = () => {
                       validate: (value) =>
                         value === password || "The passwords do not match",
                       minLength: {
-                        value: 8,
+                        value: 6,
                         message: "min Length 8",
                       },
                       maxLength: {
-                        value: 12,
+                        value: 10,
                         message: "max Length are 12",
                       },
                     })}
