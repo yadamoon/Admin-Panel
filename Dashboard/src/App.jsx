@@ -27,19 +27,11 @@ function App() {
   const { signedIn } = useSelector((state) => state.auth) || {};
   const [showScroll, setShowScroll] = useState(false);
 
-  const handleMouseEnter = () => {
-    setShowScroll(true);
-  };
-
-  const handleMouseLeave = () => {
-    setShowScroll(false);
-  };
+ 
 
   return (
     <div 
-    // onMouseEnter={handleMouseEnter}
-    // onMouseLeave={handleMouseLeave}
-    // style={{ overflow: showScroll ? 'auto' : 'hidden' }}
+   className="overflow-hidden w-200 h-200 border border-black transition duration-300 ease-in-out hover:overflow-auto"
     >
       {/* Sidebar */}
       <aside>
@@ -48,12 +40,15 @@ function App() {
         <div
           
         >
-        <div className="p-4 sm:ml-64 h-full">
+        <div className="p-4 sm:ml-64 h-full overflow-hidden hover:overflow-auto"
+         
+   
+        >
           <div className="rounded-lg dark:border-gray-700">
             <div className="rounded bg-gray-50 dark:bg-gray-800">
               <HeaderApp />
             </div>
-            
+         
             <Routes >
               <Route path="/"  element={<LandingPage />}  />
               <Route path="/dashboard" element={<ProtectedRoute element={<DashboardApp /> } roles={["*"]}  />} />
@@ -68,6 +63,7 @@ function App() {
               <Route path="/ForgetPassword" element={<ForgetPassword />} />
               <Route path="*" element={<Error />} />
             </Routes>
+          
          </div>
         </div>
       </div>
