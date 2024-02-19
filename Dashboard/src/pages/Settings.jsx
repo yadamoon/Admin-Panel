@@ -61,7 +61,7 @@ const Settings = () => {
                 <div className="lg:w-2/5 flex mt-10 ml-2 lg:ml-0 lg:mt-0 lg:justify-end">
                   <div className="pt-2 relative  text-gray-600">
                     <input
-                      className="focus:ring-2 focus:ring-offset-2 border focus:ring-gray-400 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                      className="focus:ring-2 focus:ring-offset-2 border focus:ring-gray-400 bg-white h-10 px-5 pr-16  text-sm focus:outline-none border-blue-100 rounded "
                       type="search"
                       name="search"
                       placeholder="Search"
