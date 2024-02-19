@@ -2,7 +2,6 @@
 
 import Chart from "../Layout/Chart";
 import PieComponent from "../Layout/PieComponent";
-import HeaderApp from "../SideBar/common/HeaderApp";
 import { Progress, Space } from "antd";
 import {useEffect, useState} from 'react';
 

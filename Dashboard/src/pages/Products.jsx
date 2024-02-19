@@ -1,11 +1,8 @@
 import React,{useState} from 'react';
-
 const Products = () => {
   const [showScroll, setShowScroll] = useState(false);
 
-  
-
-  const handleMouseEnter = () => {
+ const handleMouseEnter = () => {
     setShowScroll(true);
   };
 
@@ -56,9 +53,7 @@ const Products = () => {
     onMouseEnter={handleMouseEnter}
     onMouseLeave={handleMouseLeave}
     style={{ overflow: showScroll ? 'auto' : 'hidden' }}>
-      <div
-       className="bg-white w-full h-full"  
-      > 
+      <div className="bg-white w-full h-full" > 
         <div className="container mx-auto">
           <div role="article" className="bg-white py-12 md:px-8">
             <div className="px-4 xl:px-0 py-10">
