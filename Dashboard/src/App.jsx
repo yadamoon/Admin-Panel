@@ -47,7 +47,7 @@ return (
               <Route path="/DetailsUser/:id" element={<ProtectedRoute element={<DetailsUsers />}  roles={["*"]} />} />
               <Route path="/Inbox" element={<ProtectedRoute element={<Inbox />}  roles={["*"]} />} />
               <Route path="/Setting" element={<ProtectedRoute element={<Settings /> } roles={["*"]} />} />
-              {/* <Route path="/Product" element={<ProtectedRoute element={<Products />} roles={["*"]} />} /> */}
+              <Route path="/Product" element={<ProtectedRoute element={<Products />} roles={["*"]} />} />
               <Route path="/SignUp" element={<SignUp />} />
               <Route path="/SignIn" element={<SignIn />} />
               <Route path="/ForgetPassword" element={<ForgetPassword />} />
