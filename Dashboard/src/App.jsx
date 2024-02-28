@@ -19,6 +19,7 @@ import LandingPage from './pages/LandingPage'
 import DetailsUsers from './Layout/DetailsUsers'
 import { useSelector } from 'react-redux'
 import ProtectedRoute from './controller/ProtectedRoute'
+import { NewIdea } from './pages/NewIdea'
 
 function App() {
   const { signedIn } = useSelector((state) => state.auth) || {}
@@ -76,6 +77,12 @@ function App() {
                 path="/Product"
                 element={
                   <ProtectedRoute element={<Products />} roles={['*']} />
+                }
+              />
+               <Route
+                path="/NewIdea"
+                element={
+                  <ProtectedRoute element={<NewIdea />} roles={['*']} />
                 }
               />
               <Route path="/SignUp" element={<SignUp />} />
