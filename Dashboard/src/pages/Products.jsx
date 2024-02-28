@@ -98,13 +98,13 @@ const Products = () => {
 <NewIdea/>
 
         <div className="container mx-auto">
-          <div role="article" className="bg-white py-12 md:px-8">
+          <div role="article" className="bg-white py-0 md:px-8">
             <div className="px-4 xl:px-0 py-10">
               <div className="flex flex-col lg:flex-row flex-wrap">
-                <div className="mt-4 lg:mt-0 lg:w-3/5">
+                <div className=" lg:mt-0 lg:w-3/5">
                   <div>
-                    <h1 className="text-3xl ml-2 lg:ml-0 lg:text-4xl font-bold text-blue-600 underline tracking-normal lg:w-11/12">
-                   Tasks
+                    <h1 className="text-3xl ml-2 lg:ml-0 lg:text-4xl font-bold text-blue-600  tracking-normal lg:w-11/12">
+                  List Of Idea
                     </h1>
                   </div>
                 </div>
