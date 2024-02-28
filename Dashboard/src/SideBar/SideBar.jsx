@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 // eslint-disable-next-line no-unused-vars
@@ -157,6 +158,21 @@ const SideBar = () => {
                 </Link>
               </motion.li>
             )}
+     {signedIn && (
+              <motion.li
+                whileHover={{ scale: 1.3, originX: 0, color: '#f8e112' }}
+                transition={{ type: 'spring', stiffness: 300 }}
+              >
+                <Link
+                  to="/NewIdea"
+                  className="flex items-center p-2 text-gray-500 transition duration-75 rounded-lg group hover:bg-blue-500 hover:text-white dark:hover:bg-gray-200"
+                >
+                 <i class="fa fa-lightbulb"></i>
+                  <span className="flex-1 ms-3 whitespace-nowrap">Add Idea</span>
+                </Link>
+              </motion.li>
+            )}
+
             {signedIn && (
               <motion.li
                 whileHover={{ scale: 1.3, originX: 0, color: '#f8e112' }}
