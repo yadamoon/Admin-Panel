@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { Form, useForm } from 'react-hook-form'
 import { http } from "../services/http/http"
+import { NewIdea } from './NewIdea'
 
 const Products = () => {
   const [showScroll, setShowScroll] = useState(false)
@@ -93,43 +94,8 @@ const Products = () => {
       style={{ overflow: showScroll ? 'auto' : 'hidden' }}
     >
       <div className="bg-white w-full h-full">
-        <form className=" mt-4 space-y-4 lg:mt-5 md:space-y-5 ">
-          {/* <!-- Separator between social media sign in and email/password sign in --> */}
-          <div className="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
-            <p className="mx-4 mb-0 text-center font-bold text-xl text-blue-600">
-              Create New Task
-            </p>
-          </div>
-          {/* <!-- first Name --> */}
-          <div
-            className="relative mb-6 justify-center items-center text-center"
-            data-te-input-wrapper-init
-          >
-            <input
-              type="text"
-              {...register('task', {
-                required: 'Enter New Task please!',
-              })}
-              className=" w-2/3 h-32 rounded border border-gray-200 bg-transparent    "
-              // placeholder="Create new task"
-            />
-            {errors.task && (
-              <span className="text-red-700 col-span-1 md:col-span-2 ">
-                {errors.task.message}
-              </span>
-            )}
-          </div>
-          {/* <!-- Login button --> */}
-          <div className="text-center  ">
-            <button
-              type="button"
-              className="inline-block  bg-blue-500 text-white border rounded-lg  p-2 pl-10 pr-10  text-sm font-medium uppercase hover:opacity-75 hover:text-white"
-           onClick={handleSubmit(addNewTask)}
-            >
-              Done
-            </button>
-          </div>
-        </form>
+      
+<NewIdea/>
 
         <div className="container mx-auto">
           <div role="article" className="bg-white py-12 md:px-8">
