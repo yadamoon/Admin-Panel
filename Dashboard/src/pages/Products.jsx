@@ -85,8 +85,6 @@ const Products = () => {
       msg: '',
     },
   ]
-
-
   return (
     <div
       onMouseEnter={handleMouseEnter}
@@ -94,9 +92,7 @@ const Products = () => {
       style={{ overflow: showScroll ? 'auto' : 'hidden' }}
     >
       <div className="bg-white w-full h-full">
-      
-<NewIdea/>
-
+ 
         <div className="container mx-auto">
           <div role="article" className="bg-white py-0 md:px-8">
             <div className="px-4 xl:px-0 py-10">
